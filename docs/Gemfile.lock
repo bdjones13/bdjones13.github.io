@@ -267,9 +267,8 @@ PLATFORMS
   x64-mingw32
 
 DEPENDENCIES
-  github-pages
+  github-pages (~> 215)
   jekyll-include-cache
-  jekyll-remote-theme
 
 BUNDLED WITH
    2.2.21
