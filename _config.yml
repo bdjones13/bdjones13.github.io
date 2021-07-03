@@ -37,9 +37,24 @@ plugins:
 minimal_mistakes_skin: "contrast" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum" "sunrise"
 include: ["_pages"]
 
+author:
+  name     : "Ben Jones"
+  avatar   : "/assets/images/bio-photo.jpg"
+  bio      : "A mathematician who sometimes calls himself a computer scientist."
+  location : "East Lansing, MI - USA"
+
 atom_feed:
   hide: true
-  
+
+defaults:
+  # _pages
+  - scope:
+      path: ""
+      type: pages
+    values:
+      author_profile: true
+      layout: archive
+
 footer:
   links:
     - label: "Twitter"

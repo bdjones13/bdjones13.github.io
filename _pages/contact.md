@@ -1,10 +1,8 @@
 ---
 permalink: /contact/
-title: "Contact"
+title: "Contact me"
 toc: true
 ---
-
-# Contact me
 
 ## Email
 Here are my active email addresses that you should use to contact me:
