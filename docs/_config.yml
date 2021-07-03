@@ -29,7 +29,7 @@ url: https://bdjones13.github.io # the base hostname & protocol for your site, e
 
 
 # Build settings
-remote_theme: "mmistakes/minimal-mistakes@4.23.0"
+remote_theme: mmistakes/minimal-mistakes
 plugins:
   - jekyll-feed
   - jekyll-include-cache
