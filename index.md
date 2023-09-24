@@ -12,4 +12,7 @@ header:
 
 ---
 
-![image-right](/assets/images/ProfileF23.jpeg){: width="40%" .align-right } &nbsp;&nbsp;&nbsp;&nbsp;I am a math PhD student at [Michigan State University](https://math.natsci.msu.edu/) working with [Guowei Wei](https://users.math.msu.edu/users/weig/) to develop tools in Topological Data Analysis (TDA).   
+![image-left](/assets/images/ProfileF23.jpeg){: width="20%" .align-right } &nbsp;&nbsp;&nbsp;&nbsp;I am a math PhD student at [Michigan State University](https://math.natsci.msu.edu/) working with [Guowei Wei](https://users.math.msu.edu/users/weig/) to develop tools in Topological Data Analysis (TDA).
+
+More detail can be found [here](/_pages/research.md)!
+

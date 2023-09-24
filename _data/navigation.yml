@@ -3,9 +3,7 @@ main:
     url: /
   - title: "Research"
     url: /research/
-  - title: "CV"
-    url: /cv/
+  - title: "Papers and Talks"
+    url: /papers_and_talks/
   - title: "Contact"
     url: /contact/
-  - title: "Blog"
-    url: /blog/
