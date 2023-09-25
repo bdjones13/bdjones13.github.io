@@ -15,9 +15,8 @@ My current research interests are primarily in developing tools in Topological D
 By combining persistent topological Laplacians with the directed flag complex (aka directed clique complex), we can glean information about the persistent homology and more. This builds on the fast persistent homology tool, Flagser, which was build similarly to Ripser: [Computing Persistent Homology of Directed Flag Complexes](https://doi.org/10.3390/a13010019) by Daniel Lütgehetmann et al., 2020.
 
 The paper on this work will hopefully be ready to submit in the next week or so! Stay tuned. Here is a picture of a small filtered complex using a triangle, and it's "spectra" (which report the persistent Betti number plus more):
-![image-left](/assets/images/filtered_triangle.png){: width="20%" .align-right }
 
-![image-right](/assets/images/filtered_triangle_spectra.png){: width="20%" .align-right }
+![image-left](/assets/images/filtered_triangle.png){: width="45%" .align-left } ![image-right](/assets/images/filtered_triangle_spectra.png){: width="45%" .align-right }
 
 ## Adaptive pseudo-time methods for solving the Nonlinear Poisson-Boltzmann Equation
 
