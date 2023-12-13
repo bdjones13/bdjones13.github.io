@@ -24,7 +24,8 @@ By combining persistent topological Laplacians with the directed flag complex (a
 
 Here is a picture of a small filtered complex using a triangle, its persistent Betti numbers $\beta$ and the least nonzero persistent Eigenvalues $\lambda$.
 
-![image-left](/assets/images/filtered_triangle.png){: width="45%" .align-left } ![image-right](/assets/images/filtered_triangle_spectra.png){: width="45%" .align-right }
+![image-left](/assets/images/filtered_triangle.png){: width="45%" .align-left } ![image-right](/assets/images/filtered_triangle_spectra.png){: width="45%" .align-right }  
+
 
 ## Adaptive pseudo-time methods for solving the Nonlinear Poisson-Boltzmann Equation
 
