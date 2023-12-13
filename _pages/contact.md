@@ -1,13 +1,12 @@
 ---
 permalink: /contact/
 title: "Contact me"
-toc: true
+toc: false
 ---
 
-## Email
-Here are my active email addresses that you should use to contact me:
+## Current Email Addresses:
 - [benjamindanieljones@gmail.com](mailto:benjamindanieljones@gmail.com)
 - [jones657@msu.edu](mailto:jones657@msu.edu)
 
-You should *not* use these email addresses to contact me anymore:
+## Old Email Addresses:
 - bdjones13@crimson.ua.edu
