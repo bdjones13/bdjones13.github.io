@@ -28,11 +28,7 @@ Here is a picture of a small filtered complex using a triangle, its persistent B
 <figure class="half">
     <img src="/assets/images/filtered_triangle.png">
 	<img src="/assets/images/filtered_triangle_spectra.png">
-    <figcaption>Caption describing these two images.</figcaption>
 </figure>
-
-<!-- ![image-left](/assets/images/filtered_triangle.png){: width="50%" .align-left } ![image-right](/assets/images/filtered_triangle_spectra.png){: width="50%" .align-right }  -->
-
 
 
 ## Adaptive pseudo-time methods for solving the Nonlinear Poisson-Boltzmann Equation
