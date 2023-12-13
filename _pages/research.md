@@ -24,11 +24,18 @@ By combining persistent topological Laplacians with the directed flag complex (a
 
 Here is a picture of a small filtered complex using a triangle, its persistent Betti numbers $\beta$ and the least nonzero persistent Eigenvalues $\lambda$.
 
-![image-left](/assets/images/filtered_triangle.png){: width="50%" .align-left } ![image-right](/assets/images/filtered_triangle_spectra.png){: width="50%" .align-right }  
+![image-left](/assets/images/filtered_triangle.png){: width="50%" .align-left } ![image-right](/assets/images/filtered_triangle_spectra.png){: width="50%" .align-right } 
+
 
 
 ## Adaptive pseudo-time methods for solving the Nonlinear Poisson-Boltzmann Equation
 
 This project is the basis for [this paper](https://dx.doi.org/10.4310/CIS.2021.v21.n1.a5), Ullah et al., 2023, and my master's thesis. This work was completed with [Shan Zhao's](http://szhao.people.ua.edu/) research group at the [University of Alabama](http://www.math.ua.edu/). 
+
+<figure class="half">
+    <img src="/assets/images/filtered_triangle.png">
+	<!-- <img src="/assets/images/filtered_triangle_spectra.png"> -->
+    <figcaption>Caption describing these two images.</figcaption>
+</figure>
 
 I used a Proportional Integral Derivative (PID) controller to adaptively choose the time step in the numerical solution of a nonlinear PDE, the Poisson-Boltzmann Equation. This saved 84% of CPU time with only 0.06% relative error in computing the solvation energy of proteins.
