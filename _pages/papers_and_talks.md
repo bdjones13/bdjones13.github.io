@@ -13,7 +13,7 @@ layout: single
 
 2. S. Ahmed Ullah, X. Yang, **Ben Jones**, S. Zhao, W. Geng, and G. Wei, "Bridging Eulerian and Lagrangian Poisson-Boltzmann solvers by ESES," Journal of Computational Chemistry. 2023, 1. DOI: [doi.org/10.1002/jcc.27239](https://doi.org/10.1002/jcc.27239).
 
-3. **Benjamin Jones** and Guowei Wei, "Persistent Directed Flag Laplacian," [arXiv:2312.02099 [math.AT]](https://arxiv.org/abs/2312.02099), 2023.
+3. **Benjamin Jones** and Guowei Wei, "Persistent Directed Flag Laplacian," [arXiv:2312.02099 [math.AT]](https://arxiv.org/abs/2312.02099), 2023. Submitted.
 
 ## Talks
 
