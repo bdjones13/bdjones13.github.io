@@ -15,19 +15,23 @@ layout: single
 
 3. **Benjamin Jones** and Guowei Wei, "Persistent Directed Flag Laplacian," [arXiv:2312.02099 [math.AT]](https://arxiv.org/abs/2312.02099), 2023. Submitted.
 
-## Talks
+## Contributed Talks
 
-1. Computer-Based Honors Live, Tuscaloosa, AL. “Improving Effectiveness of Time Splitting Methods for Electrostatic Analysis of Solvated Biomolecules,” December 2017.
-2. Computer-Based Honors Live, Tuscaloosa, AL. “Improving Effectiveness of Time Splitting Methods for Electrostatic Analysis of Solvated Biomolecules,” December 2018.
-3. 13th Undergraduate Math Conference, Knoxville, TN. “Numerical algorithms for electrostatic analysis of solvated biomolecules,” April 2019.
-4. University of Alabama Applied Math Seminar, Tuscaloosa, AL. "Adaptive Pseudo-Time Methods for the Poisson-Boltzmann Equation with Eulerian Solvent Excluded Surface," December 2020.
+3. SIAM Conference on Mathematics of Data Science (MDS24), Atlanta, GA. "Persistent Directed Flag Laplacian," October 2024. 
 
-## Posters
+2. 4th Workshop on Computational Persistence (ComPer), Graz University of Technology (remote). "Efficient Computation of Persistent Laplacians," September 2024.
 
-1. Undergraduate Research and Creative Activity Conference, Tuscaloosa, AL. “Improving Effectiveness of Time Splitting Methods for Electrostatic Analysis of Solvated Biomolecules,” March 2018. **Top Work in Progress for Natural Sciences.**
-2. Undergraduate Research and Creative Activity Conference, Tuscaloosa, AL. “Improving the Stability of Numerical Algorithms for Electrostatic Analysis of Solvated Biomolecules,” March 2019.
-3. NSF-CBMS Conference: Mathematical Molecular Bioscience and Biophysics, Tuscaloosa, AL. “Comparing the Stability Impact of the Eulerian Solvent Excluded Surface and the MSMS Surface on Numerical Algorithms for Electrostatic Analysis of Solvated Biomolecules,” May 2019.
-4. Southeast Center for Mathematics and Biology Symposium, Atlanta, GA, “Comparing the Effectiveness of ESES and MSMS for Solving the Poisson-Boltzmann Equation,” February 2020. 
+1. Mathematical Biosciences Workshop, Penn State. "Persistent Directed Flag Laplacian," August 2024.
+
+
+
+## Seminar Talks
+
+2. MSU Operator Algebras Reading Seminar. "The story of how Vaughan Jones used operator algebras to spark a revolution in topology," March 2024. 
+
+1. University of Alabama Applied Math Seminar, Tuscaloosa, AL. "Adaptive Pseudo-Time Methods for the Poisson-Boltzmann Equation with Eulerian Solvent Excluded Surface," December 2020.
+
+
 
 ## Master's thesis
 
