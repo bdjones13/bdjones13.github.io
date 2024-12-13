@@ -11,7 +11,9 @@ layout: single
 ## Papers and Preprints
 
 <ol reversed>
-  <li><strong>Benjamin Jones</strong> and Guowei Wei, "Persistent Directed Flag Laplacian," Foundations of Data Science (accepted). <a href="https://arxiv.org/abs/2312.02099">arXiv:2312.02099 [math.AT]</a>.</li>
+  <li><strong>Benjamin Jones</strong> and Guo-Wei Wei, "Khovanov Laplacian and Khovanov Dirac for Knots and Links," <a href="https://arxiv.org/abs/2411.18841">arXiv:2411.18841 [math.GT]</a>. Submitted.</li>
+  <li>Mushal Zia, <strong>Benjamin Jones</strong>, Hongsong Feng, Guo-Wei Wei, "Persistent Directed Flag Laplacian (PDFL)-Based Machine Learning for Protein-Ligand Binding Affinity Prediction," <a href="https://arxiv.org/abs/2411.02596">arXiv:2411.02596 [q-bio.BM]</a>. Submitted.</li>
+  <li><strong>Benjamin Jones</strong> and Guo-Wei Wei, "Persistent Directed Flag Laplacian," Foundations of Data Science. (<a href="https://arxiv.org/abs/2312.02099">arxiv</a>) (<a href="https://doi.org/10.3934/fods.2024048">doi</a>)</li>
   <li>S. Ahmed Ullah, X. Yang, <strong>Ben Jones</strong>, S. Zhao, W. Geng, and G. Wei, "Bridging Eulerian and Lagrangian Poisson-Boltzmann solvers by ESES," Journal of Computational Chemistry. 2023, 1. (<a href="https://doi.org/10.1002/jcc.27239">doi</a>)</li>
   <li><strong>Benjamin Jones</strong>, S. Ahmed Ullah, S. Wang, and S. Zhao, "Adaptive pseudo-time methods for the Poisson-Boltzmann equation with Eulerian solvent excluded surface", Communications in Information & Systems, 21(1), 85-123, (2021). (<a href="arxiv.org/abs/2011.14250">arxiv</a>) (<a href="https://dx.doi.org/10.4310/CIS.2021.v21.n1.a5">doi</a>)</li>
 </ol>
