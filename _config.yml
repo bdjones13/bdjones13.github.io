@@ -20,8 +20,7 @@
 
 title: Ben Jones
 email: benjamindanieljones@gmail.com
-description: >- # this means to ignore newlines until "baseurl:"
-  This is my personal/professional website. It is under construction as of 2021-07-03.
+description: >- # this means to ignore newlines until "baseurl:"  
 baseurl: "" # the subpath of your site, e.g. /blog
 url: https://bdjones13.github.io # the base hostname & protocol for your site, e.g. http://example.com
 repository: "bdjones13/bdjones13.github.io"
@@ -40,7 +39,6 @@ include: ["_pages"]
 author:
   name     : "Ben Jones"
   avatar   : "/assets/images/bio-photo.jpg"
-  bio      : "A mathematician who sometimes calls himself a computer scientist."
   location : "East Lansing, MI - USA"
 
 atom_feed:
@@ -68,9 +66,6 @@ footer:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/bdjones13"
-    - label: "Linkedin"
-      icon: "fab fa-fw fa-linkedin"
-      url: "https://www.linkedin.com/in/bdjones13/"
 
 # Exclude from processing.
 # The following items will not be processed, by default.

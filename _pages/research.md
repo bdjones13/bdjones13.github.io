@@ -4,10 +4,6 @@ title: "Research"
 toc: true
 ---
 
-# Interests
-
-My current research interests are primarily in developing tools in Topological Data Analysis (TDA) for computational biology. I am working with [Guowei Wei](https://users.math.msu.edu/users/weig/) on a couple of projects to build [Persistent Topological Laplacians](https://www.youtube.com/watch?v=SIHirU11jqI), like the one in [this paper](https://users.math.msu.edu/users/weig/paper/p290.pdf) by [Rui Wang](https://wangru25.github.io/).
-
 # Projects
 
 ## Persistent Laplacian Library
@@ -22,7 +18,7 @@ Paper on [arxiv](https://arxiv.org/abs/2312.02099), code on [GitHub](https://git
 
 By combining persistent topological Laplacians with the directed flag complex (aka directed clique complex), we made the Persistent Directed Flag Laplacian (PDFL), which can glean information about the persistent homology and more. This builds on the fast persistent homology tool, Flagser, which was built similarly to Ripser: [Computing Persistent Homology of Directed Flag Complexes](https://doi.org/10.3390/a13010019) by Daniel Lütgehetmann et al., 2020.
 
-Here is a picture of a small filtered complex using a triangle, its persistent Betti numbers $\beta$ and the least nonzero persistent Eigenvalues $\lambda$.
+Here is a picture of a small filtered complex using a triangle, its persistent Betti numbers $$\beta$$ and the least nonzero persistent Eigenvalues $$\lambda$$.
 
 
 <figure class="half">
