@@ -43,7 +43,7 @@ header:
 
 ## Seminar Talks
 <ol reversed>
-<li> MSU Student Geometry and Topology Seminar. "Combinatorial and Persistent Laplacians: from Graphs to TDA," October 2024.
+<li> MSU Student Geometry and Topology Seminar. "Combinatorial and Persistent Laplacians: from Graphs to TDA," October 2024.</li>
 <li> MSU Operator Algebras Reading Seminar. "The story of how Vaughan Jones used operator algebras to spark a revolution in topology," March 2024. </li>
 <li> University of Alabama Applied Math Seminar, Tuscaloosa, AL. "Adaptive Pseudo-Time Methods for the Poisson-Boltzmann Equation with Eulerian Solvent Excluded Surface," December 2020.</li>
 </ol>
