@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+
+<html lang="en" data-content_root="./">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Getting Started &#8212; PersistentLaplacians 0.0.21 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=d1102ebc" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css?v=12dfc556" />
+    <script src="_static/documentation_options.js?v=a11416ff"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Welcome to PersistentLaplacians’s documentation!" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+
+  
+  
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="getting-started">
+<h1>Getting Started<a class="headerlink" href="#getting-started" title="Link to this heading">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Using Intel MKL or BLAS offers a speedup by a factor of about 6. This documentation does not currently reflect how to do that.</p>
+</div>
+<section id="python-installation">
+<h2>Python Installation<a class="headerlink" href="#python-installation" title="Link to this heading">¶</a></h2>
+<p>If you have a system compatible with any of the binary wheels listed <a class="reference external" href="https://test.pypi.org/project/PersistentLaplacians/">here</a>, you can just install via <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">PersistentLaplacians</span></code>.</p>
+<p>Otherwise, to install from source, there are the following dependencies:</p>
+<ul class="simple">
+<li><p>CMake &gt;= 3.16.3</p></li>
+<li><p>Python &gt;= 3.10</p></li>
+<li><p>pytest</p></li>
+</ul>
+<p>If you intend to use the Alpha complex from Gudhi, you will also need the following dependencies at the time of installation:</p>
+<ul class="simple">
+<li><p>Boost &gt;= 1.78.0</p></li>
+<li><p>CGAL &gt;= 4.11</p></li>
+</ul>
+<p>There are three ways to install from source:</p>
+<ol class="arabic">
+<li><p>If you do not have a system compatible with any of the binaries on PyPI, then <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">PersistentLaplacians</span></code> should do the job.</p></li>
+<li><p>Clone the <a class="reference external" href="https://github.com/bdjones13/PersistentLaplacians/">GitHub repository</a> and from the project root run <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">.</span></code></p></li>
+<li><p>Clone the <a class="reference external" href="https://github.com/bdjones13/PersistentLaplacians/">GitHub repository</a> and from the project root run:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">mkdir</span> <span class="n">build</span>
+<span class="n">cd</span> <span class="n">build</span>
+<span class="n">cmake</span> <span class="o">..</span>
+<span class="n">make</span>
+<span class="n">sudo</span> <span class="n">make</span> <span class="n">install</span>
+</pre></div>
+</div>
+</li>
+</ol>
+</section>
+<section id="c-installation">
+<h2>C++ Installation<a class="headerlink" href="#c-installation" title="Link to this heading">¶</a></h2>
+<p>Dependencies:</p>
+<ul class="simple">
+<li><p>CMake &gt;= 3.16.3</p></li>
+<li><p>Eigen 3</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This project downloads and compiles Eigen 3.4 for internal usage (some features new to 3.4 are used), but to call PersistentLaplacian functions you must pass in Eigen matrices, so you must have access to your own version of Eigen 3. You likely do not need Eigen 3.4 to use this library.</p>
+</div>
+<p>If you intend to use the Alpha complex from Gudhi, you will also need the following dependencies at the time of installation:</p>
+<ul class="simple">
+<li><p>Boost &gt;= 1.78.0</p></li>
+<li><p>CGAL &gt;= 4.11</p></li>
+</ul>
+<p>There is one way to install from source. From the project root:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">cpp</span>
+<span class="n">mkdir</span> <span class="n">build</span>
+<span class="n">cd</span> <span class="n">build</span>
+<span class="n">cmake</span> <span class="o">..</span>
+<span class="n">make</span>
+<span class="n">sudo</span> <span class="n">make</span> <span class="n">install</span>
+</pre></div>
+</div>
+</section>
+<section id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Link to this heading">¶</a></h2>
+<p>Suppose you have the following filtered simplicial complex:</p>
+<p>Dimension 0:</p>
+<ul class="simple">
+<li><p>point a, added at filtration = 0</p></li>
+<li><p>point b, added at filtration = 1</p></li>
+<li><p>point c, added at filtration = 2</p></li>
+</ul>
+<p>Dimension 1:</p>
+<ul class="simple">
+<li><p>line (a,b), added at filtration = 3</p></li>
+<li><p>line (b,c), added at filtration = 4</p></li>
+<li><p>line (a,c), added at filtration = 5</p></li>
+</ul>
+<p>Dimension 2:</p>
+<ul class="simple">
+<li><p>triangle (a,b,c), added at filtration = 5</p></li>
+</ul>
+<p>You can create the persistent Laplacians and compute the spectra:</p>
+<p><strong>Python</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">PersistentLaplacians</span>
+
+
+<span class="c1"># boundary matrices</span>
+<span class="n">d1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span>
+             <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span>
+             <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">]])</span>
+<span class="n">d2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">],[</span><span class="mi">1</span><span class="p">],[</span><span class="o">-</span><span class="mi">1</span><span class="p">]])</span>
+<span class="n">boundaries</span> <span class="o">=</span> <span class="p">[</span><span class="n">d1</span><span class="p">,</span><span class="n">d2</span><span class="p">]</span>
+
+<span class="n">filtrations</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">],</span>   <span class="c1"># dim 0 filtrations</span>
+               <span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">],</span>    <span class="c1"># dim 1 filtrations</span>
+               <span class="p">[</span><span class="mi">5</span><span class="p">]]</span>        <span class="c1"># dim 2 filtrations</span>
+
+<span class="n">pl</span> <span class="o">=</span> <span class="n">PersistentLaplacians</span><span class="o">.</span><span class="n">PersistentLaplacian</span><span class="p">(</span><span class="n">boundaries</span><span class="p">,</span> <span class="n">filtrations</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">pl</span><span class="o">.</span><span class="n">spectra</span><span class="p">())</span>
+</pre></div>
+</div>
+<p><strong>C++</strong></p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;PersistentLaplacian.hpp&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;Eigen/Dense&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;vector&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+
+<span class="n">SparseMatrixInt</span><span class="w"> </span><span class="nf">d1</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">);</span>
+<span class="n">SparseMatrixInt</span><span class="w"> </span><span class="nf">d2</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">);</span>
+<span class="n">d1</span><span class="p">.</span><span class="n">coeffRef</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span>
+<span class="n">d1</span><span class="p">.</span><span class="n">coeffRef</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="n">d1</span><span class="p">.</span><span class="n">coeffRef</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span>
+<span class="n">d1</span><span class="p">.</span><span class="n">coeffRef</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="n">d1</span><span class="p">.</span><span class="n">coeffRef</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span>
+<span class="n">d1</span><span class="p">.</span><span class="n">coeffRef</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="n">d1</span><span class="p">.</span><span class="n">coeffRef</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="n">d1</span><span class="p">.</span><span class="n">coeffRef</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="n">d1</span><span class="p">.</span><span class="n">coeffRef</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+
+<span class="n">d2</span><span class="p">.</span><span class="n">coeffRef</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="n">d2</span><span class="p">.</span><span class="n">coeffRef</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="n">d2</span><span class="p">.</span><span class="n">coeffRef</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span>
+
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">filtration_type</span><span class="o">&gt;</span><span class="w"> </span><span class="n">c0_filtrations</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">1.0</span><span class="p">,</span><span class="w"> </span><span class="mf">2.0</span><span class="p">};</span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">filtration_type</span><span class="o">&gt;</span><span class="w"> </span><span class="n">c1_filtrations</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mf">3.0</span><span class="p">,</span><span class="w"> </span><span class="mf">4.0</span><span class="p">,</span><span class="w"> </span><span class="mf">5.0</span><span class="p">};</span>
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">filtration_type</span><span class="o">&gt;</span><span class="w"> </span><span class="n">c2_filtrations</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mf">5.0</span><span class="p">};</span>
+
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">SparseMatrixInt</span><span class="o">&gt;</span><span class="w"> </span><span class="n">boundaries</span><span class="p">;</span>
+<span class="n">boundaries</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">d1</span><span class="p">);</span>
+<span class="n">boundaries</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">d2</span><span class="p">);</span>
+
+<span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">vector</span><span class="o">&lt;</span><span class="n">filtration_type</span><span class="o">&gt;&gt;</span><span class="w"> </span><span class="n">filtrations</span><span class="p">;</span>
+<span class="n">filtrations</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">c0_filtrations</span><span class="p">);</span>
+<span class="n">filtrations</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">c1_filtrations</span><span class="p">);</span>
+<span class="n">filtrations</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">c2_filtrations</span><span class="p">);</span>
+
+<span class="n">PersistentLaplacians</span><span class="o">::</span><span class="n">PersistentLaplacian</span><span class="w"> </span><span class="nf">pl</span><span class="p">(</span><span class="n">boundaries</span><span class="p">,</span><span class="n">filtrations</span><span class="p">);</span>
+<span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">pl</span><span class="p">.</span><span class="n">spectra</span><span class="p">()</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">PersistentLaplacians</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption" role="heading"><span class="caption-text">Table of Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Getting Started</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="index.html" title="previous chapter">Welcome to PersistentLaplacians’s documentation!</a></li>
+  </ul></li>
+</ul>
+</div>
+<search id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</search>
+<script>document.getElementById('searchbox').style.display = "block"</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &#169;2024, Ben Jones.
+      
+      |
+      Powered by <a href="https://www.sphinx-doc.org/">Sphinx 7.3.7</a>
+      &amp; <a href="https://alabaster.readthedocs.io">Alabaster 0.7.16</a>
+      
+      |
+      <a href="_sources/Getting_Started.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

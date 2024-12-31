@@ -1,0 +1,17 @@
+
+Welcome to PersistentLaplacians's documentation!
+================================================
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Contents:
+
+
+.. note::
+   This is a second page to show table of contents works
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
