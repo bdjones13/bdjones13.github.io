@@ -36,9 +36,9 @@ plugins:
 minimal_mistakes_skin: "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum" "sunrise"
 include: ["_pages", "software/","software/_sources/*","software/_static/*"]
 keep_files:
-  - "software/*"
-  - "software/_sources/*"
-  - "software/_static/*"
+  - software/*
+  - software/_sources/*
+  - software/_static/*
 
 author:
   name     : "Ben Jones"
