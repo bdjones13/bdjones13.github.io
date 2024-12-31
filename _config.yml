@@ -34,7 +34,7 @@ plugins:
 
 # Minimal Mistakes configurations
 minimal_mistakes_skin: "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum" "sunrise"
-include: ["_pages", "_pages/software/PersistentLaplacians"]
+include: ["_pages", "_pages/software"]
 
 author:
   name     : "Ben Jones"
@@ -86,3 +86,4 @@ footer:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
