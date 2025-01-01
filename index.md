@@ -9,6 +9,8 @@ header:
 
 ![image-left](/assets/images/ProfileF23.jpeg){: width="20%" .align-right } &nbsp;&nbsp;&nbsp;&nbsp;I am a math PhD candidate at [Michigan State University](https://math.natsci.msu.edu/) working with [Guo-Wei Wei](https://users.math.msu.edu/users/weig/) to develop tools in **Topological Data Analysis** (TDA) for computational biology.
 
+Prior to this I earned my M.A. in Mathematics, B.S. in Computer Science, and B.S. in Mathematics at The University of Alabama.
+
 [ORCID:0000-0001-7810-7770](https://orcid.org/0000-0001-7810-7770)
 
 # Research
