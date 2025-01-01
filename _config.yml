@@ -32,14 +32,12 @@ plugins:
   - jekyll-include-cache
 
 
-collections:
-  software:
-    output: true
+# collections:
+#   software:
+#     output: true
 
 # Minimal Mistakes configurations
 minimal_mistakes_skin: "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum" "sunrise"
-include: ["_pages", "software/.buildinfo","software/_sources/*","software/_static/*"]
-keep_files: ["software", "software/.buildinfo","software/_sources/*","software/_static/*"]
 
 
 
@@ -73,6 +71,22 @@ footer:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/bdjones13"
+
+#include: ["_pages", "software/**","software/\_sources/**","_software/_static/**"]
+include: 
+  - "_pages"
+  # - **/_sources
+  - "_static"
+  - "_sources"
+  # - software/**
+  # - software/\_sources/**
+  # - software/_static/**
+# keep_files: 
+#   - software
+#   - software/**
+#   - software/\_sources/**
+#   - software/_static/**
+
 
 # Exclude from processing.
 # The following items will not be processed, by default.
