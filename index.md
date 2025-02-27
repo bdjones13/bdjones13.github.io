@@ -38,6 +38,7 @@ Prior to this I earned my M.A. in Mathematics, B.S. in Computer Science, and B.S
 
 ## Contributed Talks
 <ol reversed>
+    <li> Applied Algebraic Topology Research Network Spring 2025 Tutorial-a-thon, <a href="https://youtu.be/IBS4PQ8usFY?si=X5im1nSkTEnixjJ3">YouTube tutorial</a>. "Persistent Laplacians: What they are, why you should care, and how to compute them," February 2025.</li>
     <li>SIAM Conference on Mathematics of Data Science (MDS24), Atlanta, GA. Minisymposium on <a href="https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=80632">Exploring the Intersection of Topological and Geometric Data Analysis with Biological Applications.</a> "Persistent Directed Flag Laplacian," October 2024. </li>
     <li><a href="https://www.tugraz.at/projekte/cpw/home">4th Workshop on Computational Persistence (ComPer)</a>, Graz University of Technology (by zoom). "Efficient Computation of Persistent Laplacians," September 2024.</li>
     <li><a href="https://sites.google.com/view/mbw-2024/home?authuser=0">Mathematical Biosciences Workshop</a>, Penn State University. "Persistent Directed Flag Laplacian," August 2024.</li>
