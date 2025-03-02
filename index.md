@@ -9,7 +9,7 @@ header:
 
 ![image-left](/assets/images/ProfileF23.jpeg){: width="20%" .align-right } &nbsp;&nbsp;&nbsp;&nbsp;I am a math PhD candidate at [Michigan State University](https://math.natsci.msu.edu/) working with [Guo-Wei Wei](https://users.math.msu.edu/users/weig/) to develop tools in **Topological Data Analysis** (TDA) for computational biology.
 
-Prior to this I earned my M.A. in Mathematics, B.S. in Computer Science, and B.S. in Mathematics at The University of Alabama.
+I earned my M.A. in Mathematics, B.S. in Computer Science, and B.S. in Mathematics at The University of Alabama.
 
 [ORCID:0000-0001-7810-7770](https://orcid.org/0000-0001-7810-7770)
 
@@ -17,6 +17,8 @@ Prior to this I earned my M.A. in Mathematics, B.S. in Computer Science, and B.S
 
 ## Overview
 [**Persistent Topological Laplacians** (PTLs)](https://www.youtube.com/watch?v=SIHirU11jqI) **generalize [persistent homology](https://en.wikipedia.org/wiki/Persistent_homology)**, like the one in [this paper](https://users.math.msu.edu/users/weig/paper/p290.pdf) by [Rui Wang](https://wangru25.github.io/). They also **generalize the [graph Laplacian](https://en.wikipedia.org/wiki/Laplacian_matrix)** of spectral graph theory to higher-order simplicial complexes (and other structures, such as path complexes). The eigenvalues (spectra) of a PTL reveals persistent homology and geometric qualities of the complex. Computing the PTL and its eigenvalues is hard. 
+
+As part of the Spring 2025 WinCompTop+AATRN Tutorial-a-thon, I made a <a href="https://youtu.be/IBS4PQ8usFY?si=X5im1nSkTEnixjJ3"><strong>YouTube tutorial</strong></a> that introduces Persistent Laplacians.
 
 ## I am currently interested in:
 
@@ -38,7 +40,10 @@ Prior to this I earned my M.A. in Mathematics, B.S. in Computer Science, and B.S
 
 ## Contributed Talks
 <ol reversed>
-    <li> Applied Algebraic Topology Research Network Spring 2025 Tutorial-a-thon, <a href="https://youtu.be/IBS4PQ8usFY?si=X5im1nSkTEnixjJ3">YouTube tutorial</a>. "Persistent Laplacians: What they are, why you should care, and how to compute them," February 2025.</li>
+    <li><a href="https://topologyandgeometry.iu.edu/gstgc25/index.html">Graduate Student Geometry and Topology Conference 2025</a>, Indiana University Bloomington. "Persistent and combinatorial Laplacians for topological data analysis and their introduction to knot theory," April 2025.</li>
+    <li>Women in Computational Topology (WinCompTop) + Applied Algebraic Topology Research Network (AATRN) Spring 2025 Tutorial-a-thon, <a href="https://youtu.be/IBS4PQ8usFY?si=X5im1nSkTEnixjJ3">YouTube tutorial</a>. "Persistent Laplacians: What they are, why you should care, and how to compute them," February 2025.</li>
+    <li>Joint Mathematics Meetings (JMM), Seattle, WA. AMS Special Session on Topological Data Analysis: Theory and Applications. "Efficient Computation of Persistent Laplacians," January 2025.</li>
+    <li>Joint Mathematics Meetings (JMM), Seattle, WA. MRC Climate Science at the Interface Between Topological Data Analysis and Dynamical Systems Theory. "Dynamics-Aware Filtrations," January 2025.</li>
     <li>SIAM Conference on Mathematics of Data Science (MDS24), Atlanta, GA. Minisymposium on <a href="https://meetings.siam.org/sess/dsp_programsess.cfm?SESSIONCODE=80632">Exploring the Intersection of Topological and Geometric Data Analysis with Biological Applications.</a> "Persistent Directed Flag Laplacian," October 2024. </li>
     <li><a href="https://www.tugraz.at/projekte/cpw/home">4th Workshop on Computational Persistence (ComPer)</a>, Graz University of Technology (by zoom). "Efficient Computation of Persistent Laplacians," September 2024.</li>
     <li><a href="https://sites.google.com/view/mbw-2024/home?authuser=0">Mathematical Biosciences Workshop</a>, Penn State University. "Persistent Directed Flag Laplacian," August 2024.</li>
@@ -46,6 +51,7 @@ Prior to this I earned my M.A. in Mathematics, B.S. in Computer Science, and B.S
 
 ## Seminar Talks
 <ol reversed>
+<li> MSU <a href="https://cmse.msu.edu/NewsEvents/tda_seminar/index.aspx">TDA Seminar</a>. April 2025.</li>
 <li> MSU Student Geometry and Topology Seminar. "Combinatorial and Persistent Laplacians: from Graphs to TDA," October 2024.</li>
 <li> MSU Operator Algebras Reading Seminar. "The story of how Vaughan Jones used operator algebras to spark a revolution in topology," March 2024. </li>
 <li> University of Alabama Applied Math Seminar, Tuscaloosa, AL. "Adaptive Pseudo-Time Methods for the Poisson-Boltzmann Equation with Eulerian Solvent Excluded Surface," December 2020.</li>
