@@ -3,6 +3,9 @@ permalink: /research/
 title: "Research"
 toc: true
 ---
+# Background info on Persistent Laplacians
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/IBS4PQ8usFY?si=e7Um-xqXajTEqw5N" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 # Projects
 
