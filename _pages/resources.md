@@ -32,7 +32,7 @@ toc: true
 
 * Peter Feibelman's <a href="https://www.amazon.com/gp/product/0465022227"> A PhD Is Not Enough!: A Guide to Survival in Science</a> was formative in me deciding to go to grad school. I recommend it to many people, despite the scary sounding title.
 
-* Emily Roberts's <a href="https://pfforphds.com/">Personal Finance for PhDs</a> is an amazing resource (particularly the podcast) for financial literacy specific to grad students and beyond, like paying estimated taxes on fellowships and how to prioritize spending. 
+* Emily Roberts's <a href="https://pfforphds.com/">Personal Finance for PhDs</a> is an amazing resource (particularly the podcast) for financial literacy specific to grad students and postdocs, like paying estimated taxes on fellowships and how to invest. 
 
 # MSU/Lansing/East Lansing
 ## Math
