@@ -30,7 +30,7 @@ As part of the Spring 2025 WinCompTop+AATRN Tutorial-a-thon, I made a <a href="h
 
 ## Papers and preprints
 <ol reversed>
-  <li id="transformer">Dong Chen, Gengzhuo Liu, Hongyan Du, <strong>Benjamin Jones</strong>, Junjie Wee, Rui Wang, Jiahui Chen, Jana Shen, and Guo-Wei Wei,"Drug Resistance Predictions Based on a Directed Flag Transformer," <a href="https://arxiv.org/abs/2403.02603">arXiv:2403.02603 [q-bio.QM]</a>, 2024. Submitted.</li>
+  <li id="transformer">Dong Chen, Gengzhuo Liu, Hongyan Du, <strong>Benjamin Jones</strong>, Junjie Wee, Rui Wang, Jiahui Chen, Jana Shen, and Guo-Wei Wei,"Drug Resistance Predictions Based on a Directed Flag Transformer," accepted to <em>Advanced Science</em>, 2025. (<a href="https://arxiv.org/abs/2403.02603">arXiv</a>)</li>
   <li id="khovanov"><strong>Benjamin Jones</strong> and Guo-Wei Wei, "Khovanov Laplacian and Khovanov Dirac for Knots and Links," <em>J. Phys. Complex.</em> 6(2), 025014, 2025. (<a href="https://arxiv.org/abs/2411.18841">arxiv</a>) (<a href="https://doi.org/10.1088/2632-072X/adde9f">doi</a>)</li>
   <li id="pdfl-ml">Mushal Zia, <strong>Benjamin Jones</strong>, Hongsong Feng, Guo-Wei Wei, "Persistent Directed Flag Laplacian (PDFL)-Based Machine Learning for Protein-Ligand Binding Affinity Prediction," <em>Journal of Chemical Theory and Computation</em> 21(8), 4276-4285, 2025. (<a href="https://arxiv.org/abs/2411.02596">arxiv</a>) (<a href="https://doi.org/10.1021/acs.jctc.5c00074">doi</a>) </li>
   <li id="pdfl"><strong>Benjamin Jones</strong> and Guo-Wei Wei, "Persistent Directed Flag Laplacian," <em>Foundations of Data Science,</em> 7(3), 737-758, 2025. (<a href="https://arxiv.org/abs/2312.02099">arxiv</a>) (<a href="https://doi.org/10.3934/fods.2024048">doi</a>)</li>
