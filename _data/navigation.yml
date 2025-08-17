@@ -5,5 +5,5 @@ main:
     url: /research/
   - title: "Resources"
     url: /resources/
-  # - title: "Software"
-  #   url: /software/
+  - title: "Software"
+    url: /software/

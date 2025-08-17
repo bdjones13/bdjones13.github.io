@@ -4,10 +4,10 @@ title: "Software"
 toc: false
 ---
 
-## Persistent Laplacians Library (C++ and Python bindings)
-
-* [Documentation](PersistentLaplacians/index.html)
-* [Github (still private)](https://github.com/bdjones13/PersistentLaplacians/)
+## PETLS: <u>Pe</u>rsistent <u>T</u>opological <u>L</u>aplacian <u>S</u>oftware 
+Quickly compute persistent Laplacians with Python or C++
+* [Documentation](PETLS/index.html)
+* [Github](https://github.com/bdjones13/PETLS/)
 
 ## Khovanov Laplacian and Khovanov Dirac
 
