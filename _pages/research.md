@@ -9,11 +9,11 @@ toc: true
 
 # Projects
 
-## Persistent Laplacian Library
+## Persistent Topological Laplacian Software (PETLS)
 
 I am working on a C++ library (with Python bindings) to efficiently compute many persistent Laplacian variations, unifying some disparate projects from multiple research groups in an efficient and user-friendly tool. 
 
-With preliminary testing, an experiment with the PDFL (below) that took 1.5 hours on 1 core of MSU's High Performance Computing Cluster (HPCC) now takes about 12 seconds on 1 core of my laptop.
+Between theoretical and practical advancements, this software offers speedups by order(s) of magnitude over existing implementation, in addition to being flexible and easy to use. Check out the source code on [Github](https://github.com/bdjones13/PETLS/), the paper on [Arxiv](https://arxiv.org/abs/2508.11560), and the [API Documentation](https://www.benjones-math.com/software/PETLS/), or just play around with ```pip install petls```
 
 ## A Persistent Topological Laplacian for Directed Flag Complexes
 

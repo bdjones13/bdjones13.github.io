@@ -20,17 +20,20 @@ I earned my M.A. in Mathematics, B.S. in Computer Science, and B.S. in Mathemati
 
 As part of the Spring 2025 WinCompTop+AATRN Tutorial-a-thon, I made a <a href="https://youtu.be/IBS4PQ8usFY?si=X5im1nSkTEnixjJ3"><strong>YouTube tutorial</strong></a> that introduces Persistent Laplacians.
 
+I wrote a fast python library to compute PTLs, called the <u>**PE**</u>rsistent <u>**T**</u>opological <u>**L**</u>aplacian <u>**S**</u>oftware (<u>**PETLS**</u>). Links to source code on [Github](https://github.com/bdjones13/PETLS/), the paper on [Arxiv](https://arxiv.org/abs/2508.11560), and the [API Documentation](https://www.benjones-math.com/software/PETLS/). You can install from PyPI via ```pip install petls```.
+
 ## I am currently interested in:
 
 1. The behavior of persistent (and non-Persistent) topological Laplacians defined **in different contexts**, such as directed flag (clique) complexes<sup><a href="#pdfl">3</a></sup>, the chain complex arrising from Khovanov homology<sup><a href="#khovanov">5</a></sup>, and with cellular sheaves.
-2. Ways to **efficiently compute** the persistent Laplacian and its eigenvalues. Persistent Laplacian computations are much slower in practice than persistent homology. I am working on a Python and C++ library for fast and user-friendly computations.
+2. Ways to **efficiently compute** the persistent Laplacian and its eigenvalues. Persistent Laplacian computations are much slower in practice than persistent homology, but there are practical and theoretical ways to mitigate this<sup><a href="#petls">7</a></sup>. 
 3. Applying persistent Laplacians to problems in **molecular biology**, by way of **machine learning** methods<sup><a href="#pdfl-ml">4</a>, <a href="#transformer">6</a></sup>.
 4. Applying persistent homology of **asymmetric/directed networks** (directed flag/clique complexes and Dowker complexes) to study dynamical systems arrising from **climate science**.
 
 
 ## Papers and preprints
 <ol reversed>
-  <li id="transformer">Dong Chen, Gengzhuo Liu, Hongyan Du, <strong>Benjamin Jones</strong>, Junjie Wee, Rui Wang, Jiahui Chen, Jana Shen, and Guo-Wei Wei,"Drug Resistance Predictions Based on a Directed Flag Transformer,"  <em>Advanced Science</em> e02756, 2025. (<a href="https://arxiv.org/abs/2403.02603">arXiv</a>) (<a href="https://doi.org/10.1002/advs.202502756">doi</a>)</li>
+  <li id="petls"><strong>Benjamin Jones</strong> and Guo-Wei Wei, "PETLS: PErsistent Topological Laplacian Software," 2025. (<a href="https://arxiv.org/abs/2508.11560">arXiv</a>)
+  <li id="transformer">Dong Chen, Gengzhuo Liu, Hongyan Du, <strong>Benjamin Jones</strong>, Junjie Wee, Rui Wang, Jiahui Chen, Jana Shen, and Guo-Wei Wei, "Drug Resistance Predictions Based on a Directed Flag Transformer,"  <em>Advanced Science</em> e02756, 2025. (<a href="https://arxiv.org/abs/2403.02603">arXiv</a>) (<a href="https://doi.org/10.1002/advs.202502756">doi</a>)</li>
   <li id="khovanov"><strong>Benjamin Jones</strong> and Guo-Wei Wei, "Khovanov Laplacian and Khovanov Dirac for Knots and Links," <em>J. Phys. Complex.</em> 6(2), 025014, 2025. (<a href="https://arxiv.org/abs/2411.18841">arxiv</a>) (<a href="https://doi.org/10.1088/2632-072X/adde9f">doi</a>)</li>
   <li id="pdfl-ml">Mushal Zia, <strong>Benjamin Jones</strong>, Hongsong Feng, Guo-Wei Wei, "Persistent Directed Flag Laplacian (PDFL)-Based Machine Learning for Protein-Ligand Binding Affinity Prediction," <em>Journal of Chemical Theory and Computation</em> 21(8), 4276-4285, 2025. (<a href="https://arxiv.org/abs/2411.02596">arxiv</a>) (<a href="https://doi.org/10.1021/acs.jctc.5c00074">doi</a>) </li>
   <li id="pdfl"><strong>Benjamin Jones</strong> and Guo-Wei Wei, "Persistent Directed Flag Laplacian," <em>Foundations of Data Science,</em> 7(3), 737-758, 2025. (<a href="https://arxiv.org/abs/2312.02099">arxiv</a>) (<a href="https://doi.org/10.3934/fods.2024048">doi</a>)</li>
