@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>petls.sheaf_simplex_tree &#8212; petls 1.0.0 documentation</title>
+    <title>petls.Rips.set_boundaries_filtrations &#8212; petls 1.0.0 documentation</title>
   
   
   
@@ -46,11 +46,11 @@
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../../_static/copybutton.js?v=f281be69"></script>
     <script src="../../_static/design-tabs.js?v=f930bc37"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'python/generated/petls.sheaf_simplex_tree';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'python/generated/petls.Rips.set_boundaries_filtrations';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="petls.sheaf_simplex_tree.coface_index" href="petls.sheaf_simplex_tree.coface_index.html" />
-    <link rel="prev" title="sheaf_simplex_tree" href="../sheaf_simplex_tree.html" />
+    <link rel="next" title="petls.Rips.spectra" href="petls.Rips.spectra.html" />
+    <link rel="prev" title="petls.Rips" href="petls.Rips.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -276,13 +276,13 @@
 <li class="toctree-l2"><a class="reference internal" href="petls.Complex.spectra.html">petls.Complex.spectra</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Rips.html">Rips</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2 has-children"><a class="reference internal" href="petls.Rips.html">petls.Rips</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l3"><a class="reference internal" href="petls.Rips.set_boundaries_filtrations.html">petls.Rips.set_boundaries_filtrations</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../Rips.html">Rips</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="petls.Rips.html">petls.Rips</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">petls.Rips.set_boundaries_filtrations</a></li>
 <li class="toctree-l3"><a class="reference internal" href="petls.Rips.spectra.html">petls.Rips.spectra</a></li>
 </ul>
 </details></li>
-<li class="toctree-l2"><a class="reference internal" href="petls.Rips.set_boundaries_filtrations.html">petls.Rips.set_boundaries_filtrations</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">petls.Rips.set_boundaries_filtrations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="petls.Rips.spectra.html">petls.Rips.spectra</a></li>
 </ul>
 </details></li>
@@ -300,8 +300,8 @@
 <li class="toctree-l2"><a class="reference internal" href="petls.PersistentSheafLaplacian.spectra.html">petls.PersistentSheafLaplacian.spectra</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="../sheaf_simplex_tree.html">sheaf_simplex_tree</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">petls.sheaf_simplex_tree</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../sheaf_simplex_tree.html">sheaf_simplex_tree</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="petls.sheaf_simplex_tree.html">petls.sheaf_simplex_tree</a></li>
 <li class="toctree-l2"><a class="reference internal" href="petls.sheaf_simplex_tree.coface_index.html">petls.sheaf_simplex_tree.coface_index</a></li>
 <li class="toctree-l2"><a class="reference internal" href="petls.sheaf_simplex_tree.apply_restriction_function.html">petls.sheaf_simplex_tree.apply_restriction_function</a></li>
 </ul>
@@ -350,9 +350,12 @@
     <li class="breadcrumb-item"><a href="../index.html" class="nav-link">Python Documentation</a></li>
     
     
-    <li class="breadcrumb-item"><a href="../sheaf_simplex_tree.html" class="nav-link">sheaf_simplex_tree</a></li>
+    <li class="breadcrumb-item"><a href="../Rips.html" class="nav-link">Rips</a></li>
     
-    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">petls.sheaf_simplex_tree</span></li>
+    
+    <li class="breadcrumb-item"><a href="petls.Rips.html" class="nav-link">petls.Rips</a></li>
+    
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">petls.Rips.set_boundaries_filtrations</span></li>
   </ul>
 </nav>
 </div>
@@ -369,60 +372,37 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="petls-sheaf-simplex-tree">
-<h1>petls.sheaf_simplex_tree<a class="headerlink" href="#petls-sheaf-simplex-tree" title="Link to this heading">#</a></h1>
-<dl class="py class">
-<dt class="sig sig-object py" id="petls.sheaf_simplex_tree">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">petls.</span></span><span class="sig-name descname"><span class="pre">sheaf_simplex_tree</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">_st</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">gudhi.simplex_tree</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_extra_data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_restriction</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#petls.sheaf_simplex_tree" title="petls.sheaf_simplex_tree"><span class="pre">sheaf_simplex_tree</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/petls.html#sheaf_simplex_tree"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#petls.sheaf_simplex_tree" title="Link to this definition">#</a></dt>
-<dd><p>Wrap a Gudhi simplex tree with possibly added data and a given restriction function.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Attributes<span class="colon">:</span></dt>
-<dd class="field-odd"><dl class="simple">
-<dt><strong>st</strong><span class="classifier">gudhi.simplex_tree</span></dt><dd><p>Underlying simplex tree</p>
-</dd>
-<dt><strong>extra_data</strong><span class="classifier">dict</span></dt><dd><p>Keys are simplices (list of int) converted to tuples, e.g. tuple([0,1,2]). Values can be anything.</p>
-</dd>
-<dt><strong>restriction</strong><span class="classifier">Callable[[list[int], list[int], ‘sheaf_simplex_tree’], float]</span></dt><dd><p>Restriction function from a simplex to a coface, which may need knowledge from the whole sheaf_simplex_tree. e.g. my_restriction(simplex, coface, sst)</p>
-</dd>
-<dt><strong>complex_dim</strong><span class="classifier">int</span></dt><dd><p>Dimension of the complex, same as dimension of the simplex tree</p>
-</dd>
-</dl>
-</dd>
-</dl>
-<p class="rubric">Methods</p>
-<div class="pst-scrollable-table-container"><table class="table">
-<tbody>
-<tr class="row-odd"><td><p><strong>coface_index(simplex, coface):</strong></p></td>
-<td><p>Get the index of the missing vertex, e.g. coface_index([0,1,3],[0,1,2,3]) = 2.</p></td>
-</tr>
-<tr class="row-even"><td><p><strong>apply_restriction_function():</strong></p></td>
-<td><p>Get coboundaries and filtrations</p></td>
-</tr>
-</tbody>
-</table>
-</div>
+  <section id="petls-rips-set-boundaries-filtrations">
+<h1>petls.Rips.set_boundaries_filtrations<a class="headerlink" href="#petls-rips-set-boundaries-filtrations" title="Link to this heading">#</a></h1>
 <dl class="py method">
-<dt class="sig sig-object py" id="petls.sheaf_simplex_tree.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">_st</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">gudhi.simplex_tree</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_extra_data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_restriction</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#petls.sheaf_simplex_tree" title="petls.sheaf_simplex_tree"><span class="pre">sheaf_simplex_tree</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/petls.html#sheaf_simplex_tree.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#petls.sheaf_simplex_tree.__init__" title="Link to this definition">#</a></dt>
-<dd></dd></dl>
-
-<p class="rubric">Methods</p>
-<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
-<tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#petls.sheaf_simplex_tree.__init__" title="petls.sheaf_simplex_tree.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(_st, _extra_data, _restriction)</p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="petls.sheaf_simplex_tree.apply_restriction_function.html#petls.sheaf_simplex_tree.apply_restriction_function" title="petls.sheaf_simplex_tree.apply_restriction_function"><code class="xref py py-obj docutils literal notranslate"><span class="pre">apply_restriction_function</span></code></a>()</p></td>
-<td><p>Get coboundaries and filtrations</p></td>
-</tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="petls.sheaf_simplex_tree.coface_index.html#petls.sheaf_simplex_tree.coface_index" title="petls.sheaf_simplex_tree.coface_index"><code class="xref py py-obj docutils literal notranslate"><span class="pre">coface_index</span></code></a>(simplex, coface)</p></td>
-<td><p>Get the index of the missing vertex, e.g. coface_index([0,1,3],[0,1,2,3]) = 2.</p></td>
-</tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">reindex_coboundaries</span></code>(coboundaries_triples)</p></td>
-<td><p></p></td>
-</tr>
-</tbody>
-</table>
+<dt class="sig sig-object py" id="petls.Rips.set_boundaries_filtrations">
+<span class="sig-prename descclassname"><span class="pre">Rips.</span></span><span class="sig-name descname"><span class="pre">set_boundaries_filtrations</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">boundaries</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filtrations</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#petls.Rips.set_boundaries_filtrations" title="Link to this definition">#</a></dt>
+<dd><p>If the boundaries and filtrations were not set in the constructor, set them here.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>boundaries</strong><span class="classifier">List[np.array]</span></dt><dd><p>List of boundary matrices</p>
+</dd>
+<dt><strong>filtrations</strong><span class="classifier">List[List[float]]</span></dt><dd><p>For each dimension in the complex, a list of simplex filtration values</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt>None</dt><dd></dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Examples</p>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">d1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span>
+<span class="go">        [1,-1,0],</span>
+<span class="go">        [0,1,1]])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">d2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">],[</span><span class="mi">1</span><span class="p">],[</span><span class="o">-</span><span class="mi">1</span><span class="p">]])</span> 
+<span class="gp">&gt;&gt;&gt; </span><span class="n">boundaries</span> <span class="o">=</span> <span class="p">[</span><span class="n">d1</span><span class="p">,</span><span class="n">d2</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">filtrations</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">],[</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">],[</span><span class="mi">5</span><span class="p">]]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pl</span> <span class="o">=</span> <span class="n">petls</span><span class="o">.</span><span class="n">Complex</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pl</span><span class="o">.</span><span class="n">set_boundaries_filtrations</span><span class="p">(</span><span class="n">boundaries</span><span class="p">,</span> <span class="n">filtrations</span><span class="p">)</span>
+</pre></div>
 </div>
 </dd></dl>
 
@@ -439,20 +419,20 @@
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../sheaf_simplex_tree.html"
+       href="petls.Rips.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">sheaf_simplex_tree</p>
+        <p class="prev-next-title">petls.Rips</p>
       </div>
     </a>
     <a class="right-next"
-       href="petls.sheaf_simplex_tree.coface_index.html"
+       href="petls.Rips.spectra.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">petls.sheaf_simplex_tree.coface_index</p>
+        <p class="prev-next-title">petls.Rips.spectra</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -475,10 +455,7 @@
   </div>
   <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#petls.sheaf_simplex_tree"><code class="docutils literal notranslate"><span class="pre">sheaf_simplex_tree</span></code></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#petls.sheaf_simplex_tree.__init__"><code class="docutils literal notranslate"><span class="pre">sheaf_simplex_tree.__init__()</span></code></a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#petls.Rips.set_boundaries_filtrations"><code class="docutils literal notranslate"><span class="pre">Rips.set_boundaries_filtrations()</span></code></a></li>
 </ul>
   </nav></div>
 
@@ -486,7 +463,7 @@
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
-      <li><a href="../../_sources/python/generated/petls.sheaf_simplex_tree.rst.txt"
+      <li><a href="../../_sources/python/generated/petls.Rips.set_boundaries_filtrations.rst.txt"
             rel="nofollow">Show Source</a></li>
     </ul>
    </div></div>

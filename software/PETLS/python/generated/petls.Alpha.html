@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>petls.sheaf_simplex_tree &#8212; petls 1.0.0 documentation</title>
+    <title>petls.Alpha &#8212; petls 1.0.0 documentation</title>
   
   
   
@@ -46,11 +46,11 @@
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../../_static/copybutton.js?v=f281be69"></script>
     <script src="../../_static/design-tabs.js?v=f930bc37"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'python/generated/petls.sheaf_simplex_tree';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'python/generated/petls.Alpha';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="petls.sheaf_simplex_tree.coface_index" href="petls.sheaf_simplex_tree.coface_index.html" />
-    <link rel="prev" title="sheaf_simplex_tree" href="../sheaf_simplex_tree.html" />
+    <link rel="next" title="dFlag" href="../dFlag.html" />
+    <link rel="prev" title="Alpha" href="../Alpha.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="" />
@@ -286,8 +286,8 @@
 <li class="toctree-l2"><a class="reference internal" href="petls.Rips.spectra.html">petls.Rips.spectra</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../Alpha.html">Alpha</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="petls.Alpha.html">petls.Alpha</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../Alpha.html">Alpha</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">petls.Alpha</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../dFlag.html">dFlag</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -300,8 +300,8 @@
 <li class="toctree-l2"><a class="reference internal" href="petls.PersistentSheafLaplacian.spectra.html">petls.PersistentSheafLaplacian.spectra</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="../sheaf_simplex_tree.html">sheaf_simplex_tree</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">petls.sheaf_simplex_tree</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../sheaf_simplex_tree.html">sheaf_simplex_tree</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="petls.sheaf_simplex_tree.html">petls.sheaf_simplex_tree</a></li>
 <li class="toctree-l2"><a class="reference internal" href="petls.sheaf_simplex_tree.coface_index.html">petls.sheaf_simplex_tree.coface_index</a></li>
 <li class="toctree-l2"><a class="reference internal" href="petls.sheaf_simplex_tree.apply_restriction_function.html">petls.sheaf_simplex_tree.apply_restriction_function</a></li>
 </ul>
@@ -350,9 +350,9 @@
     <li class="breadcrumb-item"><a href="../index.html" class="nav-link">Python Documentation</a></li>
     
     
-    <li class="breadcrumb-item"><a href="../sheaf_simplex_tree.html" class="nav-link">sheaf_simplex_tree</a></li>
+    <li class="breadcrumb-item"><a href="../Alpha.html" class="nav-link">Alpha</a></li>
     
-    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">petls.sheaf_simplex_tree</span></li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">petls.Alpha</span></li>
   </ul>
 </nav>
 </div>
@@ -369,56 +369,158 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="petls-sheaf-simplex-tree">
-<h1>petls.sheaf_simplex_tree<a class="headerlink" href="#petls-sheaf-simplex-tree" title="Link to this heading">#</a></h1>
+  <section id="petls-alpha">
+<h1>petls.Alpha<a class="headerlink" href="#petls-alpha" title="Link to this heading">#</a></h1>
 <dl class="py class">
-<dt class="sig sig-object py" id="petls.sheaf_simplex_tree">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">petls.</span></span><span class="sig-name descname"><span class="pre">sheaf_simplex_tree</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">_st</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">gudhi.simplex_tree</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_extra_data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_restriction</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#petls.sheaf_simplex_tree" title="petls.sheaf_simplex_tree"><span class="pre">sheaf_simplex_tree</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/petls.html#sheaf_simplex_tree"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#petls.sheaf_simplex_tree" title="Link to this definition">#</a></dt>
-<dd><p>Wrap a Gudhi simplex tree with possibly added data and a given restriction function.</p>
+<dt class="sig sig-object py" id="petls.Alpha">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">petls.</span></span><span class="sig-name descname"><span class="pre">Alpha</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">points</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_dim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/petls.html#Alpha"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#petls.Alpha" title="Link to this definition">#</a></dt>
+<dd><p>Alpha complex from a point cloud, using Gudhi’s AlphaComplex.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Attributes<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
-<dt><strong>st</strong><span class="classifier">gudhi.simplex_tree</span></dt><dd><p>Underlying simplex tree</p>
-</dd>
-<dt><strong>extra_data</strong><span class="classifier">dict</span></dt><dd><p>Keys are simplices (list of int) converted to tuples, e.g. tuple([0,1,2]). Values can be anything.</p>
-</dd>
-<dt><strong>restriction</strong><span class="classifier">Callable[[list[int], list[int], ‘sheaf_simplex_tree’], float]</span></dt><dd><p>Restriction function from a simplex to a coface, which may need knowledge from the whole sheaf_simplex_tree. e.g. my_restriction(simplex, coface, sst)</p>
-</dd>
-<dt><strong>complex_dim</strong><span class="classifier">int</span></dt><dd><p>Dimension of the complex, same as dimension of the simplex tree</p>
-</dd>
+<dt><strong>flipped</strong></dt><dd></dd>
+<dt><strong>verbose</strong></dt><dd></dd>
 </dl>
 </dd>
 </dl>
 <p class="rubric">Methods</p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">eigenpairs</span></code>([dim, a, b, request_list, allpairs])</p></td>
+<td><p>Compute the eigenvalues and eigenvectors of L_{dim}^{a,b} or for every tuple (dim, a, b) in request_list.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_boundaries_filtrations</span></code>(boundaries, ...)</p></td>
+<td><p>If the boundaries and filtrations were not set in the constructor, set them here.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">spectra</span></code>([dim, a, b, request_list, allpairs])</p></td>
+<td><p>Compute the eigenvalues of L_{dim}^{a,b} or for every tuple (dim, a, b) in request_list.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 <div class="pst-scrollable-table-container"><table class="table">
 <tbody>
-<tr class="row-odd"><td><p><strong>coface_index(simplex, coface):</strong></p></td>
-<td><p>Get the index of the missing vertex, e.g. coface_index([0,1,3],[0,1,2,3]) = 2.</p></td>
+<tr class="row-odd"><td><p><strong>eigenvalues_summarize</strong></p></td>
+<td></td>
 </tr>
-<tr class="row-even"><td><p><strong>apply_restriction_function():</strong></p></td>
-<td><p>Get coboundaries and filtrations</p></td>
+<tr class="row-even"><td><p><strong>filtration_list_to_spectra_request</strong></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><strong>get_L</strong></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><strong>get_all_filtrations</strong></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><strong>get_down</strong></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><strong>get_up</strong></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><strong>nonzero_spectra</strong></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><strong>print_boundaries</strong></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><strong>set_eigs_Algorithm</strong></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><strong>set_up_Algorithm</strong></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><strong>store_L</strong></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><strong>store_spectra</strong></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p><strong>store_spectra_summary</strong></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p><strong>time_to_csv</strong></p></td>
+<td></td>
 </tr>
 </tbody>
 </table>
 </div>
 <dl class="py method">
-<dt class="sig sig-object py" id="petls.sheaf_simplex_tree.__init__">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">_st</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">gudhi.simplex_tree</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_extra_data</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_restriction</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">[</span></span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="#petls.sheaf_simplex_tree" title="petls.sheaf_simplex_tree"><span class="pre">sheaf_simplex_tree</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/petls.html#sheaf_simplex_tree.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#petls.sheaf_simplex_tree.__init__" title="Link to this definition">#</a></dt>
-<dd></dd></dl>
+<dt class="sig sig-object py" id="petls.Alpha.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">filename</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">points</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">max_dim</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">3</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/petls.html#Alpha.__init__"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#petls.Alpha.__init__" title="Link to this definition">#</a></dt>
+<dd><p>Constructor for the Complex class.</p>
+</dd></dl>
 
 <p class="rubric">Methods</p>
 <div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#petls.sheaf_simplex_tree.__init__" title="petls.sheaf_simplex_tree.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(_st, _extra_data, _restriction)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#petls.Alpha.__init__" title="petls.Alpha.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>([filename, points, max_dim])</p></td>
+<td><p>Constructor for the Complex class.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">eigenpairs</span></code>([dim, a, b, request_list, allpairs])</p></td>
+<td><p>Compute the eigenvalues and eigenvectors of L_{dim}^{a,b} or for every tuple (dim, a, b) in request_list.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">eigenvalues_summarize</span></code>(eigenvalues)</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="petls.sheaf_simplex_tree.apply_restriction_function.html#petls.sheaf_simplex_tree.apply_restriction_function" title="petls.sheaf_simplex_tree.apply_restriction_function"><code class="xref py py-obj docutils literal notranslate"><span class="pre">apply_restriction_function</span></code></a>()</p></td>
-<td><p>Get coboundaries and filtrations</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">filtration_list_to_spectra_request</span></code>(...[, ...])</p></td>
+<td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="petls.sheaf_simplex_tree.coface_index.html#petls.sheaf_simplex_tree.coface_index" title="petls.sheaf_simplex_tree.coface_index"><code class="xref py py-obj docutils literal notranslate"><span class="pre">coface_index</span></code></a>(simplex, coface)</p></td>
-<td><p>Get the index of the missing vertex, e.g. coface_index([0,1,3],[0,1,2,3]) = 2.</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_L</span></code>(dim, a, b)</p></td>
+<td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">reindex_coboundaries</span></code>(coboundaries_triples)</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_all_filtrations</span></code>()</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_down</span></code>(dim, a)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_up</span></code>(dim, a, b)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">nonzero_spectra</span></code>(dim, a, b[, PH_basis, ...])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">print_boundaries</span></code>()</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_boundaries_filtrations</span></code>(boundaries, ...)</p></td>
+<td><p>If the boundaries and filtrations were not set in the constructor, set them here.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_eigs_Algorithm</span></code>(eigs_Algorithm[, ...])</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_up_Algorithm</span></code>(up_Algorithm)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">spectra</span></code>([dim, a, b, request_list, allpairs])</p></td>
+<td><p>Compute the eigenvalues of L_{dim}^{a,b} or for every tuple (dim, a, b) in request_list.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">store_L</span></code>(dim, a, b, prefix)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">store_spectra</span></code>(spectra_list, file_prefix)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">store_spectra_summary</span></code>(spectra_list, file_prefix)</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">time_to_csv</span></code>(filename)</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p class="rubric">Attributes</p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">cpp_algorithms_list</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">flipped</span></code></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">verbose</span></code></p></td>
 <td><p></p></td>
 </tr>
 </tbody>
@@ -439,20 +541,20 @@
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../sheaf_simplex_tree.html"
+       href="../Alpha.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">sheaf_simplex_tree</p>
+        <p class="prev-next-title">Alpha</p>
       </div>
     </a>
     <a class="right-next"
-       href="petls.sheaf_simplex_tree.coface_index.html"
+       href="../dFlag.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">petls.sheaf_simplex_tree.coface_index</p>
+        <p class="prev-next-title">dFlag</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -475,8 +577,8 @@
   </div>
   <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#petls.sheaf_simplex_tree"><code class="docutils literal notranslate"><span class="pre">sheaf_simplex_tree</span></code></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#petls.sheaf_simplex_tree.__init__"><code class="docutils literal notranslate"><span class="pre">sheaf_simplex_tree.__init__()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#petls.Alpha"><code class="docutils literal notranslate"><span class="pre">Alpha</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#petls.Alpha.__init__"><code class="docutils literal notranslate"><span class="pre">Alpha.__init__()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -486,7 +588,7 @@
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
-      <li><a href="../../_sources/python/generated/petls.sheaf_simplex_tree.rst.txt"
+      <li><a href="../../_sources/python/generated/petls.Alpha.rst.txt"
             rel="nofollow">Show Source</a></li>
     </ul>
    </div></div>

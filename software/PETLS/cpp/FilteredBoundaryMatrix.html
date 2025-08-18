@@ -336,10 +336,97 @@
 <h1>FilteredBoundaryMatrix<a class="headerlink" href="#filteredboundarymatrix" title="Link to this heading">#</a></h1>
 <section id="id1">
 <h2>FilteredBoundaryMatrix<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>doxygenclass: Cannot find class “petls::FilteredBoundaryMatrix” in doxygen xml output for project “petls” from directory: /home/jones657/petls/docs/xml/</p>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4I0EN5petls22FilteredBoundaryMatrixE">
+<span id="_CPPv3I0EN5petls22FilteredBoundaryMatrixE"></span><span id="_CPPv2I0EN5petls22FilteredBoundaryMatrixE"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FBMcoeff</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="classpetls_1_1FilteredBoundaryMatrix"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FilteredBoundaryMatrix</span></span></span><a class="headerlink" href="#_CPPv4I0EN5petls22FilteredBoundaryMatrixE" title="Link to this definition">#</a><br /></dt>
+<dd><p>Class for storing, manipulating, and retrieving the boundary matrix at different filtration levels </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5petls22FilteredBoundaryMatrix22FilteredBoundaryMatrixEN5Eigen12SparseMatrixI8FBMcoeffN5Eigen8ColMajorEEENSt6vectorI15filtration_typeEENSt6vectorI15filtration_typeEE">
+<span id="_CPPv3N5petls22FilteredBoundaryMatrix22FilteredBoundaryMatrixEN5Eigen12SparseMatrixI8FBMcoeffN5Eigen8ColMajorEEENSt6vectorI15filtration_typeEENSt6vectorI15filtration_typeEE"></span><span id="_CPPv2N5petls22FilteredBoundaryMatrix22FilteredBoundaryMatrixEN5Eigen12SparseMatrixI8FBMcoeffN5Eigen8ColMajorEEENSt6vectorI15filtration_typeEENSt6vectorI15filtration_typeEE"></span><span id="petls::FilteredBoundaryMatrix::FilteredBoundaryMatrix__Eigen::SparseMatrix:FBMcoeff.Eigen::ColMajor:.std::vector:filtration_type:.std::vector:filtration_type:"></span><span class="target" id="classpetls_1_1FilteredBoundaryMatrix_1a24c183bc301a0aa9028d2fb6e7f48a80"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">FilteredBoundaryMatrix</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">Eigen</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">SparseMatrix</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0EN5petls22FilteredBoundaryMatrixE" title="petls::FilteredBoundaryMatrix::FBMcoeff"><span class="n"><span class="pre">FBMcoeff</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">Eigen</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">ColMajor</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">_matrix</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">filtration_type</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">_domain_filtrations</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">filtration_type</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">_range_filtrations</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5petls22FilteredBoundaryMatrix22FilteredBoundaryMatrixEN5Eigen12SparseMatrixI8FBMcoeffN5Eigen8ColMajorEEENSt6vectorI15filtration_typeEENSt6vectorI15filtration_typeEE" title="Link to this definition">#</a><br /></dt>
+<dd><p>Constructor. Note: dimensions of filtrations and matrix must match. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>_matrix</strong> – boundary matrix d_n </p></li>
+<li><p><strong>_domain_filtrations</strong> – filtrations of n-simplices </p></li>
+<li><p><strong>_range_filtrations</strong> – filtrations of (n-1)-simplices </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5petls22FilteredBoundaryMatrix22get_domain_filtrationsEv">
+<span id="_CPPv3N5petls22FilteredBoundaryMatrix22get_domain_filtrationsEv"></span><span id="_CPPv2N5petls22FilteredBoundaryMatrix22get_domain_filtrationsEv"></span><span id="petls::FilteredBoundaryMatrix::get_domain_filtrations"></span><span class="target" id="classpetls_1_1FilteredBoundaryMatrix_1ab7c06b568de5786b5e9ae21677f05c02"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">filtration_type</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_domain_filtrations</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5petls22FilteredBoundaryMatrix22get_domain_filtrationsEv" title="Link to this definition">#</a><br /></dt>
+<dd><p>Get the filtration values of n-simplices </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5petls22FilteredBoundaryMatrix21get_range_filtrationsEv">
+<span id="_CPPv3N5petls22FilteredBoundaryMatrix21get_range_filtrationsEv"></span><span id="_CPPv2N5petls22FilteredBoundaryMatrix21get_range_filtrationsEv"></span><span id="petls::FilteredBoundaryMatrix::get_range_filtrations"></span><span class="target" id="classpetls_1_1FilteredBoundaryMatrix_1a8803d08dfff84de36546098fe4bbf5c1"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">filtration_type</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_range_filtrations</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5petls22FilteredBoundaryMatrix21get_range_filtrationsEv" title="Link to this definition">#</a><br /></dt>
+<dd><p>Get the filtration values of (n-1)-simplices </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5petls22FilteredBoundaryMatrix9transposeEv">
+<span id="_CPPv3N5petls22FilteredBoundaryMatrix9transposeEv"></span><span id="_CPPv2N5petls22FilteredBoundaryMatrix9transposeEv"></span><span id="petls::FilteredBoundaryMatrix::transpose"></span><span class="target" id="classpetls_1_1FilteredBoundaryMatrix_1ae9b9e697d6913b173473fd17195bf691"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN5petls22FilteredBoundaryMatrixE" title="petls::FilteredBoundaryMatrix"><span class="n"><span class="pre">FilteredBoundaryMatrix</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">transpose</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5petls22FilteredBoundaryMatrix9transposeEv" title="Link to this definition">#</a><br /></dt>
+<dd><p>Get the transpose of the boundary matrix, which swaps the domain and range filtrations </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5petls22FilteredBoundaryMatrix19index_of_filtrationEb15filtration_type">
+<span id="_CPPv3N5petls22FilteredBoundaryMatrix19index_of_filtrationEb15filtration_type"></span><span id="_CPPv2N5petls22FilteredBoundaryMatrix19index_of_filtrationEb15filtration_type"></span><span id="petls::FilteredBoundaryMatrix::index_of_filtration__b.filtration_type"></span><span class="target" id="classpetls_1_1FilteredBoundaryMatrix_1ae85cbb960d7ca3c5601a5661d0a23c82"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">index_of_filtration</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">use_domain_filtrations</span></span>, <span class="n"><span class="pre">filtration_type</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">a</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5petls22FilteredBoundaryMatrix19index_of_filtrationEb15filtration_type" title="Link to this definition">#</a><br /></dt>
+<dd><p>Get the largest index where the corresponding filtration value is not more than a. If there are multiple simplices with the same filtration highest value, it will return the largest index. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>use_domain_filtrations</strong> – if true, iterate over the domain filtrations (n-simplices), if false over the range filtrations (n-1)-simplices </p></li>
+<li><p><strong>a</strong> – filtration value </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The largest index where the corresponding filtration value is not more than a. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5petls22FilteredBoundaryMatrix23submatrix_at_filtrationE15filtration_typeRN5Eigen12SparseMatrixI8FBMcoeffN5Eigen8ColMajorEEE">
+<span id="_CPPv3N5petls22FilteredBoundaryMatrix23submatrix_at_filtrationE15filtration_typeRN5Eigen12SparseMatrixI8FBMcoeffN5Eigen8ColMajorEEE"></span><span id="_CPPv2N5petls22FilteredBoundaryMatrix23submatrix_at_filtrationE15filtration_typeRN5Eigen12SparseMatrixI8FBMcoeffN5Eigen8ColMajorEEE"></span><span id="petls::FilteredBoundaryMatrix::submatrix_at_filtration__filtration_type.Eigen::SparseMatrix:FBMcoeff.Eigen::ColMajor:R"></span><span class="target" id="classpetls_1_1FilteredBoundaryMatrix_1a281c680fa29c17c348e89bbe3daa58c3"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">submatrix_at_filtration</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">filtration_type</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">a</span></span>, <span class="n"><span class="pre">Eigen</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">SparseMatrix</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0EN5petls22FilteredBoundaryMatrixE" title="petls::FilteredBoundaryMatrix::FBMcoeff"><span class="n"><span class="pre">FBMcoeff</span></span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">Eigen</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">ColMajor</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">M</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5petls22FilteredBoundaryMatrix23submatrix_at_filtrationE15filtration_typeRN5Eigen12SparseMatrixI8FBMcoeffN5Eigen8ColMajorEEE" title="Link to this definition">#</a><br /></dt>
+<dd><p>Get the largest submatrix (by reference) that does not have corresponding filtration values greater than a. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>a</strong> – filtration value </p></li>
+<li><p><strong>M</strong> – <strong>[out]</strong> the submatrix. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5petls22FilteredBoundaryMatrix22print_range_filtrationEv">
+<span id="_CPPv3N5petls22FilteredBoundaryMatrix22print_range_filtrationEv"></span><span id="_CPPv2N5petls22FilteredBoundaryMatrix22print_range_filtrationEv"></span><span id="petls::FilteredBoundaryMatrix::print_range_filtration"></span><span class="target" id="classpetls_1_1FilteredBoundaryMatrix_1a4ca6ac0481d5a4979bfae81e97bbcdb2"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">print_range_filtration</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5petls22FilteredBoundaryMatrix22print_range_filtrationEv" title="Link to this definition">#</a><br /></dt>
+<dd><p>Print the filtration values of (n-1)-simplices. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5petls22FilteredBoundaryMatrix23print_domain_filtrationEv">
+<span id="_CPPv3N5petls22FilteredBoundaryMatrix23print_domain_filtrationEv"></span><span id="_CPPv2N5petls22FilteredBoundaryMatrix23print_domain_filtrationEv"></span><span id="petls::FilteredBoundaryMatrix::print_domain_filtration"></span><span class="target" id="classpetls_1_1FilteredBoundaryMatrix_1af3baae8c31410ff076d8d08ee279b886"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">print_domain_filtration</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5petls22FilteredBoundaryMatrix23print_domain_filtrationEv" title="Link to this definition">#</a><br /></dt>
+<dd><p>Print the filtration values of (n-1)-simplices. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5petls22FilteredBoundaryMatrix5printEv">
+<span id="_CPPv3N5petls22FilteredBoundaryMatrix5printEv"></span><span id="_CPPv2N5petls22FilteredBoundaryMatrix5printEv"></span><span id="petls::FilteredBoundaryMatrix::print"></span><span class="target" id="classpetls_1_1FilteredBoundaryMatrix_1a48ee0ee9c2cbe5601546e61e554fbfc6"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">print</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5petls22FilteredBoundaryMatrix5printEv" title="Link to this definition">#</a><br /></dt>
+<dd><p>Print the underlying matrix for d_n. </p>
+</dd></dl>
+
 </div>
+</dd></dl>
+
 </section>
 </section>
 
@@ -390,7 +477,21 @@
   </div>
   <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">FilteredBoundaryMatrix</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">FilteredBoundaryMatrix</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4I0EN5petls22FilteredBoundaryMatrixE"><code class="docutils literal notranslate"><span class="pre">petls::FilteredBoundaryMatrix</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N5petls22FilteredBoundaryMatrix22FilteredBoundaryMatrixEN5Eigen12SparseMatrixI8FBMcoeffN5Eigen8ColMajorEEENSt6vectorI15filtration_typeEENSt6vectorI15filtration_typeEE"><code class="docutils literal notranslate"><span class="pre">FilteredBoundaryMatrix()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N5petls22FilteredBoundaryMatrix22get_domain_filtrationsEv"><code class="docutils literal notranslate"><span class="pre">get_domain_filtrations()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N5petls22FilteredBoundaryMatrix21get_range_filtrationsEv"><code class="docutils literal notranslate"><span class="pre">get_range_filtrations()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N5petls22FilteredBoundaryMatrix9transposeEv"><code class="docutils literal notranslate"><span class="pre">transpose()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N5petls22FilteredBoundaryMatrix19index_of_filtrationEb15filtration_type"><code class="docutils literal notranslate"><span class="pre">index_of_filtration()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N5petls22FilteredBoundaryMatrix23submatrix_at_filtrationE15filtration_typeRN5Eigen12SparseMatrixI8FBMcoeffN5Eigen8ColMajorEEE"><code class="docutils literal notranslate"><span class="pre">submatrix_at_filtration()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N5petls22FilteredBoundaryMatrix22print_range_filtrationEv"><code class="docutils literal notranslate"><span class="pre">print_range_filtration()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N5petls22FilteredBoundaryMatrix23print_domain_filtrationEv"><code class="docutils literal notranslate"><span class="pre">print_domain_filtration()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N5petls22FilteredBoundaryMatrix5printEv"><code class="docutils literal notranslate"><span class="pre">print()</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
   </nav></div>
 

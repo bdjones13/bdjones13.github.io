@@ -315,7 +315,7 @@
                 <article class="bd-article">
                   
   <h1>Source code for petls</h1><div class="highlight"><pre>
-<span></span><span class="kn">from</span><span class="w"> </span><span class="nn">._petls</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span>
+<span></span><span class="kn">from</span><span class="w"> </span><span class="nn">._petls</span><span class="w"> </span><span class="kn">import</span> <span class="o">*</span> <span class="c1"># import the pybind11-generated classes</span>
 
 <span class="kn">import</span><span class="w"> </span><span class="nn">enum</span>
 
@@ -384,7 +384,7 @@
 
 <span class="k">class</span><span class="w"> </span><span class="nc">up_Algorithms</span><span class="p">(</span><span class="n">enum</span><span class="o">.</span><span class="n">Enum</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Enum to choose which up-Laplacian algorithm to use</span>
+<span class="sd">    Enum to choose which up-Laplacian algorithm to use for PersistentSheafLaplacian only. </span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">schur</span> <span class="o">=</span> <span class="mi">1</span>
 
@@ -400,12 +400,16 @@
 <span class="sd">    verbose : boolean</span>
 <span class="sd">        Print progress if spectra() is called</span>
 <span class="sd">    flipped : boolean</span>
-<span class="sd">        Compute the top-dimensional Laplacian&#39;s eigenvalues via the eigenvalues of the smaller of B_N B_N^T or B_N^T B_N and possible zero-padding</span>
-<span class="sd">        </span>
+<span class="sd">        Compute the top-dimensional Laplacian&#39;s eigenvalues via the eigenvalues of the smaller of B_N B_N^T or B_N^T B_N and possible zero-padding        </span>
+
 <span class="sd">    Methods</span>
 <span class="sd">    -------</span>
 <span class="sd">    set_boundaries_filtrations(boundaries, filtrations)</span>
 <span class="sd">        If the boundaries and filtrations were not set in the constructor, set them here.</span>
+<span class="sd">    set_eigs_Algorithm(eigs_Algorithm, num_eigenvalues, eigenvalue_order)</span>
+<span class="sd">        Set the eigenvalue algorithm to use.</span>
+<span class="sd">    set_up_Algorithm(up_Algorithm)</span>
+<span class="sd">        Set the up-Laplacian algorithm to use. Currently only &quot;schur&quot; is available in Python. Passing a callable function is only available in C++.</span>
 <span class="sd">    get_L(dim, a, b)</span>
 <span class="sd">        Get the persistent Laplacian matrix.</span>
 <span class="sd">    get_up(dim, a, b)</span>
@@ -439,8 +443,12 @@
 
 <div class="viewcode-block" id="Complex.__init__">
 <a class="viewcode-back" href="../python/generated/petls.Complex.html#petls.Complex.__init__">[docs]</a>
-    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">boundaries</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">filtrations</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">eigs_Algorithm</span> <span class="o">=</span> <span class="s2">&quot;eigvalsh&quot;</span><span class="p">,</span> <span class="n">up_Algorithm</span> <span class="o">=</span> <span class="n">up_Algorithms</span><span class="o">.</span><span class="n">schur</span><span class="p">,</span> <span class="n">simplex_tree</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
-        
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">boundaries</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">filtrations</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">eigs_Algorithm</span> <span class="o">=</span> <span class="s2">&quot;eigvalsh&quot;</span><span class="p">,</span> <span class="n">up_Algorithm</span> <span class="o">=</span> <span class="s2">&quot;schur&quot;</span><span class="p">,</span> <span class="n">simplex_tree</span> <span class="o">=</span> <span class="kc">None</span><span class="p">):</span>
+<span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Constructor for the Complex class.</span>
+
+
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="c1"># Get the pybind11-generated class name for the C++ wrapper </span>
         <span class="n">pl_class</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">_petls</span><span class="p">,</span> <span class="s2">&quot;Complex&quot;</span><span class="p">)</span>
         
@@ -458,8 +466,10 @@
 
         <span class="bp">self</span><span class="o">.</span><span class="n">verbose</span> <span class="o">=</span> <span class="kc">False</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">flipped</span> <span class="o">=</span> <span class="kc">False</span>
-
+        <span class="bp">self</span><span class="o">.</span><span class="n">use_cpp_eigs</span> <span class="o">=</span> <span class="kc">True</span>
+        
         <span class="bp">self</span><span class="o">.</span><span class="n">set_eigs_Algorithm</span><span class="p">(</span><span class="n">eigs_Algorithm</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">set_up_Algorithm</span><span class="p">(</span><span class="n">up_Algorithm</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">profile</span> <span class="o">=</span> <span class="n">Profile</span><span class="p">()</span></div>
 
 
@@ -538,10 +548,19 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">use_cpp_eigs</span> <span class="o">=</span> <span class="kc">False</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">eigs_Algorithm</span> <span class="o">=</span> <span class="n">eigs_Algorithm</span>   
 
+    <span class="k">def</span><span class="w"> </span><span class="nf">set_up_Algorithm</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">up_Algorithm</span><span class="p">):</span>
+
+        <span class="n">valid_algorithms</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;schur&quot;</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">up_Algorithm</span> <span class="ow">in</span> <span class="n">valid_algorithms</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">use_cpp_up</span> <span class="o">=</span> <span class="kc">True</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">pl</span><span class="o">.</span><span class="n">set_up_algorithm_func</span><span class="p">(</span><span class="n">up_Algorithm</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="nb">type</span><span class="p">(</span><span class="n">up_Algorithm</span><span class="p">)</span> <span class="o">==</span> <span class="nb">str</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&quot;&quot;up_Algorithm must be a string in </span><span class="si">{</span><span class="n">valid_algorithms</span><span class="si">}</span><span class="s2">. Got </span><span class="si">{</span><span class="n">up_Algorithm</span><span class="si">}</span><span class="s2">.&quot;&quot;&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&quot;&quot;up_Algorithm must be a string in </span><span class="si">{</span><span class="n">valid_algorithms</span><span class="si">}</span><span class="s2">. Got </span><span class="si">{</span><span class="n">up_Algorithm</span><span class="si">}</span><span class="s2">. Passable up_Algorithm functions is currently only available in C++.&quot;&quot;&quot;</span><span class="p">)</span>
+
     <span class="k">def</span><span class="w"> </span><span class="nf">get_L</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dim</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
-        <span class="n">L</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">pl</span><span class="o">.</span><span class="n">get_L</span><span class="p">(</span><span class="n">dim</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
-        
-        <span class="k">return</span> <span class="n">L</span> <span class="c1"># self.pl.get_L(dim, a, b)</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">pl</span><span class="o">.</span><span class="n">get_L</span><span class="p">(</span><span class="n">dim</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
     
     <span class="k">def</span><span class="w"> </span><span class="nf">get_up</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dim</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">pl</span><span class="o">.</span><span class="n">get_up</span><span class="p">(</span><span class="n">dim</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
@@ -732,14 +751,29 @@
     
 
 
+<div class="viewcode-block" id="dFlag">
+<a class="viewcode-back" href="../python/generated/petls.dFlag.html#petls.dFlag">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">dFlag</span><span class="p">(</span><span class="n">Complex</span><span class="p">):</span>
-    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="n">max_dim</span><span class="p">,</span> <span class="n">eigs_Algorithm</span> <span class="o">=</span> <span class="s2">&quot;eigvalsh&quot;</span><span class="p">,</span> <span class="n">up_Algorithm</span> <span class="o">=</span> <span class="n">up_Algorithms</span><span class="o">.</span><span class="n">schur</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;Directed flag complex from a directed graph read from a file, using &quot;flagser&quot; by Daniel Lütgehetmann.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+<div class="viewcode-block" id="dFlag.__init__">
+<a class="viewcode-back" href="../python/generated/petls.dFlag.html#petls.dFlag.__init__">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filename</span><span class="p">,</span> <span class="n">max_dim</span><span class="p">,</span> <span class="n">eigs_Algorithm</span> <span class="o">=</span> <span class="s2">&quot;eigvalsh&quot;</span><span class="p">,</span> <span class="n">up_Algorithm</span> <span class="o">=</span> <span class="s2">&quot;schur&quot;</span><span class="p">):</span>
         <span class="n">pl_class</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">_petls</span><span class="p">,</span> <span class="s2">&quot;dFlag&quot;</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">pl</span> <span class="o">=</span> <span class="n">pl_class</span><span class="p">(</span><span class="n">filename</span><span class="p">,</span> <span class="n">max_dim</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">set_eigs_Algorithm</span><span class="p">(</span><span class="n">eigs_Algorithm</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">set_up_Algorithm</span><span class="p">(</span><span class="n">up_Algorithm</span><span class="p">)</span></div>
+</div>
 
+
+<div class="viewcode-block" id="Rips">
+<a class="viewcode-back" href="../python/generated/petls.Rips.html#petls.Rips">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">Rips</span><span class="p">(</span><span class="n">Complex</span><span class="p">):</span>
-    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filename</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">points</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">distances</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">max_dim</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">threshold</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">eigs_Algorithm</span> <span class="o">=</span> <span class="s2">&quot;eigvalsh&quot;</span><span class="p">,</span> <span class="n">up_Algorithm</span> <span class="o">=</span> <span class="n">up_Algorithms</span><span class="o">.</span><span class="n">schur</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Rips complex from a point cloud or distance matrix, using &quot;ripser&quot; by Ulrich Bauer.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+<div class="viewcode-block" id="Rips.__init__">
+<a class="viewcode-back" href="../python/generated/petls.Rips.html#petls.Rips.__init__">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filename</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">points</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">distances</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">max_dim</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">threshold</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">eigs_Algorithm</span> <span class="o">=</span> <span class="s2">&quot;eigvalsh&quot;</span><span class="p">,</span> <span class="n">up_Algorithm</span> <span class="o">=</span> <span class="s2">&quot;schur&quot;</span><span class="p">):</span>
         <span class="n">pl_class</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">_petls</span><span class="p">,</span> <span class="s2">&quot;Rips&quot;</span><span class="p">)</span>
         
         <span class="k">if</span> <span class="n">threshold</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
@@ -761,10 +795,19 @@
             <span class="k">else</span><span class="p">:</span>
                 <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Rips requires either filename or point set as input&#39;</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">set_eigs_Algorithm</span><span class="p">(</span><span class="n">eigs_Algorithm</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">set_up_Algorithm</span><span class="p">(</span><span class="n">up_Algorithm</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">profile</span> <span class="o">=</span> <span class="n">Profile</span><span class="p">()</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">use_cpp_eigs</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">use_cpp_eigs</span> <span class="o">=</span> <span class="kc">False</span></div>
+</div>
+
         
+<div class="viewcode-block" id="Alpha">
+<a class="viewcode-back" href="../python/generated/petls.Alpha.html#petls.Alpha">[docs]</a>
 <span class="k">class</span><span class="w"> </span><span class="nc">Alpha</span><span class="p">(</span><span class="n">Complex</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; Alpha complex from a point cloud, using Gudhi&#39;s AlphaComplex.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+<div class="viewcode-block" id="Alpha.__init__">
+<a class="viewcode-back" href="../python/generated/petls.Alpha.html#petls.Alpha.__init__">[docs]</a>
     <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">filename</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">points</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">max_dim</span><span class="o">=</span><span class="mi">3</span><span class="p">):</span>
         <span class="n">pl_class</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">_petls</span><span class="p">,</span> <span class="s2">&quot;Alpha&quot;</span><span class="p">)</span>
         <span class="k">if</span> <span class="n">filename</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
@@ -774,8 +817,11 @@
         <span class="k">else</span><span class="p">:</span>
             <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Alpha complex requires filename or point set as input&quot;</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">set_eigs_Algorithm</span><span class="p">(</span><span class="s2">&quot;eigvalsh&quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">set_up_Algorithm</span><span class="p">(</span><span class="s2">&quot;schur&quot;</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">profile</span> <span class="o">=</span> <span class="n">Profile</span><span class="p">()</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">use_cpp_eigs</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">use_cpp_eigs</span> <span class="o">=</span> <span class="kc">False</span></div>
+</div>
+
 
 
 <div class="viewcode-block" id="sheaf_simplex_tree">
@@ -956,7 +1002,7 @@
 <span class="w">    </span><span class="sd">&quot;&quot;&quot; Persistent Laplacian made with a cellular sheaf. The information is encoded in the sheaf_simplex_tree argument.</span>
 <span class="sd">    </span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sst</span><span class="p">:</span> <span class="n">sheaf_simplex_tree</span><span class="p">,</span> <span class="n">eigs_Algorithm</span> <span class="o">=</span> <span class="s2">&quot;eigvalsh&quot;</span><span class="p">,</span> <span class="n">up_Algorithm</span> <span class="o">=</span> <span class="n">up_Algorithms</span><span class="o">.</span><span class="n">schur</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sst</span><span class="p">:</span> <span class="n">sheaf_simplex_tree</span><span class="p">,</span> <span class="n">eigs_Algorithm</span> <span class="o">=</span> <span class="s2">&quot;eigvalsh&quot;</span><span class="p">,</span> <span class="n">up_Algorithm</span> <span class="o">=</span> <span class="s2">&quot;schur&quot;</span><span class="p">):</span>
         <span class="n">coboundaries</span><span class="p">,</span> <span class="n">filtrations</span> <span class="o">=</span> <span class="n">sst</span><span class="o">.</span><span class="n">apply_restriction_function</span><span class="p">()</span>
         <span class="n">boundaries</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="o">.</span><span class="n">T</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">coboundaries</span><span class="p">]</span>    
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">boundaries</span><span class="p">,</span> <span class="n">filtrations</span><span class="p">,</span> <span class="n">eigs_Algorithm</span><span class="p">,</span> <span class="n">up_Algorithm</span><span class="p">,</span>  <span class="n">storage</span> <span class="o">=</span> <span class="n">storage</span><span class="o">.</span><span class="n">float</span><span class="p">)</span>

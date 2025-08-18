@@ -67,9 +67,12 @@ Please use the following bibtex entry to cite this work:
 
 .. code-block::
 
-    @article{jones2024petls,
-        title={PETLS: Persistent Topological Laplacian Software},
-        author={Jones, Benjamin and Wei, Guo-Wei},
-        journal={arXiv preprint arXiv:XX.YY},
-        year={2025}
+    @misc{jones2025petlspersistenttopologicallaplacian,
+        title={PETLS: PErsistent Topological Laplacian Software}, 
+        author={Benjamin Jones and Guo-Wei Wei},
+        year={2025},
+        eprint={2508.11560},
+        archivePrefix={arXiv},
+        primaryClass={math.AT},
+        url={https://arxiv.org/abs/2508.11560}, 
     }

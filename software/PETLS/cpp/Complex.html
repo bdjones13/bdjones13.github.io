@@ -336,10 +336,476 @@
 <h1>Complex<a class="headerlink" href="#complex" title="Link to this heading">#</a></h1>
 <section id="id1">
 <h2>Complex<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>doxygenclass: Cannot find class “petls::Complex” in doxygen xml output for project “petls” from directory: /home/jones657/petls/docs/xml/</p>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N5petls7ComplexE">
+<span id="_CPPv3N5petls7ComplexE"></span><span id="_CPPv2N5petls7ComplexE"></span><span id="petls::Complex"></span><span class="target" id="classpetls_1_1Complex"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Complex</span></span></span><a class="headerlink" href="#_CPPv4N5petls7ComplexE" title="Link to this definition">#</a><br /></dt>
+<dd><p>Primary class for computing persistent Laplacians </p>
+<dl class="field-list simple">
+<dt class="field-odd">Template Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>eigs_Algorithm</strong> – Algorithm wrapper class to use for computing eigenvalues of the Laplacian in the spectra family of functions. Default is a wrapper for Eigen::SelfAdjointEigenSolver. </p></li>
+<li><p><strong>up_Algorithm</strong> – Algorithm wrapper class to use for computing the up-Laplacian. Default is the Schur complement algorithm presented in Memoli, Wan, and Wang 2020. //TODO: \see up_algorithms and eigs_algorithms </p></li>
+</ul>
+</dd>
+</dl>
+<p>Subclassed by petls::Alpha, petls::Rips, petls::dFlag</p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5petls7Complex7ComplexEv">
+<span id="_CPPv3N5petls7Complex7ComplexEv"></span><span id="_CPPv2N5petls7Complex7ComplexEv"></span><span id="petls::Complex::Complex"></span><span class="target" id="classpetls_1_1Complex_1a8cd116efeb41c775846c29a7c09fa5e3"></span><span class="sig-name descname"><span class="n"><span class="pre">Complex</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5petls7Complex7ComplexEv" title="Link to this definition">#</a><br /></dt>
+<dd><p>Default constructor with no boundary maps or simplices. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5petls7Complex7ComplexENSt6vectorIN5Eigen12SparseMatrixI7storageEEEENSt6vectorINSt6vectorI15filtration_typeEEEE">
+<span id="_CPPv3N5petls7Complex7ComplexENSt6vectorIN5Eigen12SparseMatrixI7storageEEEENSt6vectorINSt6vectorI15filtration_typeEEEE"></span><span id="_CPPv2N5petls7Complex7ComplexENSt6vectorIN5Eigen12SparseMatrixI7storageEEEENSt6vectorINSt6vectorI15filtration_typeEEEE"></span><span id="petls::Complex::Complex__std::vector:Eigen::SparseMatrix:storage::.std::vector:std::vector:filtration_type::"></span><span class="target" id="classpetls_1_1Complex_1ab2c3d07024b1b2b2843ea4f146fc9b18"></span><span class="sig-name descname"><span class="n"><span class="pre">Complex</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">Eigen</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">SparseMatrix</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">storage</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">boundaries</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">filtration_type</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">filtrations</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5petls7Complex7ComplexENSt6vectorIN5Eigen12SparseMatrixI7storageEEEENSt6vectorINSt6vectorI15filtration_typeEEEE" title="Link to this definition">#</a><br /></dt>
+<dd><p>
+Primary constructor. Important Assumptions: 1) Boundary matrix has real coefficients stored as integers (but not mod 2!) 2) Boundary matrix dimensions agree with filtrations sizes 3) Length(filtrations) = Length(boundaries) + 1 </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>boundaries</strong> – a vector of Eigen::SparseMatrix of type int. Boundaries must be sorted in order of dimension. </p></li>
+<li><p><strong>filtrations</strong> – a vector of vector of filtrations. filtrations[dim] is a list of all filtrations of simplices in dimension dim. filtrations must be sorted in order of dimension, each filtrations[i] must be sorted in order of filtration</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5petls7Complex26set_boundaries_filtrationsENSt6vectorIN5Eigen12SparseMatrixI7storageEEEENSt6vectorINSt6vectorI15filtration_typeEEEE">
+<span id="_CPPv3N5petls7Complex26set_boundaries_filtrationsENSt6vectorIN5Eigen12SparseMatrixI7storageEEEENSt6vectorINSt6vectorI15filtration_typeEEEE"></span><span id="_CPPv2N5petls7Complex26set_boundaries_filtrationsENSt6vectorIN5Eigen12SparseMatrixI7storageEEEENSt6vectorINSt6vectorI15filtration_typeEEEE"></span><span id="petls::Complex::set_boundaries_filtrations__std::vector:Eigen::SparseMatrix:storage::.std::vector:std::vector:filtration_type::"></span><span class="target" id="classpetls_1_1Complex_1ad3dc94300ae8ff357c2e73a19977d9f6"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_boundaries_filtrations</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">Eigen</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">SparseMatrix</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">storage</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">boundaries</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">filtration_type</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">filtrations</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5petls7Complex26set_boundaries_filtrationsENSt6vectorIN5Eigen12SparseMatrixI7storageEEEENSt6vectorINSt6vectorI15filtration_typeEEEE" title="Link to this definition">#</a><br /></dt>
+<dd><p>Set the boundaries and filtrations of a complex, particularly if the default constructor was called. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>boundaries</strong> – a vector of Eigen::SparseMatrix of type int. Boundaries must be sorted in order of dimension. </p></li>
+<li><p><strong>filtrations</strong> – a vector of vector of filtrations. filtrations[dim] is a list of all filtrations of simplices in dimension dim. filtrations must be sorted in order of dimension, each filtrations[i] must be sorted in order of filtration. Important Assumptions: 1) Boundary matrix has real coefficients stored as integers (but not mod 2!), 2) Boundary matrix dimensions agree with filtrations sizes, 3) Length(filtrations) = Length(boundaries) + 1. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5petls7Complex11set_verboseEb">
+<span id="_CPPv3N5petls7Complex11set_verboseEb"></span><span id="_CPPv2N5petls7Complex11set_verboseEb"></span><span id="petls::Complex::set_verbose__b"></span><span class="target" id="classpetls_1_1Complex_1a81608e40257ce40d6ccb2a8fb064ed8b"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_verbose</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">verbose</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5petls7Complex11set_verboseEb" title="Link to this definition">#</a><br /></dt>
+<dd><p>Set verbose </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>verbose</strong> – New setting. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5petls7Complex11set_flippedEb">
+<span id="_CPPv3N5petls7Complex11set_flippedEb"></span><span id="_CPPv2N5petls7Complex11set_flippedEb"></span><span id="petls::Complex::set_flipped__b"></span><span class="target" id="classpetls_1_1Complex_1ab1aa6d47f79701aa182e1f551203b0bb"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_flipped</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">use_flipped</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5petls7Complex11set_flippedEb" title="Link to this definition">#</a><br /></dt>
+<dd><p>Set flipped </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>use_flipped</strong> – New setting </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5petls7Complex5get_LEi15filtration_type15filtration_typeR14DenseMatrix_PL">
+<span id="_CPPv3N5petls7Complex5get_LEi15filtration_type15filtration_typeR14DenseMatrix_PL"></span><span id="_CPPv2N5petls7Complex5get_LEi15filtration_type15filtration_typeR14DenseMatrix_PL"></span><span id="petls::Complex::get_L__i.filtration_type.filtration_type.DenseMatrix_PLR"></span><span class="target" id="classpetls_1_1Complex_1a761ea93d4220dfced3b59e04767e6c9e"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_L</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">dim</span></span>, <span class="n"><span class="pre">filtration_type</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">a</span></span>, <span class="n"><span class="pre">filtration_type</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">b</span></span>, <span class="n"><span class="pre">DenseMatrix_PL</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">L</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5petls7Complex5get_LEi15filtration_type15filtration_typeR14DenseMatrix_PL" title="Link to this definition">#</a><br /></dt>
+<dd><p>Get the Persistent Laplacian Matrix (by reference). </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dim</strong> – dimension </p></li>
+<li><p><strong>a</strong> – start filtration value </p></li>
+<li><p><strong>b</strong> – end filtration value (must be &gt;= a) </p></li>
+<li><p><strong>L</strong> – <strong>[out]</strong> the matrix where the persistent Laplacian will be stored (by reference). </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5petls7Complex5get_LEi15filtration_type15filtration_type">
+<span id="_CPPv3N5petls7Complex5get_LEi15filtration_type15filtration_type"></span><span id="_CPPv2N5petls7Complex5get_LEi15filtration_type15filtration_type"></span><span id="petls::Complex::get_L__i.filtration_type.filtration_type"></span><span class="target" id="classpetls_1_1Complex_1a6cc2484c3864671287d5518793dcff6c"></span><span class="n"><span class="pre">DenseMatrix_PL</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_L</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">dim</span></span>, <span class="n"><span class="pre">filtration_type</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">a</span></span>, <span class="n"><span class="pre">filtration_type</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">b</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5petls7Complex5get_LEi15filtration_type15filtration_type" title="Link to this definition">#</a><br /></dt>
+<dd><p>Get the Persistent Laplacian Matrix (by value).</p>
+<p>Warning: this does a potentially expensive copy. The primary reason this function exists is to provide reasonable python binding access to the matrix L itself. If you do not need the persistent Laplacian matrix directly in python (e.g. you want its eigenvalues) it will be more efficient to compute by reference via <a class="reference internal" href="#classpetls_1_1Complex_1a761ea93d4220dfced3b59e04767e6c9e"><span class="std std-ref">get_L(int dim, filtration_type a, filtration_type b, DenseMatrix_PL &amp;L)</span></a>. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dim</strong> – dimension </p></li>
+<li><p><strong>a</strong> – start filtration value </p></li>
+<li><p><strong>b</strong> – end filtration value (must be &gt;= a) </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>L the persistent Laplacian matrix. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5petls7Complex21get_L_top_dim_flippedE15filtration_typeR15SparseMatrix_PL">
+<span id="_CPPv3N5petls7Complex21get_L_top_dim_flippedE15filtration_typeR15SparseMatrix_PL"></span><span id="_CPPv2N5petls7Complex21get_L_top_dim_flippedE15filtration_typeR15SparseMatrix_PL"></span><span id="petls::Complex::get_L_top_dim_flipped__filtration_type.SparseMatrix_PLR"></span><span class="target" id="classpetls_1_1Complex_1adfffc8a1b210c8f650e660bb202a9dc9"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_L_top_dim_flipped</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">filtration_type</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">a</span></span>, <span class="n"><span class="pre">SparseMatrix_PL</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">L</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5petls7Complex21get_L_top_dim_flippedE15filtration_typeR15SparseMatrix_PL" title="Link to this definition">#</a><br /></dt>
+<dd><p>Get a matrix with the same nonzero eigenvalues as the top-dimensional Persistent Laplacian Matrix (by reference). </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>a</strong> – start filtration value </p></li>
+<li><p><strong>L</strong> – <strong>[out]</strong> the matrix (by reference) that has the same eigenvalues as the top-dimensional Persistent Laplacian </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5petls7Complex21get_L_top_dim_flippedE15filtration_type">
+<span id="_CPPv3N5petls7Complex21get_L_top_dim_flippedE15filtration_type"></span><span id="_CPPv2N5petls7Complex21get_L_top_dim_flippedE15filtration_type"></span><span id="petls::Complex::get_L_top_dim_flipped__filtration_type"></span><span class="target" id="classpetls_1_1Complex_1aa257917af744abb7a94a7713a05c4f8c"></span><span class="n"><span class="pre">SparseMatrix_PL</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_L_top_dim_flipped</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">filtration_type</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">a</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5petls7Complex21get_L_top_dim_flippedE15filtration_type" title="Link to this definition">#</a><br /></dt>
+<dd><p>Get a matrix with the same nonzero eigenvalues as the top-dimensional Persistent Laplacian Matrix (by value).</p>
+<p>Warning: this does a potentially expensive copy. The primary reason this function exists is to provide reasonable python binding access to the matrix itself. If you do not need this matrix directly in python (e.g. you want its eigenvalues) it will be more efficient to compute by reference via <a class="reference internal" href="#classpetls_1_1Complex_1adfffc8a1b210c8f650e660bb202a9dc9"><span class="std std-ref">get_L_top_dim_flipped(filtration_type a, SparseMatrix_PL &amp;L)</span></a>. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>a</strong> – start filtration value </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A matrix with the same nonzero eigenvalues as the top-dimensional persistent Laplacian (but not the persistent Laplacian itself). </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5petls7Complex6get_upEi15filtration_type15filtration_typeR14DenseMatrix_PL">
+<span id="_CPPv3N5petls7Complex6get_upEi15filtration_type15filtration_typeR14DenseMatrix_PL"></span><span id="_CPPv2N5petls7Complex6get_upEi15filtration_type15filtration_typeR14DenseMatrix_PL"></span><span id="petls::Complex::get_up__i.filtration_type.filtration_type.DenseMatrix_PLR"></span><span class="target" id="classpetls_1_1Complex_1a791969d5e1a55e0db1bd381257062494"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_up</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">dim</span></span>, <span class="n"><span class="pre">filtration_type</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">a</span></span>, <span class="n"><span class="pre">filtration_type</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">b</span></span>, <span class="n"><span class="pre">DenseMatrix_PL</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">L_up</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5petls7Complex6get_upEi15filtration_type15filtration_typeR14DenseMatrix_PL" title="Link to this definition">#</a><br /></dt>
+<dd><p>Get the up persistent Laplacian (by reference). The algorithm used is determined by the template parameter. See up_algorithms.hpp.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dim</strong> – dimension </p></li>
+<li><p><strong>a</strong> – start filtration value </p></li>
+<li><p><strong>b</strong> – end filtration value </p></li>
+<li><p><strong>L_up</strong> – <strong>[out]</strong> up persistent Laplacian (by reference) </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5petls7Complex6get_upEi15filtration_type15filtration_type">
+<span id="_CPPv3N5petls7Complex6get_upEi15filtration_type15filtration_type"></span><span id="_CPPv2N5petls7Complex6get_upEi15filtration_type15filtration_type"></span><span id="petls::Complex::get_up__i.filtration_type.filtration_type"></span><span class="target" id="classpetls_1_1Complex_1a49e79d7991ce0602bc02997bafb584b6"></span><span class="n"><span class="pre">DenseMatrix_PL</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_up</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">dim</span></span>, <span class="n"><span class="pre">filtration_type</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">a</span></span>, <span class="n"><span class="pre">filtration_type</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">b</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5petls7Complex6get_upEi15filtration_type15filtration_type" title="Link to this definition">#</a><br /></dt>
+<dd><p>Get the up persistent Laplacian (by value). The algorithm used is determined by the template parameter. See up_algorithms.hpp.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dim</strong> – dimension </p></li>
+<li><p><strong>a</strong> – start filtration value </p></li>
+<li><p><strong>b</strong> – end filtration value </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>up persistent Laplacian </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5petls7Complex8get_downEi15filtration_typeRN5Eigen12SparseMatrixI7storageEE">
+<span id="_CPPv3N5petls7Complex8get_downEi15filtration_typeRN5Eigen12SparseMatrixI7storageEE"></span><span id="_CPPv2N5petls7Complex8get_downEi15filtration_typeRN5Eigen12SparseMatrixI7storageEE"></span><span id="petls::Complex::get_down__i.filtration_type.Eigen::SparseMatrix:storage:R"></span><span class="target" id="classpetls_1_1Complex_1a2b882abcabbfb35073eb33f7be9d30e9"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_down</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">dim</span></span>, <span class="n"><span class="pre">filtration_type</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">a</span></span>, <span class="n"><span class="pre">Eigen</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">SparseMatrix</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">storage</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">L_down</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5petls7Complex8get_downEi15filtration_typeRN5Eigen12SparseMatrixI7storageEE" title="Link to this definition">#</a><br /></dt>
+<dd><p>Get the down persistent Laplacian (by reference). </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dim</strong> – dimension </p></li>
+<li><p><strong>a</strong> – start filtration value </p></li>
+<li><p><strong>L_down</strong> – <strong>[out]</strong> the matrix (by reference) of the down presistent Laplacian </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5petls7Complex8get_downEi15filtration_type">
+<span id="_CPPv3N5petls7Complex8get_downEi15filtration_type"></span><span id="_CPPv2N5petls7Complex8get_downEi15filtration_type"></span><span id="petls::Complex::get_down__i.filtration_type"></span><span class="target" id="classpetls_1_1Complex_1ac94f36cfa806dc9df9a2f4fef203f1d9"></span><span class="n"><span class="pre">DenseMatrix_PL</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_down</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">dim</span></span>, <span class="n"><span class="pre">filtration_type</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">a</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5petls7Complex8get_downEi15filtration_type" title="Link to this definition">#</a><br /></dt>
+<dd><p>Get the down persistent Laplacian (by value).</p>
+<p>Warning: this does a potentially expensive copy. The primary reason this function exists is to provide reasonable python binding access to the matrix itself. If you do not need this matrix directly in python (e.g. you want its eigenvalues) it will be more efficient to compute by reference via <a class="reference internal" href="#classpetls_1_1Complex_1a2b882abcabbfb35073eb33f7be9d30e9"><span class="std std-ref">get_down(int dim, filtration_type a, Eigen::SparseMatrix&lt;storage&gt; &amp;L_down)</span></a>. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dim</strong> – dimension </p></li>
+<li><p><strong>a</strong> – start filtration value \return The matrix (by value) of the down presistent Laplacian </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5petls7Complex15nonzero_spectraEi15filtration_type15filtration_type15SparseMatrix_PLb">
+<span id="_CPPv3N5petls7Complex15nonzero_spectraEi15filtration_type15filtration_type15SparseMatrix_PLb"></span><span id="_CPPv2N5petls7Complex15nonzero_spectraEi15filtration_type15filtration_type15SparseMatrix_PLb"></span><span id="petls::Complex::nonzero_spectra__i.filtration_type.filtration_type.SparseMatrix_PL.b"></span><span class="target" id="classpetls_1_1Complex_1a75852f8c18c3496d67261f841cd31607"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">spectra_type</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">nonzero_spectra</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">dim</span></span>, <span class="n"><span class="pre">filtration_type</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">a</span></span>, <span class="n"><span class="pre">filtration_type</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">b</span></span>, <span class="n"><span class="pre">SparseMatrix_PL</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">PH_basis</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">use_dummy_harmonic_basis</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5petls7Complex15nonzero_spectraEi15filtration_type15filtration_type15SparseMatrix_PLb" title="Link to this definition">#</a><br /></dt>
+<dd><p>Compute the nonzero eigenvalues of a persistent Laplacian using Schur restriction with the null space, either given by Persistent Homology representatives or by computing the null space. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dim</strong> – dimension </p></li>
+<li><p><strong>a</strong> – start filtration level </p></li>
+<li><p><strong>b</strong> – end filtration level </p></li>
+<li><p><strong>(optional)</strong> – PH_basis Basis for the null space of the Laplacian, possibly obtained through persistent homology </p></li>
+<li><p><strong>use_dummy_harmonic_basis</strong> – Compute the null space of the Laplacian here, then do the same projected as if we had been given the null space </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>sorted vector of real, positive eigenvalues </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5petls7Complex7spectraEi15filtration_type15filtration_type">
+<span id="_CPPv3N5petls7Complex7spectraEi15filtration_type15filtration_type"></span><span id="_CPPv2N5petls7Complex7spectraEi15filtration_type15filtration_type"></span><span id="petls::Complex::spectra__i.filtration_type.filtration_type"></span><span class="target" id="classpetls_1_1Complex_1aa573eb40a05d28db6271ec74615fb6a6"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">spectra_type</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">spectra</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">dim</span></span>, <span class="n"><span class="pre">filtration_type</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">a</span></span>, <span class="n"><span class="pre">filtration_type</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">b</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5petls7Complex7spectraEi15filtration_type15filtration_type" title="Link to this definition">#</a><br /></dt>
+<dd><p>Get the Persistent Laplacian’s eigenvalues at a given dimension and filtration. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dim</strong> – dimension </p></li>
+<li><p><strong>a</strong> – start filtration level </p></li>
+<li><p><strong>b</strong> – end filtration level </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>sorted vector of real, nonnegative eigenvalues </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5petls7Complex7spectraEv">
+<span id="_CPPv3N5petls7Complex7spectraEv"></span><span id="_CPPv2N5petls7Complex7spectraEv"></span><span id="petls::Complex::spectra"></span><span class="target" id="classpetls_1_1Complex_1ae90c3fed6769bf36fd6c88465459cefd"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">tuple</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">filtration_type</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">filtration_type</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">spectra_type</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">spectra</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5petls7Complex7spectraEv" title="Link to this definition">#</a><br /></dt>
+<dd><p>Get all eigenvalues for all combinations of dimension and successive filtration values: a=filtrations[i] and b=filtrations[i+1]. Note: the caller does not know what spectra to expect from this. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>vector of tuples (dim, a, b, eigenvalues) where “eigenvalues” is a sorted vector of real, nonnegative eigenvalues. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5petls7Complex7spectraENSt6vectorINSt5tupleIi15filtration_type15filtration_typeEEEE">
+<span id="_CPPv3N5petls7Complex7spectraENSt6vectorINSt5tupleIi15filtration_type15filtration_typeEEEE"></span><span id="_CPPv2N5petls7Complex7spectraENSt6vectorINSt5tupleIi15filtration_type15filtration_typeEEEE"></span><span id="petls::Complex::spectra__std::vector:std::tuple:i.filtration_type.filtration_type::"></span><span class="target" id="classpetls_1_1Complex_1ac8ae478fd15f6f3ff59bc7c3862f832b"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">tuple</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">filtration_type</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">filtration_type</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">spectra_type</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">spectra</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">tuple</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">filtration_type</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">filtration_type</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">spectra_request_list</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5petls7Complex7spectraENSt6vectorINSt5tupleIi15filtration_type15filtration_typeEEEE" title="Link to this definition">#</a><br /></dt>
+<dd><p>This function essentially just calls spectra(dim, a, b) in a loop. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>spectra_quest_list</strong> – vector of tuples (dim, a, b) to compute the eigenvalues of L_{dim}^{a,b}. </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>vector of tuples (dim, a, b, eigenvalues), where eigenvalues it istelf a vector of real, nonnegative eigenvalues. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5petls7Complex16spectra_allpairsEv">
+<span id="_CPPv3N5petls7Complex16spectra_allpairsEv"></span><span id="_CPPv2N5petls7Complex16spectra_allpairsEv"></span><span id="petls::Complex::spectra_allpairs"></span><span class="target" id="classpetls_1_1Complex_1a073913eac9aeabe8b9063523e1c1e1e4"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">tuple</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">filtration_type</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">filtration_type</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">spectra_type</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">spectra_allpairs</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5petls7Complex16spectra_allpairsEv" title="Link to this definition">#</a><br /></dt>
+<dd><p>Get all eigenvalues for all combinations of dimension and filtration values. Note: the caller does not know what spectra to expect from this. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>vector of tuples (dim, a, b, eigenvalues) where “eigenvalues” is a sorted vector of real, nonnegative eigenvalues. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5petls7Complex10eigenpairsEi15filtration_type15filtration_type">
+<span id="_CPPv3N5petls7Complex10eigenpairsEi15filtration_type15filtration_type"></span><span id="_CPPv2N5petls7Complex10eigenpairsEi15filtration_type15filtration_type"></span><span id="petls::Complex::eigenpairs__i.filtration_type.filtration_type"></span><span class="target" id="classpetls_1_1Complex_1ac131d729c705f46ff3e16458335c7001"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">pair</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">spectra_type</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">DenseMatrix_PL</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">eigenpairs</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">dim</span></span>, <span class="n"><span class="pre">filtration_type</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">a</span></span>, <span class="n"><span class="pre">filtration_type</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">b</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5petls7Complex10eigenpairsEi15filtration_type15filtration_type" title="Link to this definition">#</a><br /></dt>
+<dd><p>Get the Persistent Laplacian’s eigenvalues and eigenvectors at a given dimension and filtration. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dim</strong> – dimension </p></li>
+<li><p><strong>a</strong> – start filtration level </p></li>
+<li><p><strong>b</strong> – end filtration level </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>sorted pair of: vector of real, nonnegative eigenvalues and Eigen matrix where column i is the eigenvector for eigenvalue i </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5petls7Complex10eigenpairsEv">
+<span id="_CPPv3N5petls7Complex10eigenpairsEv"></span><span id="_CPPv2N5petls7Complex10eigenpairsEv"></span><span id="petls::Complex::eigenpairs"></span><span class="target" id="classpetls_1_1Complex_1acdbea1a9ca32af5cc235e2dd1c28d872"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">tuple</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">filtration_type</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">filtration_type</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">spectra_type</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">DenseMatrix_PL</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">eigenpairs</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5petls7Complex10eigenpairsEv" title="Link to this definition">#</a><br /></dt>
+<dd><p>Get all eigenvalues for all combinations of dimension and successive filtration values: a=filtrations[i] and b=filtrations[i+1]. Note: the caller does not know what spectra to expect from this. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>vector of tuples (dim, a, b, eigenvalues, eigenvectors) where “eigenvalues” is a sorted vector of real, nonnegative eigenvalues and “eigenvectors” is an Eigen::MatrixXf where column i is the eigenvector for eigenvalue i </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5petls7Complex10eigenpairsENSt6vectorINSt5tupleIi15filtration_type15filtration_typeEEEE">
+<span id="_CPPv3N5petls7Complex10eigenpairsENSt6vectorINSt5tupleIi15filtration_type15filtration_typeEEEE"></span><span id="_CPPv2N5petls7Complex10eigenpairsENSt6vectorINSt5tupleIi15filtration_type15filtration_typeEEEE"></span><span id="petls::Complex::eigenpairs__std::vector:std::tuple:i.filtration_type.filtration_type::"></span><span class="target" id="classpetls_1_1Complex_1a7460d3368941c911624f99a24d741f19"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">tuple</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">filtration_type</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">filtration_type</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">spectra_type</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">DenseMatrix_PL</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">eigenpairs</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">tuple</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">filtration_type</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">filtration_type</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">spectra_request_list</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5petls7Complex10eigenpairsENSt6vectorINSt5tupleIi15filtration_type15filtration_typeEEEE" title="Link to this definition">#</a><br /></dt>
+<dd><p>This function essentially just calls eigenpairs(dim, a, b) in a loop. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>spectra_quest_list</strong> – vector of tuples (dim, a, b) to compute the eigenvalues of L_{dim}^{a,b}. </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>vector of tuples (dim, a, b, eigenvalues, eigenvalues), where eigenvalues it istelf a vector of real, nonnegative eigenvalues and “eigenvectors” is an Eigen::MatrixXf where column i is the eigenvector for eigenvalue i. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5petls7Complex21eigenvalues_summarizeENSt6vectorI12spectra_typeEE">
+<span id="_CPPv3N5petls7Complex21eigenvalues_summarizeENSt6vectorI12spectra_typeEE"></span><span id="_CPPv2N5petls7Complex21eigenvalues_summarizeENSt6vectorI12spectra_typeEE"></span><span id="petls::Complex::eigenvalues_summarize__std::vector:spectra_type:"></span><span class="target" id="classpetls_1_1Complex_1ae3ac144149db98b2245c13e95c23d12e"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">pair</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">spectra_type</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">eigenvalues_summarize</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">spectra_type</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">eigenvalues</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5petls7Complex21eigenvalues_summarizeENSt6vectorI12spectra_typeEE" title="Link to this definition">#</a><br /></dt>
+<dd><p>Utility function to get the Betti number and least nonzero eigenvalue form a vector of eigenvalues. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>eigenvalues</strong> – eigenvalues </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>pair of (Betti number, least nonzero eigenvalue) </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5petls7Complex7store_LEi15filtration_type15filtration_typeNSt6stringE">
+<span id="_CPPv3N5petls7Complex7store_LEi15filtration_type15filtration_typeNSt6stringE"></span><span id="_CPPv2N5petls7Complex7store_LEi15filtration_type15filtration_typeNSt6stringE"></span><span id="petls::Complex::store_L__i.filtration_type.filtration_type.ss"></span><span class="target" id="classpetls_1_1Complex_1a8c3c7f99170a02f218012c2b2348dc6c"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">store_L</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">dim</span></span>, <span class="n"><span class="pre">filtration_type</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">a</span></span>, <span class="n"><span class="pre">filtration_type</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">b</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">filename</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5petls7Complex7store_LEi15filtration_type15filtration_typeNSt6stringE" title="Link to this definition">#</a><br /></dt>
+<dd><p>Compute and store a persistent Laplacian matrix in a file in matrix market format. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>dim</strong> – dimension </p></li>
+<li><p><strong>a</strong> – start filtration value </p></li>
+<li><p><strong>b</strong> – end filtration value </p></li>
+<li><p><strong>filename</strong> – file to store matrix (typically .mtx extension) </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5petls7Complex16print_boundariesEv">
+<span id="_CPPv3N5petls7Complex16print_boundariesEv"></span><span id="_CPPv2N5petls7Complex16print_boundariesEv"></span><span id="petls::Complex::print_boundaries"></span><span class="target" id="classpetls_1_1Complex_1a901288242ec9f4d6db57074755e0a942"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">print_boundaries</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5petls7Complex16print_boundariesEv" title="Link to this definition">#</a><br /></dt>
+<dd><p>Print all boundaries and corresponding filtrations. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5petls7Complex13store_spectraENSt6vectorINSt5tupleIi15filtration_type15filtration_typeNSt6vectorI12spectra_typeEEEEEENSt6stringE">
+<span id="_CPPv3N5petls7Complex13store_spectraENSt6vectorINSt5tupleIi15filtration_type15filtration_typeNSt6vectorI12spectra_typeEEEEEENSt6stringE"></span><span id="_CPPv2N5petls7Complex13store_spectraENSt6vectorINSt5tupleIi15filtration_type15filtration_typeNSt6vectorI12spectra_typeEEEEEENSt6stringE"></span><span id="petls::Complex::store_spectra__std::vector:std::tuple:i.filtration_type.filtration_type.std::vector:spectra_type:::.ss"></span><span class="target" id="classpetls_1_1Complex_1a8f24c27efcf718465238d3bb1586046c"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">store_spectra</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">tuple</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">filtration_type</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">filtration_type</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">spectra_type</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">spectra</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">out_prefix</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5petls7Complex13store_spectraENSt6vectorINSt5tupleIi15filtration_type15filtration_typeNSt6vectorI12spectra_typeEEEEEENSt6stringE" title="Link to this definition">#</a><br /></dt>
+<dd><p>Write spectra to files.</p>
+<p>for each dimension dim of the complex, files write “{out_prefix}_spectra_{dim}.txt”. Each line of the file is a space-separated list of eigenvalues. Lines may be empty. Note the filtration values are not reported.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>spectra</strong> – tuples (dim, a, b, eigenvalues) </p></li>
+<li><p><strong>out_prefix</strong> – Eigenvalues will be written to “{out_prefix}_spectra_{dim}.txt” </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5petls7Complex21store_spectra_summaryENSt6vectorINSt5tupleIi15filtration_type15filtration_typeNSt6vectorI12spectra_typeEEEEEENSt6stringE">
+<span id="_CPPv3N5petls7Complex21store_spectra_summaryENSt6vectorINSt5tupleIi15filtration_type15filtration_typeNSt6vectorI12spectra_typeEEEEEENSt6stringE"></span><span id="_CPPv2N5petls7Complex21store_spectra_summaryENSt6vectorINSt5tupleIi15filtration_type15filtration_typeNSt6vectorI12spectra_typeEEEEEENSt6stringE"></span><span id="petls::Complex::store_spectra_summary__std::vector:std::tuple:i.filtration_type.filtration_type.std::vector:spectra_type:::.ss"></span><span class="target" id="classpetls_1_1Complex_1acd5e321056e2ede5b46164f1240ac0e4"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">store_spectra_summary</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">tuple</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">filtration_type</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">filtration_type</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">spectra_type</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">spectra</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">out_prefix</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5petls7Complex21store_spectra_summaryENSt6vectorINSt5tupleIi15filtration_type15filtration_typeNSt6vectorI12spectra_typeEEEEEENSt6stringE" title="Link to this definition">#</a><br /></dt>
+<dd><p>Write spectra summary to files “{out_prefix}_spectra_summary.txt”</p>
+<p>Each line is a space-separated list of filtrations, bettti numbers, and least nonzero eigenvalues: (filtration a) (filtration b) (betti 0) … (betti top_dim) (lambda 0) … (lambda top_dim) </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>spectra</strong> – tuples (dim, a, b, eigenvalues) </p></li>
+<li><p><strong>out_prefix</strong> – Eigenvalues will be written to “{out_prefix}_spectra_summary.txt” </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5petls7Complex11time_to_csvENSt6stringE">
+<span id="_CPPv3N5petls7Complex11time_to_csvENSt6stringE"></span><span id="_CPPv2N5petls7Complex11time_to_csvENSt6stringE"></span><span id="petls::Complex::time_to_csv__ss"></span><span class="target" id="classpetls_1_1Complex_1a5ca94422983a0ca1e2f7083f0d7466fe"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">time_to_csv</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">filename</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5petls7Complex11time_to_csvENSt6stringE" title="Link to this definition">#</a><br /></dt>
+<dd><p>Write the profile to a csv file. This is done automatically when <a class="reference internal" href="#classpetls_1_1Complex_1ae90c3fed6769bf36fd6c88465459cefd"><span class="std std-ref">spectra()</span></a> is called, but it can also be done here.BDCSVDEigen </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>filename</strong> – name of the file to write to </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5petls7Complex34filtration_list_to_spectra_requestENSt6vectorI15filtration_typeEENSt6vectorIiEE">
+<span id="_CPPv3N5petls7Complex34filtration_list_to_spectra_requestENSt6vectorI15filtration_typeEENSt6vectorIiEE"></span><span id="_CPPv2N5petls7Complex34filtration_list_to_spectra_requestENSt6vectorI15filtration_typeEENSt6vectorIiEE"></span><span id="petls::Complex::filtration_list_to_spectra_request__std::vector:filtration_type:.std::vector:i:"></span><span class="target" id="classpetls_1_1Complex_1a9e6e6a833a87173157c02391d13af78b"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">tuple</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">filtration_type</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">filtration_type</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">filtration_list_to_spectra_request</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">filtration_type</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">filtrations</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">dims</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5petls7Complex34filtration_list_to_spectra_requestENSt6vectorI15filtration_typeEENSt6vectorIiEE" title="Link to this definition">#</a><br /></dt>
+<dd><p>Get tuples (dim, a, b) for all combinations of dimension and successive filtration values: a=filtrations[i], b=filtrations[i+1]. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filtrations</strong> – vector of filtration values </p></li>
+<li><p><strong>dims</strong> – vector of dimensions </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>tuples (dim, a, b) for all combinations of dimension and successive filtration values: a=filtrations[i], b=filtrations[i+1]. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5petls7Complex43filtration_list_to_spectra_request_allpairsENSt6vectorI15filtration_typeEENSt6vectorIiEE">
+<span id="_CPPv3N5petls7Complex43filtration_list_to_spectra_request_allpairsENSt6vectorI15filtration_typeEENSt6vectorIiEE"></span><span id="_CPPv2N5petls7Complex43filtration_list_to_spectra_request_allpairsENSt6vectorI15filtration_typeEENSt6vectorIiEE"></span><span id="petls::Complex::filtration_list_to_spectra_request_allpairs__std::vector:filtration_type:.std::vector:i:"></span><span class="target" id="classpetls_1_1Complex_1ae8de6f9bffcf4efc584855bd25982752"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">tuple</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">filtration_type</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">filtration_type</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">filtration_list_to_spectra_request_allpairs</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">filtration_type</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">filtrations</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">dims</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5petls7Complex43filtration_list_to_spectra_request_allpairsENSt6vectorI15filtration_typeEENSt6vectorIiEE" title="Link to this definition">#</a><br /></dt>
+<dd><p>Get tuples (dim, a, b) for all combinations of dimension and filtrations. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filtrations</strong> – vector of filtration values </p></li>
+<li><p><strong>dims</strong> – vector of dimensions </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>tuples (dim, a, b) for all combinations of dimension and filtration values. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N5petls7Complex19get_all_filtrationsEv">
+<span id="_CPPv3N5petls7Complex19get_all_filtrationsEv"></span><span id="_CPPv2N5petls7Complex19get_all_filtrationsEv"></span><span id="petls::Complex::get_all_filtrations"></span><span class="target" id="classpetls_1_1Complex_1a30fce0a1ba9de451b677012c289aa3e9"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">filtration_type</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_all_filtrations</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N5petls7Complex19get_all_filtrationsEv" title="Link to this definition">#</a><br /></dt>
+<dd><p>Get all unique filtration values in the complex. </p>
+</dd></dl>
+
 </div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5petls7Complex7top_dimE">
+<span id="_CPPv3N5petls7Complex7top_dimE"></span><span id="_CPPv2N5petls7Complex7top_dimE"></span><span id="petls::Complex::top_dim__i"></span><span class="target" id="classpetls_1_1Complex_1a51b323c84f7c4944c796e88538c28824"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">top_dim</span></span></span><a class="headerlink" href="#_CPPv4N5petls7Complex7top_dimE" title="Link to this definition">#</a><br /></dt>
+<dd><p>Top dimension of the complex. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5petls7Complex19filtered_boundariesE">
+<span id="_CPPv3N5petls7Complex19filtered_boundariesE"></span><span id="_CPPv2N5petls7Complex19filtered_boundariesE"></span><span id="petls::Complex::filtered_boundaries__std::vector:FilteredBoundaryMatrix:storage::"></span><span class="target" id="classpetls_1_1Complex_1a0c8eab257d6e54edc37e910921176060"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="FilteredBoundaryMatrix.html#_CPPv4I0EN5petls22FilteredBoundaryMatrixE" title="petls::FilteredBoundaryMatrix"><span class="n"><span class="pre">FilteredBoundaryMatrix</span></span></a><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">storage</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">filtered_boundaries</span></span></span><a class="headerlink" href="#_CPPv4N5petls7Complex19filtered_boundariesE" title="Link to this definition">#</a><br /></dt>
+<dd><p>Boundary matrix assuming real (or integer) coefficients. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5petls7Complex7verboseE">
+<span id="_CPPv3N5petls7Complex7verboseE"></span><span id="_CPPv2N5petls7Complex7verboseE"></span><span id="petls::Complex::verbose__b"></span><span class="target" id="classpetls_1_1Complex_1a784b891bd9bf1c68ad22d942d8d8245c"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">verbose</span></span></span><a class="headerlink" href="#_CPPv4N5petls7Complex7verboseE" title="Link to this definition">#</a><br /></dt>
+<dd><p>Print progress if <a class="reference internal" href="#classpetls_1_1Complex_1ae90c3fed6769bf36fd6c88465459cefd"><span class="std std-ref">spectra()</span></a> is called. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5petls7Complex11use_flippedE">
+<span id="_CPPv3N5petls7Complex11use_flippedE"></span><span id="_CPPv2N5petls7Complex11use_flippedE"></span><span id="petls::Complex::use_flipped__b"></span><span class="target" id="classpetls_1_1Complex_1acf05fc10d73f8dc5e9a2a1d50a9cd480"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">use_flipped</span></span></span><a class="headerlink" href="#_CPPv4N5petls7Complex11use_flippedE" title="Link to this definition">#</a><br /></dt>
+<dd><p>Compute the top-dimensional Laplacian’s eigenvalues in spectra function via the eigenvalues of the smaller of B_N B_N^T or B_N^T B_N and possible zero-padding. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N5petls7Complex7profileE">
+<span id="_CPPv3N5petls7Complex7profileE"></span><span id="_CPPv2N5petls7Complex7profileE"></span><span id="petls::Complex::profile__Profile"></span><span class="target" id="classpetls_1_1Complex_1a09b4983ae83f6978bd2a851cdddf89e6"></span><span class="n"><span class="pre">Profile</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">profile</span></span></span><a class="headerlink" href="#_CPPv4N5petls7Complex7profileE" title="Link to this definition">#</a><br /></dt>
+<dd><p>Profiler to track time usage of various steps. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
 </section>
 </section>
 
@@ -390,7 +856,47 @@
   </div>
   <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Complex</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Complex</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N5petls7ComplexE"><code class="docutils literal notranslate"><span class="pre">petls::Complex</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N5petls7Complex7ComplexEv"><code class="docutils literal notranslate"><span class="pre">Complex()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N5petls7Complex7ComplexENSt6vectorIN5Eigen12SparseMatrixI7storageEEEENSt6vectorINSt6vectorI15filtration_typeEEEE"><code class="docutils literal notranslate"><span class="pre">Complex()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N5petls7Complex26set_boundaries_filtrationsENSt6vectorIN5Eigen12SparseMatrixI7storageEEEENSt6vectorINSt6vectorI15filtration_typeEEEE"><code class="docutils literal notranslate"><span class="pre">set_boundaries_filtrations()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N5petls7Complex11set_verboseEb"><code class="docutils literal notranslate"><span class="pre">set_verbose()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N5petls7Complex11set_flippedEb"><code class="docutils literal notranslate"><span class="pre">set_flipped()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N5petls7Complex5get_LEi15filtration_type15filtration_typeR14DenseMatrix_PL"><code class="docutils literal notranslate"><span class="pre">get_L()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N5petls7Complex5get_LEi15filtration_type15filtration_type"><code class="docutils literal notranslate"><span class="pre">get_L()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N5petls7Complex21get_L_top_dim_flippedE15filtration_typeR15SparseMatrix_PL"><code class="docutils literal notranslate"><span class="pre">get_L_top_dim_flipped()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N5petls7Complex21get_L_top_dim_flippedE15filtration_type"><code class="docutils literal notranslate"><span class="pre">get_L_top_dim_flipped()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N5petls7Complex6get_upEi15filtration_type15filtration_typeR14DenseMatrix_PL"><code class="docutils literal notranslate"><span class="pre">get_up()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N5petls7Complex6get_upEi15filtration_type15filtration_type"><code class="docutils literal notranslate"><span class="pre">get_up()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N5petls7Complex8get_downEi15filtration_typeRN5Eigen12SparseMatrixI7storageEE"><code class="docutils literal notranslate"><span class="pre">get_down()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N5petls7Complex8get_downEi15filtration_type"><code class="docutils literal notranslate"><span class="pre">get_down()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N5petls7Complex15nonzero_spectraEi15filtration_type15filtration_type15SparseMatrix_PLb"><code class="docutils literal notranslate"><span class="pre">nonzero_spectra()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N5petls7Complex7spectraEi15filtration_type15filtration_type"><code class="docutils literal notranslate"><span class="pre">spectra()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N5petls7Complex7spectraEv"><code class="docutils literal notranslate"><span class="pre">spectra()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N5petls7Complex7spectraENSt6vectorINSt5tupleIi15filtration_type15filtration_typeEEEE"><code class="docutils literal notranslate"><span class="pre">spectra()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N5petls7Complex16spectra_allpairsEv"><code class="docutils literal notranslate"><span class="pre">spectra_allpairs()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N5petls7Complex10eigenpairsEi15filtration_type15filtration_type"><code class="docutils literal notranslate"><span class="pre">eigenpairs()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N5petls7Complex10eigenpairsEv"><code class="docutils literal notranslate"><span class="pre">eigenpairs()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N5petls7Complex10eigenpairsENSt6vectorINSt5tupleIi15filtration_type15filtration_typeEEEE"><code class="docutils literal notranslate"><span class="pre">eigenpairs()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N5petls7Complex21eigenvalues_summarizeENSt6vectorI12spectra_typeEE"><code class="docutils literal notranslate"><span class="pre">eigenvalues_summarize()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N5petls7Complex7store_LEi15filtration_type15filtration_typeNSt6stringE"><code class="docutils literal notranslate"><span class="pre">store_L()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N5petls7Complex16print_boundariesEv"><code class="docutils literal notranslate"><span class="pre">print_boundaries()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N5petls7Complex13store_spectraENSt6vectorINSt5tupleIi15filtration_type15filtration_typeNSt6vectorI12spectra_typeEEEEEENSt6stringE"><code class="docutils literal notranslate"><span class="pre">store_spectra()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N5petls7Complex21store_spectra_summaryENSt6vectorINSt5tupleIi15filtration_type15filtration_typeNSt6vectorI12spectra_typeEEEEEENSt6stringE"><code class="docutils literal notranslate"><span class="pre">store_spectra_summary()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N5petls7Complex11time_to_csvENSt6stringE"><code class="docutils literal notranslate"><span class="pre">time_to_csv()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N5petls7Complex34filtration_list_to_spectra_requestENSt6vectorI15filtration_typeEENSt6vectorIiEE"><code class="docutils literal notranslate"><span class="pre">filtration_list_to_spectra_request()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N5petls7Complex43filtration_list_to_spectra_request_allpairsENSt6vectorI15filtration_typeEENSt6vectorIiEE"><code class="docutils literal notranslate"><span class="pre">filtration_list_to_spectra_request_allpairs()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N5petls7Complex19get_all_filtrationsEv"><code class="docutils literal notranslate"><span class="pre">get_all_filtrations()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N5petls7Complex7top_dimE"><code class="docutils literal notranslate"><span class="pre">top_dim</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N5petls7Complex19filtered_boundariesE"><code class="docutils literal notranslate"><span class="pre">filtered_boundaries</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N5petls7Complex7verboseE"><code class="docutils literal notranslate"><span class="pre">verbose</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N5petls7Complex11use_flippedE"><code class="docutils literal notranslate"><span class="pre">use_flipped</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#_CPPv4N5petls7Complex7profileE"><code class="docutils literal notranslate"><span class="pre">profile</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
   </nav></div>
 

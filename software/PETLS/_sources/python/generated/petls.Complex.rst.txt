@@ -25,6 +25,7 @@
       ~Complex.print_boundaries
       ~Complex.set_boundaries_filtrations
       ~Complex.set_eigs_Algorithm
+      ~Complex.set_up_Algorithm
       ~Complex.spectra
       ~Complex.store_L
       ~Complex.store_spectra
