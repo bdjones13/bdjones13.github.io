@@ -15,14 +15,14 @@ I earned my M.A. in Mathematics, B.S. in Computer Science, and B.S. in Mathemati
 
 # Research
 
-## Overview
-[**Persistent Topological Laplacians** (PTLs)](https://www.youtube.com/watch?v=SIHirU11jqI) **generalize [persistent homology](https://en.wikipedia.org/wiki/Persistent_homology)**, like the one in [this paper](https://users.math.msu.edu/users/weig/paper/p290.pdf) by [Rui Wang](https://wangru25.github.io/). They also **generalize the [graph Laplacian](https://en.wikipedia.org/wiki/Laplacian_matrix)** of spectral graph theory to higher-order simplicial complexes (and other structures, such as path complexes). The eigenvalues (spectra) of a PTL reveals persistent homology and geometric qualities of the complex. Computing the PTL and its eigenvalues is hard. 
+## Background
+[**Persistent Topological Laplacians** (PTLs)](https://www.youtube.com/watch?v=SIHirU11jqI) **generalize [persistent homology](https://en.wikipedia.org/wiki/Persistent_homology)** and **the [graph Laplacian](https://en.wikipedia.org/wiki/Laplacian_matrix)** of spectral graph theory to higher-order simplicial complexes (and other structures, such as path complexes). The eigenvalues (spectra) of a PTL reveals persistent homology and geometric qualities of the complex. Computing the PTL and its eigenvalues is computationally challenging. 
 
 As part of the Spring 2025 WinCompTop+AATRN Tutorial-a-thon, I made a <a href="https://youtu.be/IBS4PQ8usFY?si=X5im1nSkTEnixjJ3"><strong>YouTube tutorial</strong></a> that introduces Persistent Laplacians.
 
 I wrote a fast python library to compute PTLs, called the <u><strong>PE</strong></u>rsistent <u><strong>T</strong></u>opological <u><strong>L</strong></u>aplacian <u><strong>S</strong></u>oftware (<u><strong>PETLS</strong></u>). Links to source code on [Github](https://github.com/bdjones13/PETLS/), the paper on [Arxiv](https://arxiv.org/abs/2508.11560), and the [API Documentation](https://www.benjones-math.com/software/PETLS/). You can install from PyPI via ```pip install petls```.
 
-## I am currently interested in:
+## Current Research Interests:
 
 1. The behavior of persistent (and non-Persistent) topological Laplacians defined **in different contexts**, such as directed flag (clique) complexes<sup><a href="#pdfl">3</a></sup>, the chain complex arrising from Khovanov homology<sup><a href="#khovanov">5</a></sup>, and with cellular sheaves.
 2. Ways to **efficiently compute** the persistent Laplacian and its eigenvalues. Persistent Laplacian computations are much slower in practice than persistent homology, but there are practical and theoretical ways to mitigate this<sup><a href="#petls">7</a></sup>. 
@@ -43,7 +43,7 @@ I wrote a fast python library to compute PTLs, called the <u><strong>PE</strong>
   <li><strong>Benjamin Jones</strong>, S. Ahmed Ullah, S. Wang, and S. Zhao, "Adaptive pseudo-time methods for the Poisson-Boltzmann equation with Eulerian solvent excluded surface", <em>Communications in Information & Systems,</em> 21(1), 85-123, 2021. (<a href="arxiv.org/abs/2011.14250">arxiv</a>) (<a href="https://dx.doi.org/10.4310/CIS.2021.v21.n1.a5">doi</a>)</li>
 </ol>
 
-## Contributed Talks
+## Conference Talks
 
 <ol reversed>
     <li><a href="https://zhengchao-wan.com/tda-conference-2025/index.html">Conference on Topological Data Analysis: Recent Developments and Applications</a>, November 2025. </li>
