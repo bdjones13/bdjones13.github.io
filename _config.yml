@@ -71,6 +71,7 @@ footer:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/bdjones13"
+      
 
 #include: ["_pages", "software/**","software/\_sources/**","_software/_static/**"]
 # https://talk.jekyllrb.com/t/include-all-files-in-a-specific-directory-even-if-the-filenames-start-with-underscores/5849/7

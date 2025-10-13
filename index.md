@@ -7,11 +7,11 @@ header:
   overlay_image: /assets/images/purple-coffee.jpg
 ---
 
-![image-left](/assets/images/ProfileF23.jpeg){: width="20%" .align-right } &nbsp;&nbsp;&nbsp;&nbsp;I am a math PhD candidate at [Michigan State University](https://math.natsci.msu.edu/) working with [Guo-Wei Wei](https://users.math.msu.edu/users/weig/) to develop tools in **Topological Data Analysis** (TDA) for computational biology.
+![image-left](/assets/images/ProfileF23.jpeg){: width="20%" .align-right } &nbsp;&nbsp;&nbsp;&nbsp;I am a math PhD candidate at [Michigan State University](https://math.natsci.msu.edu/) working with [Guo-Wei Wei](https://users.math.msu.edu/users/weig/) to develop tools in **Computational Topology** for computational biology.
 
 I earned my M.A. in Mathematics, B.S. in Computer Science, and B.S. in Mathematics at The University of Alabama.
 
-[ORCID:0000-0001-7810-7770](https://orcid.org/0000-0001-7810-7770)
+**I am currently on the job market for a postdoc starting Summer/Fall 2026.** Here is [my CV](/assets/files/CV.pdf).
 
 # Research
 
@@ -26,12 +26,14 @@ I wrote a fast python library to compute PTLs, called the <u>**PE**</u>rsistent 
 
 1. The behavior of persistent (and non-Persistent) topological Laplacians defined **in different contexts**, such as directed flag (clique) complexes<sup><a href="#pdfl">3</a></sup>, the chain complex arrising from Khovanov homology<sup><a href="#khovanov">5</a></sup>, and with cellular sheaves.
 2. Ways to **efficiently compute** the persistent Laplacian and its eigenvalues. Persistent Laplacian computations are much slower in practice than persistent homology, but there are practical and theoretical ways to mitigate this<sup><a href="#petls">7</a></sup>. 
-3. Applying persistent Laplacians to problems in **molecular biology**, by way of **machine learning** methods<sup><a href="#pdfl-ml">4</a>, <a href="#transformer">6</a></sup>.
+3. Applying persistent Laplacians and/or **machine learning** to problems in **molecular biology**<sup><a href="#pdfl-ml">4</a>, <a href="#transformer">6</a>, <a href="#alphafold">8</a>, <a href="#opioid">9</a> </sup>.
 4. Applying persistent homology of **asymmetric/directed networks** (directed flag/clique complexes and Dowker complexes) to study dynamical systems arrising from **climate science**.
 
 
 ## Papers and preprints
 <ol reversed>
+  <li id="opioid"> Chunhuan Zhang, Sean Cottrell, <strong>Benjamin Jones</strong>, Yueying Zhu, Huahai Qiu, Bengong Zhang, Tianshou Zhou,  and Jian Jiang, "Meta-analysis and Topological Perturbation in Interactomic Network for Anti-opioid Addiction Drug Repurposing," 2025. (<a href="https://arxiv.org/abs/2509.19410">arXiv</a>)
+  <li id="alphafold">Jian Jiang, Guilin Wang, Daixin Li, Nicole Hayes, <strong>Benjamin Jones</strong>, Yazhou Shi, Huahai Qiu, Bengong Zhang, Tianshou Zhou, and Guo-Wei Wei, "Unexpected Applications of AlphaFold in Molecular Sciences: A Review," <em>Annual review of Biochemistry</em>, accepted (2025).
   <li id="petls"><strong>Benjamin Jones</strong> and Guo-Wei Wei, "PETLS: PErsistent Topological Laplacian Software," 2025. (<a href="https://arxiv.org/abs/2508.11560">arXiv</a>)
   <li id="transformer">Dong Chen, Gengzhuo Liu, Hongyan Du, <strong>Benjamin Jones</strong>, Junjie Wee, Rui Wang, Jiahui Chen, Jana Shen, and Guo-Wei Wei, "Drug Resistance Predictions Based on a Directed Flag Transformer,"  <em>Advanced Science</em> e02756, 2025. (<a href="https://arxiv.org/abs/2403.02603">arXiv</a>) (<a href="https://doi.org/10.1002/advs.202502756">doi</a>)</li>
   <li id="khovanov"><strong>Benjamin Jones</strong> and Guo-Wei Wei, "Khovanov Laplacian and Khovanov Dirac for Knots and Links," <em>J. Phys. Complex.</em> 6(2), 025014, 2025. (<a href="https://arxiv.org/abs/2411.18841">arxiv</a>) (<a href="https://doi.org/10.1088/2632-072X/adde9f">doi</a>)</li>
@@ -43,6 +45,10 @@ I wrote a fast python library to compute PTLs, called the <u>**PE**</u>rsistent 
 
 ## Contributed Talks
 <ol reversed>
+    <li><a href="https://zhengchao-wan.com/tda-conference-2025/index.html">Conference on Topological Data Analysis: Recent Developments and Applications</a>, November 2025. </li>
+    <li><a href="https://www.imsi.institute/activities/the-geometric-realization-of-aatrn-applied-algebraic-topology-research-network/">5th Workshop on Computational Persistence (ComPer)</a>, SUNY Albany. </li>
+    <li><a href="https://sites.google.com/view/glsiam2025/">SIAM Great Lakes Section Annual Meeting,</a> Illinois Institute of Technology, September 2025.</li>
+    <li>The Geometric Realization of the Applied Algebraic Topology Research Network (AATRN), IMSI, Chicago. Lightning talk + poster. August 2025.
     <li><a href="https://topologyandgeometry.iu.edu/gstgc25/index.html">Graduate Student Geometry and Topology Conference 2025</a>, Indiana University Bloomington. "Persistent and combinatorial Laplacians for topological data analysis and their introduction to knot theory," April 2025.</li>
     <li>Women in Computational Topology (WinCompTop) + Applied Algebraic Topology Research Network (AATRN) Spring 2025 Tutorial-a-thon, <a href="https://youtu.be/IBS4PQ8usFY?si=X5im1nSkTEnixjJ3">YouTube tutorial</a>. "Persistent Laplacians: What they are, why you should care, and how to compute them," February 2025.</li>
     <li>Joint Mathematics Meetings (JMM), Seattle, WA. AMS Special Session on Topological Data Analysis: Theory and Applications. "Efficient Computation of Persistent Laplacians," January 2025.</li>

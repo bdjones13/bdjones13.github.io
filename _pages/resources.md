@@ -4,6 +4,7 @@ title: "Resources"
 toc: true
 ---
 
+I've collected some useful resources below for applied algebraic topology, math in general, grad school, and the MSU/Lansing area. 
 
 # Topology
 
