@@ -49,7 +49,7 @@ I wrote a fast python library to compute PTLs, called the <u><strong>PE</strong>
     <li><a href="https://zhengchao-wan.com/tda-conference-2025/index.html">Conference on Topological Data Analysis: Recent Developments and Applications</a>, November 2025. </li>
     <li><a href="https://www.imsi.institute/activities/the-geometric-realization-of-aatrn-applied-algebraic-topology-research-network/">5th Workshop on Computational Persistence (ComPer)</a>, SUNY Albany. </li>
     <li><a href="https://sites.google.com/view/glsiam2025/">SIAM Great Lakes Section Annual Meeting,</a> Illinois Institute of Technology, September 2025.</li>
-    <li>The Geometric Realization of the Applied Algebraic Topology Research Network (AATRN), IMSI, Chicago. Lightning talk + poster. August 2025.
+    <li>The Geometric Realization of the Applied Algebraic Topology Research Network (AATRN), IMSI, Chicago. Lightning talk + poster. August 2025.</li>
     <li><a href="https://topologyandgeometry.iu.edu/gstgc25/index.html">Graduate Student Geometry and Topology Conference 2025</a>, Indiana University Bloomington. "Persistent and combinatorial Laplacians for topological data analysis and their introduction to knot theory," April 2025.</li>
     <li>Women in Computational Topology (WinCompTop) + Applied Algebraic Topology Research Network (AATRN) Spring 2025 Tutorial-a-thon, <a href="https://youtu.be/IBS4PQ8usFY?si=X5im1nSkTEnixjJ3">YouTube tutorial</a>. "Persistent Laplacians: What they are, why you should care, and how to compute them," February 2025.</li>
     <li>Joint Mathematics Meetings (JMM), Seattle, WA. AMS Special Session on Topological Data Analysis: Theory and Applications. "Efficient Computation of Persistent Laplacians," January 2025.</li>
