@@ -7,30 +7,22 @@ header:
   overlay_image: /assets/images/purple-coffee.jpg
 ---
 
-![image-left](/assets/images/ProfileF23.jpeg){: width="20%" .align-right } &nbsp;&nbsp;&nbsp;&nbsp;I am a math PhD candidate at [Michigan State University](https://math.natsci.msu.edu/) working with [Guo-Wei Wei](https://users.math.msu.edu/users/weig/) to develop tools in **Computational Topology** for computational biology.
+![image-left](/assets/images/ProfileF23.jpeg){: width="20%" .align-right } &nbsp;&nbsp;&nbsp;&nbsp;I am a 5th year math PhD candidate at Michigan State University working with [Guo-Wei Wei](https://users.math.msu.edu/users/weig/) to develop tools in **Computational Topology** for computational biology.
 
-I earned my M.A. in Mathematics, B.S. in Computer Science, and B.S. in Mathematics at The University of Alabama.
+Previously, I earned my MA in math, BS in computer science, and BS in Mathematics at The University of Alabama.
 
 **I am currently on the job market for a postdoc starting Summer/Fall 2026.** Here is [my CV](/assets/files/CV.pdf).
 
-# Research
 
-## Background
-[**Persistent Topological Laplacians** (PTLs)](https://www.youtube.com/watch?v=SIHirU11jqI) **generalize [persistent homology](https://en.wikipedia.org/wiki/Persistent_homology)** and **the [graph Laplacian](https://en.wikipedia.org/wiki/Laplacian_matrix)** of spectral graph theory to higher-order simplicial complexes (and other structures, such as path complexes). The eigenvalues (spectra) of a PTL reveals persistent homology and geometric qualities of the complex. Computing the PTL and its eigenvalues is computationally challenging. 
+# Research Interests
 
-As part of the Spring 2025 WinCompTop+AATRN Tutorial-a-thon, I made a <a href="https://youtu.be/IBS4PQ8usFY?si=X5im1nSkTEnixjJ3"><strong>YouTube tutorial</strong></a> that introduces Persistent Laplacians.
-
-I wrote a fast python library to compute PTLs, called the <u><strong>PE</strong></u>rsistent <u><strong>T</strong></u>opological <u><strong>L</strong></u>aplacian <u><strong>S</strong></u>oftware (<u><strong>PETLS</strong></u>). Links to source code on [Github](https://github.com/bdjones13/PETLS/), the paper on [Arxiv](https://arxiv.org/abs/2508.11560), and the [API Documentation](https://www.benjones-math.com/software/PETLS/). You can install from PyPI via ```pip install petls```.
-
-## Current Research Interests:
-
-1. The behavior of persistent (and non-Persistent) topological Laplacians defined **in different contexts**, such as directed flag (clique) complexes<sup><a href="#pdfl">3</a></sup>, the chain complex arrising from Khovanov homology<sup><a href="#khovanov">5</a></sup>, and with cellular sheaves.
+1. The behavior of **persistent Laplacians** defined **in different contexts**, such as directed flag (clique) complexes<sup><a href="#pdfl">3</a></sup>, the chain complex arrising from Khovanov homology<sup><a href="#khovanov">5</a></sup>, and with **cellular sheaves**.
 2. Ways to **efficiently compute** the persistent Laplacian and its eigenvalues. Persistent Laplacian computations are much slower in practice than persistent homology, but there are practical and theoretical ways to mitigate this<sup><a href="#petls">7</a></sup>. 
 3. Applying persistent Laplacians and/or **machine learning** to problems in **molecular biology**<sup><a href="#pdfl-ml">4</a>, <a href="#transformer">6</a>, <a href="#alphafold">8</a>, <a href="#opioid">9</a> </sup>.
-4. Applying persistent homology of **asymmetric/directed networks** (directed flag/clique complexes and Dowker complexes) to study dynamical systems arrising from **climate science**.
+4. Using persistent homology of **asymmetric/directed networks** (directed flag/clique complexes and Dowker complexes) to study **dynamical systems** arrising from **climate science**.
 
 
-## Papers and preprints
+# Papers and preprints
 <ol reversed>
   <li id="opioid"> Chunhuan Zhang, Sean Cottrell, <strong>Benjamin Jones</strong>, Yueying Zhu, Huahai Qiu, Bengong Zhang, Tianshou Zhou,  and Jian Jiang, "Meta-analysis and Topological Perturbation in Interactomic Network for Anti-opioid Addiction Drug Repurposing," 2025. (<a href="https://arxiv.org/abs/2509.19410">arXiv</a>)</li>
   <li id="alphafold">Jian Jiang, Guilin Wang, Daixin Li, Nicole Hayes, <strong>Benjamin Jones</strong>, Yazhou Shi, Huahai Qiu, Bengong Zhang, Tianshou Zhou, and Guo-Wei Wei, "Unexpected Applications of AlphaFold in Molecular Sciences: A Review," <em>Annual review of Biochemistry</em>, accepted (2025).</li>
@@ -43,7 +35,7 @@ I wrote a fast python library to compute PTLs, called the <u><strong>PE</strong>
   <li><strong>Benjamin Jones</strong>, S. Ahmed Ullah, S. Wang, and S. Zhao, "Adaptive pseudo-time methods for the Poisson-Boltzmann equation with Eulerian solvent excluded surface", <em>Communications in Information & Systems,</em> 21(1), 85-123, 2021. (<a href="arxiv.org/abs/2011.14250">arxiv</a>) (<a href="https://dx.doi.org/10.4310/CIS.2021.v21.n1.a5">doi</a>)</li>
 </ol>
 
-## Conference Talks
+# Conference Talks
 
 <ol reversed>
     <li><a href="https://zhengchao-wan.com/tda-conference-2025/index.html">Conference on Topological Data Analysis: Recent Developments and Applications</a>, November 2025. </li>
@@ -59,7 +51,7 @@ I wrote a fast python library to compute PTLs, called the <u><strong>PE</strong>
     <li><a href="https://sites.google.com/view/mbw-2024/home?authuser=0">Mathematical Biosciences Workshop</a>, Penn State University. "Persistent Directed Flag Laplacian," August 2024.</li>
 </ol>
 
-## Seminar Talks
+# Seminar Talks
 
 <ol reversed>
 <li> MSU <a href="https://cmse.msu.edu/NewsEvents/tda_seminar/index.aspx">TDA Seminar</a>. "Computing Persistent Laplacians: Toward Broader Applications in TDA," April 2025.</li>
@@ -68,7 +60,7 @@ I wrote a fast python library to compute PTLs, called the <u><strong>PE</strong>
 <li> University of Alabama Applied Math Seminar, Tuscaloosa, AL. "Adaptive Pseudo-Time Methods for the Poisson-Boltzmann Equation with Eulerian Solvent Excluded Surface," December 2020.</li>
 </ol>
 
-## Theses
+# Theses
 
 **Ph.D. (in progress):** B. Jones. "Aspects of Applied Geometric and Algebraic Topologies." Doctoral thesis at Michigan State University.
   Committee: *Guo-Wei Wei (chair), Mark Iwen, Ekaterina Merkurjev, and Elizabeth Munch.*
