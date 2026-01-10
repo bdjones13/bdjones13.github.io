@@ -77,4 +77,4 @@ Previously, I earned my MA in math, BS in computer science, and BS in Mathematic
 
 [jones657@msu.edu](mailto:jones657@msu.edu)
 
-I recently met another Benjamin (Ben) Jones mathematician. He researches operator algebras at Arizona State University. Here is <a href="https://been-jamming.github.io/">his website</a> and a <a href="/assets/images/OtherBenJones.jpeg">picture</a> of us.
+I recently met another Benjamin Jones mathematician. He researches operator algebras at Arizona State University. Here is <a href="https://been-jamming.github.io/">his website</a> and a <a href="/assets/images/OtherBenJones.jpg">picture</a> of us.
