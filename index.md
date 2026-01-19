@@ -20,7 +20,7 @@ I earned my M.A. in Mathematics, B.S. in Computer Science, and B.S. in Mathemati
 
 As part of the Spring 2025 WinCompTop+AATRN Tutorial-a-thon, I made a <a href="https://youtu.be/IBS4PQ8usFY?si=X5im1nSkTEnixjJ3"><strong>YouTube tutorial</strong></a> that introduces Persistent Laplacians.
 
-I wrote a fast python library to compute PTLs, called the <u><strong>PE</strong></u>rsistent <u><strong>T</strong></u>opological <u><strong>L</strong></u>aplacian <u><strong>S</strong></u>oftware (<u><strong>PETLS</strong></u>). Links to source code on [Github](https://github.com/bdjones13/PETLS/), the paper on [Arxiv](https://arxiv.org/abs/2508.11560), and the [API Documentation](https://www.benjones-math.com/software/PETLS/). You can install from PyPI via ```pip install petls```.
+I wrote a fast python library to compute PTLs, called PETLS: <u><strong>PE</strong></u>rsistent <u><strong>T</strong></u>opological <u><strong>L</strong></u>aplacian <u><strong>S</strong></u>oftware . Links to [source code on Github](https://github.com/bdjones13/PETLS/), the [paper on Arxiv](https://arxiv.org/abs/2508.11560), and the [API Documentation](https://www.benjones-math.com/software/PETLS/). You can install from PyPI via ```pip install petls```.
 
 ## Current Research Interests:
 
