@@ -24,6 +24,7 @@ description: "Benjamin Jones is a mathematics PhD candidate at Michigan State Un
 baseurl: "" # the subpath of your site, e.g. /blog
 url: https://www.benjones-math.com/ # the base hostname & protocol for your site, e.g. http://example.com
 repository: "bdjones13/bdjones13.github.io"
+favicon: "/assets/images/favicon/favicon.ico"
 
 # Build settings
 remote_theme: mmistakes/minimal-mistakes
