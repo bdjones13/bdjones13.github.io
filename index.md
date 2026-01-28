@@ -7,7 +7,7 @@ header:
   overlay_image: /assets/images/purple-coffee.jpg
 ---
 
-![image-left](/assets/images/ProfileF23.jpeg){: width="20%" .align-right } &nbsp;&nbsp;&nbsp;&nbsp;I am a 5th year math PhD candidate at Michigan State University working with [Guo-Wei Wei](https://users.math.msu.edu/users/weig/) to develop tools in **Computational Topology** for computational biology.
+![image-left](/assets/images/ProfileF23_hq.webp){: width="20%" .align-right } &nbsp;&nbsp;&nbsp;&nbsp;I am a 5th year math PhD candidate at Michigan State University working with [Guo-Wei Wei](https://users.math.msu.edu/users/weig/) to develop tools in **Computational Topology** for computational biology.
 
 Previously, I earned my MA in math, BS in computer science, and BS in Mathematics at The University of Alabama.
 
