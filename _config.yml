@@ -20,7 +20,7 @@
 
 title: Ben Jones
 email: benjamindanieljones@gmail.com
-description: "Benjamin Jones is a mathematics PhD candidate at Michigan State University working in computational topology, persistent Laplacians, and applications to biology." 
+description: "Ben Jones is a mathematics PhD candidate at Michigan State University specializing in topological data analysis (TDA), persistent Laplacians, flag complexes, and computational topology. Creator of PETLS software for efficient persistent Laplacian computations with applications to molecular biology." 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: https://www.benjones-math.com # the base hostname & protocol for your site, e.g. http://example.com
 repository: "bdjones13/bdjones13.github.io"
@@ -31,6 +31,8 @@ remote_theme: mmistakes/minimal-mistakes
 plugins:
   - jekyll-feed
   - jekyll-include-cache
+  - jekyll-sitemap
+  - jekyll-seo-tag
 
 
 # collections:
@@ -45,7 +47,12 @@ minimal_mistakes_skin: "default" # "air", "aqua", "contrast", "dark", "dirt", "n
 author:
   name     : "Ben Jones"
   avatar   : "/assets/images/bio-photo.jpg"
+  bio      : "Math PhD | TDA & Persistent Laplacians | PETLS Creator"
   location : "East Lansing, MI - USA"
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/bdjones13"
 
 atom_feed:
   hide: true

@@ -5,33 +5,39 @@ header:
   overlay_color: "#000"
   overlay_filter: "0.5"
   overlay_image: /assets/images/purple-coffee.jpg
+excerpt: "Math PhD candidate specializing in TDA, persistent Laplacians, geometric topology, and computational topology. Creator of PETLS software."
+seo_title: "Ben Jones Math - TDA, Persistent Laplacians, Flag Complexes | PETLS"
+description: "Ben Jones is a mathematics PhD researcher at Michigan State University working on topological data analysis (TDA), persistent Laplacians, flag complexes, and PETLS software for computational topology applications in molecular biology."
+keywords: "Ben Jones Math, TDA, topological data analysis, persistent Laplacian, PETLS, flag complex, directed flag complex, computational topology, persistent homology, Khovanov homology, Khovanov Laplacian, CACTIS"
 ---
 
-![image-left](/assets/images/ProfileF23_hq.webp){: width="20%" .align-right } &nbsp;&nbsp;&nbsp;&nbsp;I am a 5th year math PhD candidate at Michigan State University working with [Guo-Wei Wei](https://users.math.msu.edu/users/weig/) to develop tools in **Computational Topology** for computational biology.
+![image-left](/assets/images/ProfileF23_hq.webp){: width="20%" .align-right } &nbsp;&nbsp;&nbsp;&nbsp;I am a 5th year math PhD candidate at Michigan State University working with [Guo-Wei Wei](https://users.math.msu.edu/users/weig/) to develop tools in **topological data analysis (TDA)** and **computational topology** for computational biology. My research focuses on **persistent Laplacians**, **Khovanov homology**, efficient algorithms for TDA, and **mathematical biology**.
 
-Previously, I earned my MA in math, BS in computer science, and BS in Mathematics at The University of Alabama.
+I created [**PETLS**](/software/#petls-persistent-topological-laplacian-software) (PErsistent Topological Laplacian Software), an open-source Python/C++ library for computing persistent Laplacians with applications to molecular biology and network analysis. View the [PETLS source code on GitHub](https://github.com/bdjones13/PETLS).
+
+Previously, I earned my MA in math, BS in computer science, and BS in mathematics at The University of Alabama.
 
 **I am currently on the job market for a postdoc starting Summer/Fall 2026.** Here is [my CV](/assets/files/CV.pdf).
 
 
 # Research Interests
 
-1. The behavior of **persistent Laplacians** defined **in different contexts**, such as directed flag (clique) complexes<sup><a href="#pdfl">3</a></sup>, the chain complex arrising from Khovanov homology<sup><a href="#khovanov">5</a></sup>, and with **cellular sheaves**.
-2. Ways to **efficiently compute** the persistent Laplacian and its eigenvalues. Persistent Laplacian computations are much slower in practice than persistent homology, but there are practical and theoretical ways to mitigate this<sup><a href="#petls">7</a></sup>. 
+1. The behavior of **persistent Laplacians** defined **in different contexts**, such as **directed flag complexes** (clique complexes)<sup><a href="#pdfl">3</a></sup>, the chain complex arrising from Khovanov homology<sup><a href="#khovanov">5</a></sup>, and with **cellular sheaves**.
+2. Ways to **efficiently compute** the persistent Laplacian and its eigenvalues for **TDA applications**. Persistent Laplacian computations are much slower in practice than persistent homology, but there are practical and theoretical ways to mitigate this<sup><a href="#petls">7</a></sup>. See my [PETLS software](/software/) for efficient implementations.
 3. Applying persistent Laplacians and/or **machine learning** to problems in **molecular biology**<sup><a href="#pdfl-ml">4</a>, <a href="#transformer">6</a>, <a href="#alphafold">8</a>, <a href="#opioid">9</a> </sup>.
-4. Using persistent homology of **asymmetric/directed networks** (directed flag/clique complexes and Dowker complexes) to study **dynamical systems** arrising from **climate science**<sup><a href="#dowker">10</a></sup>.
+4. Using **topological data analysis** and persistent homology of **asymmetric/directed networks** (directed flag/clique complexes and Dowker complexes) to study **dynamical systems** arrising from **climate science**<sup><a href="#dowker">10</a></sup>.
 
 
 # Papers and preprints
 <ol reversed>
-  <li id="dowker"> Tobias Timofeyev, Christopher Potvin, <strong>Benjamin Jones</strong>, Kristin Kurianski, Miguel Lopez, and Sunia Tanweer, "Asymmetrically Weighted Dowker Persistence and Applications in Dynamical Systems," 2026. (<a href="https://arxiv.org/abs/2601.04559">arXiv</a>)</li>
+  <li id="dowker"> Tobias Timofeyev, Christopher Potvin, <strong>Benjamin Jones</strong>, Kristin Kurianski, Miguel Lopez, and Sunia Tanweer, "Asymmetrically Weighted Dowker Persistence and Applications in Dynamical Systems," 2026. (<a href="https://arxiv.org/abs/2601.04559">arXiv</a>) [<a href="/software/#cactis-coarse-grained-asymmetric-cycles-in-time-series">Software</a>] [<a href="https://github.com/cactismath/CACTIS">GitHub</a>]</li>
   <li id="opioid"> Chunhuan Zhang, Sean Cottrell, <strong>Benjamin Jones</strong>, Yueying Zhu, Huahai Qiu, Bengong Zhang, Tianshou Zhou,  and Jian Jiang, "Meta-analysis and Topological Perturbation in Interactomic Network for Anti-opioid Addiction Drug Repurposing," 2025. (<a href="https://arxiv.org/abs/2509.19410">arXiv</a>) (<a href="https://doi.org/10.1021/acs.jcim.5c02263">Journal</a>)</li>
   <li id="alphafold">Jian Jiang, Guilin Wang, Daixin Li, Nicole Hayes, <strong>Benjamin Jones</strong>, Yazhou Shi, Huahai Qiu, Bengong Zhang, Tianshou Zhou, and Guo-Wei Wei, "Unexpected Applications of AlphaFold in Molecular Sciences: A Review," <em>Annual review of Biochemistry</em>, accepted (2025).</li>
-  <li id="petls"><strong>Benjamin Jones</strong> and Guo-Wei Wei, "PETLS: PErsistent Topological Laplacian Software," 2025. (<a href="https://arxiv.org/abs/2508.11560">arXiv</a>)</li>
+  <li id="petls"><strong>Benjamin Jones</strong> and Guo-Wei Wei, "PETLS: PErsistent Topological Laplacian Software," 2025. (<a href="https://arxiv.org/abs/2508.11560">arXiv</a>) [<a href="/software/#petls-persistent-topological-laplacian-software">Software</a>] [<a href="https://github.com/bdjones13/PETLS">GitHub</a>]</li>
   <li id="transformer">Dong Chen, Gengzhuo Liu, Hongyan Du, <strong>Benjamin Jones</strong>, Junjie Wee, Rui Wang, Jiahui Chen, Jana Shen, and Guo-Wei Wei, "Drug Resistance Predictions Based on a Directed Flag Transformer,"  <em>Advanced Science</em> e02756, 2025. (<a href="https://arxiv.org/abs/2403.02603">arXiv</a>) (<a href="https://doi.org/10.1002/advs.202502756">Journal</a>)</li>
-  <li id="khovanov"><strong>Benjamin Jones</strong> and Guo-Wei Wei, "Khovanov Laplacian and Khovanov Dirac for Knots and Links," <em>J. Phys. Complex.</em> 6(2), 025014, 2025. (<a href="https://arxiv.org/abs/2411.18841">arxiv</a>) (<a href="https://doi.org/10.1088/2632-072X/adde9f">Journal</a>)</li>
+  <li id="khovanov"><strong>Benjamin Jones</strong> and Guo-Wei Wei, "Khovanov Laplacian and Khovanov Dirac for Knots and Links," <em>J. Phys. Complex.</em> 6(2), 025014, 2025. (<a href="https://arxiv.org/abs/2411.18841">arxiv</a>) (<a href="https://doi.org/10.1088/2632-072X/adde9f">Journal</a>) [<a href="https://github.com/bdjones13/KhovanovLaplacian">GitHub</a>]</li>
   <li id="pdfl-ml">Mushal Zia, <strong>Benjamin Jones</strong>, Hongsong Feng, Guo-Wei Wei, "Persistent Directed Flag Laplacian (PDFL)-Based Machine Learning for Protein-Ligand Binding Affinity Prediction," <em>Journal of Chemical Theory and Computation</em> 21(8), 4276-4285, 2025. (<a href="https://arxiv.org/abs/2411.02596">arxiv</a>) (<a href="https://doi.org/10.1021/acs.jctc.5c00074">Journal</a>) </li>
-  <li id="pdfl"><strong>Benjamin Jones</strong> and Guo-Wei Wei, "Persistent Directed Flag Laplacian," <em>Foundations of Data Science,</em> 7(3), 737-758, 2025. (<a href="https://arxiv.org/abs/2312.02099">arxiv</a>) (<a href="https://doi.org/10.3934/fods.2024048">Journal</a>)</li>
+  <li id="pdfl"><strong>Benjamin Jones</strong> and Guo-Wei Wei, "Persistent Directed Flag Laplacian," <em>Foundations of Data Science,</em> 7(3), 737-758, 2025. (<a href="https://arxiv.org/abs/2312.02099">arxiv</a>) (<a href="https://doi.org/10.3934/fods.2024048">Journal</a>) [<a href="/software/#persistent-directed-flag-laplacian-pdfl">Software</a>] [<a href="https://github.com/bdjones13/flagser-laplacian">GitHub</a>]</li>
   <li>S. Ahmed Ullah, X. Yang, <strong>Ben Jones</strong>, S. Zhao, W. Geng, and G. Wei, "Bridging Eulerian and Lagrangian Poisson-Boltzmann solvers by ESES," <em>Journal of Computational Chemistry.</em> 2023, 1. (<a href="https://doi.org/10.1002/jcc.27239">Journal</a>)</li>
   <li><strong>Benjamin Jones</strong>, S. Ahmed Ullah, S. Wang, and S. Zhao, "Adaptive pseudo-time methods for the Poisson-Boltzmann equation with Eulerian solvent excluded surface", <em>Communications in Information & Systems,</em> 21(1), 85-123, 2021. (<a href="https://arxiv.org/abs/2011.14250">arxiv</a>) (<a href="https://dx.doi.org/10.4310/CIS.2021.v21.n1.a5">Journal</a>)</li>
 </ol>
@@ -70,6 +76,10 @@ Previously, I earned my MA in math, BS in computer science, and BS in Mathematic
 **Master's:** B. Jones. "Adaptive pseudo-time methods for the Poisson-Boltzmann equation with Eulerian solvent excluded surface," (2021). Master's thesis at The University of Alabama.  
     Committee: *Shan Zhao (chair), Xiaoyan Hong, Mojdeh Rasoulzadeh, and Wei Zhu.*
 
+
+# Software & Code
+
+All of my research software is open-source and available on [GitHub](https://github.com/bdjones13). Visit my [software page](/software/) to learn more about [PETLS](/software/#petls-persistent-topological-laplacian-software), [CACTIS](/software/#cactis-coarse-grained-asymmetric-cycles-in-time-series), and other **TDA** and **persistent Laplacian** tools.
 
 # Contact information
 

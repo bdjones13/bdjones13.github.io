@@ -1,0 +1,6 @@
+# robots.txt for www.benjones-math.com
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://www.benjones-math.com/sitemap.xml
