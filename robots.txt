@@ -2,5 +2,18 @@
 User-agent: *
 Allow: /
 
+# Disallow thin content auto-generated API documentation pages
+Disallow: /software/PETLS/python/generated/
+Disallow: /software/PETLS/_modules/
+Disallow: /software/PETLS/_sources/
+Disallow: /software/PETLS/genindex.html
+Disallow: /software/PETLS/search.html
+
+# Allow important PETLS pages
+Allow: /software/PETLS/index.html
+Allow: /software/PETLS/Getting_Started.html
+Allow: /software/PETLS/python/
+Allow: /software/PETLS/cpp/
+
 # Sitemap location
 Sitemap: https://www.benjones-math.com/sitemap.xml

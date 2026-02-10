@@ -4,6 +4,9 @@ title: "TDA Software: PETLS, CACTIS | Persistent Laplacian & Flag Complex Tools"
 toc: true
 description: "Open-source TDA software including PETLS for persistent Laplacian computations, CACTIS for time series analysis with flag complexes, and tools for directed flag complexes. Python and C++ implementations by Ben Jones."
 keywords: "PETLS, TDA software, persistent Laplacian, flag complex, directed flag complex, topological data analysis, computational topology, Python TDA, C++ topology"
+redirect_from:
+  - /software/PersistentLaplacians/
+  - /software/PersistentLaplacians/index.html
 ---
 
 ## CACTIS: Coarse-grained Asymmetric Cycles in Time Series

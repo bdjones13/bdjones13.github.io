@@ -33,6 +33,7 @@ plugins:
   - jekyll-include-cache
   - jekyll-sitemap
   - jekyll-seo-tag
+  - jekyll-redirect-from
 
 
 # collections:
@@ -73,6 +74,19 @@ defaults:
       author_profile: true
       share: true
       related: true
+  # Exclude thin-content PETLS API docs from sitemap
+  - scope:
+      path: "software/PETLS/python/generated"
+    values:
+      sitemap: false
+  - scope:
+      path: "software/PETLS/_modules"
+    values:
+      sitemap: false
+  - scope:
+      path: "software/PETLS/_sources"
+    values:
+      sitemap: false
 
 footer:
   links:
