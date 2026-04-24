@@ -1,0 +1,9 @@
+<div class="interests-grid">
+  {% for interest in site.data.interests %}
+  <div class="interest-card">
+    <div class="interest-dot" style="background: {{ interest.color }};"></div>
+    <h3>{{ interest.title }}</h3>
+    <p>{{ interest.desc }}</p>
+  </div>
+  {% endfor %}
+</div>

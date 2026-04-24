@@ -1,0 +1,112 @@
+- id: dowker
+  num: 10
+  title: "Asymmetrically Weighted Dowker Persistence and Applications in Dynamical Systems"
+  authors: "T. Timofeyev, C. Potvin, B. Jones, K. Kurianski, M. Lopez, S. Tanweer"
+  year: 2026
+  venue: "Preprint"
+  arxiv: "https://arxiv.org/abs/2601.04559"
+  github: "https://github.com/cactismath/CACTIS"
+  abstract: "We introduce asymmetrically weighted Dowker persistence for studying directed networks arising from dynamical systems, with applications to climate science data."
+  color: "#2a6b5a"
+
+- id: opioid
+  num: 9
+  title: "Meta-analysis and Topological Perturbation in Interactomic Network for Anti-opioid Addiction Drug Repurposing"
+  authors: "C. Zhang, S. Cottrell, B. Jones, Y. Zhu, H. Qiu, B. Zhang, T. Zhou, J. Jiang"
+  year: 2025
+  venue: "J. Chem. Inf. Model."
+  arxiv: "https://arxiv.org/abs/2509.19410"
+  journal: "https://doi.org/10.1021/acs.jcim.5c02263"
+  abstract: "Applying topological perturbation analysis to protein interaction networks to identify drug repurposing candidates for opioid addiction treatment."
+  color: "#7a3a6a"
+
+- id: alphafold
+  num: 8
+  title: "Unexpected Applications of AlphaFold in Molecular Sciences: A Review"
+  authors: "J. Jiang, G. Wang, D. Li, N. Hayes, B. Jones, Y. Shi, H. Qiu, B. Zhang, T. Zhou, G.-W. Wei"
+  year: 2025
+  venue: "Annual Review of Biochemistry"
+  abstract: "A comprehensive review of AlphaFold's emerging applications beyond protein structure prediction across molecular sciences."
+  color: "#4a5a8a"
+
+- id: petls
+  num: 7
+  title: "PETLS: PErsistent Topological Laplacian Software"
+  authors: "B. Jones, G.-W. Wei"
+  year: 2025
+  venue: "Preprint"
+  arxiv: "https://arxiv.org/abs/2508.11560"
+  github: "https://github.com/bdjones13/PETLS"
+  abstract: "An efficient C++/Python library for computing persistent Laplacians, offering orders-of-magnitude speedups over existing tools for topological data analysis."
+  color: "#1a4a3a"
+  highlight: true
+
+- id: transformer
+  num: 6
+  title: "Drug Resistance Predictions Based on a Directed Flag Transformer"
+  authors: "D. Chen, G. Liu, H. Du, B. Jones, J. Wee, R. Wang, J. Chen, J. Shen, G.-W. Wei"
+  year: 2025
+  venue: "Advanced Science"
+  arxiv: "https://arxiv.org/abs/2403.02603"
+  journal: "https://doi.org/10.1002/advs.202502756"
+  abstract: "Using directed flag complexes within a transformer architecture to predict drug resistance mutations in viral proteins."
+  color: "#5a3a7a"
+
+- id: khovanov
+  num: 5
+  title: "Khovanov Laplacian and Khovanov Dirac for Knots and Links"
+  authors: "B. Jones, G.-W. Wei"
+  year: 2025
+  venue: "J. Phys. Complex."
+  arxiv: "https://arxiv.org/abs/2411.18841"
+  journal: "https://doi.org/10.1088/2632-072X/adde9f"
+  github: "https://github.com/bdjones13/KhovanovLaplacian"
+  abstract: "Introducing Khovanov Laplacians and Dirac operators defined on the chain complex arising from Khovanov homology for knots and links."
+  color: "#2a5a4a"
+  highlight: true
+
+- id: pdfl-ml
+  num: 4
+  title: "Persistent Directed Flag Laplacian (PDFL)-Based Machine Learning for Protein-Ligand Binding Affinity Prediction"
+  authors: "M. Zia, B. Jones, H. Feng, G.-W. Wei"
+  year: 2025
+  venue: "J. Chem. Theory Comput."
+  arxiv: "https://arxiv.org/abs/2411.02596"
+  journal: "https://doi.org/10.1021/acs.jctc.5c00074"
+  abstract: "Combining persistent directed flag Laplacian features with machine learning models to predict protein-ligand binding affinities."
+  color: "#6a4a2a"
+
+- id: pdfl
+  num: 3
+  title: "Persistent Directed Flag Laplacian"
+  authors: "B. Jones, G.-W. Wei"
+  year: 2025
+  venue: "Foundations of Data Science"
+  arxiv: "https://arxiv.org/abs/2312.02099"
+  journal: "https://doi.org/10.3934/fods.2024048"
+  github: "https://github.com/bdjones13/flagser-laplacian"
+  abstract: "Defining a persistent Laplacian on directed flag complexes (clique complexes), extending persistent homology tools to capture richer topological information."
+  color: "#3a6a5a"
+  highlight: true
+
+- id: eses
+  num: 2
+  title: "Bridging Eulerian and Lagrangian Poisson-Boltzmann solvers by ESES"
+  authors: "S. A. Ullah, X. Yang, B. Jones, S. Zhao, W. Geng, G. Wei"
+  year: 2023
+  venue: "J. Comput. Chem."
+  journal: "https://doi.org/10.1002/jcc.27239"
+  abstract: "Bridging Eulerian and Lagrangian frameworks for solving the Poisson-Boltzmann equation using the ESES molecular surface."
+  color: "#5a5a3a"
+
+- id: pbe
+  num: 1
+  title: "Adaptive pseudo-time methods for the Poisson-Boltzmann equation with Eulerian solvent excluded surface"
+  authors: "B. Jones, S. A. Ullah, S. Wang, S. Zhao"
+  year: 2021
+  venue: "Commun. Inf. Syst."
+  arxiv: "https://arxiv.org/abs/2011.14250"
+  journal: "https://dx.doi.org/10.4310/CIS.2021.v21.n1.a5"
+  abstract: "Using PID control to adaptively choose time steps for solving the nonlinear Poisson-Boltzmann equation, achieving 84% CPU savings with minimal error."
+  color: "#4a4a6a"
+  highlight: true

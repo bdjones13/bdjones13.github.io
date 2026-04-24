@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {% seo %}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/custom.css">
+  <link rel="icon" type="image/png" href="/assets/images/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/svg+xml" href="/assets/images/favicon/favicon.svg">
+  <link rel="apple-touch-icon" href="/assets/images/favicon/apple-touch-icon.png">
+  {% feed_meta %}
+  {% if site.google_analytics %}
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
+  {% endif %}
+</head>
+<body>
+
+<nav class="site-nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="/" class="nav-brand">
+      <span class="nav-monogram">BJ</span>
+      <span class="nav-name">Ben Jones</span>
+    </a>
+    <div class="nav-items">
+      <a href="/" class="nav-item{% if page.url == '/' %} active{% endif %}">Home</a>
+      <a href="/research/" class="nav-item{% if page.url == '/research/' %} active{% endif %}">Research</a>
+      <a href="/software/" class="nav-item{% if page.url == '/software/' %} active{% endif %}">Software</a>
+      <a href="/resources/" class="nav-item{% if page.url == '/resources/' %} active{% endif %}">Resources</a>
+      <a href="/cv/" class="nav-item{% if page.url == '/cv/' %} active{% endif %}">Full CV</a>
+    </div>
+  </div>
+</nav>
+
+{% if page.show_hero %}
+<section class="site-hero" aria-label="Introduction">
+  <div id="hero-mesh"></div>
+  <div class="hero-inner">
+    <img src="/assets/images/ProfileF23_hq.webp" alt="Ben Jones" class="hero-photo">
+    <div class="hero-text">
+      <h1>Ben Jones</h1>
+      <p class="hero-subtitle">Mathematics PhD candidate at Michigan State University</p>
+      <p class="hero-desc">Topological data analysis &middot; persistent Laplacians &middot; computational topology &middot; mathematical biology</p>
+      <div class="hero-actions">
+        <a href="/research/" class="btn btn-pink">View Research</a>
+        <a href="mailto:benjamindanieljones@gmail.com" class="btn btn-ghost">Contact</a>
+      </div>
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<div class="page-content">
+  {{ content }}
+</div>
+
+<footer class="site-footer" role="contentinfo">
+  <p>Benjamin Jones &middot; Michigan State University</p>
+  <p>
+    <a href="mailto:benjamindanieljones@gmail.com">benjamindanieljones@gmail.com</a>
+    &nbsp;&middot;&nbsp;
+    <a href="https://github.com/bdjones13">GitHub</a>
+  </p>
+</footer>
+
+<script src="/assets/js/site.js"></script>
+</body>
+</html>

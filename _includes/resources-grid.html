@@ -1,0 +1,12 @@
+<div class="resources-grid">
+  {% for section in site.data.resources %}
+  <div class="resources-section">
+    <h3>{{ section.category }}</h3>
+    <div class="resources-links">
+      {% for link in section.links %}
+      <a href="{{ link.href }}" class="resource-link" target="_blank" rel="noopener">{{ link.label }}</a>
+      {% endfor %}
+    </div>
+  </div>
+  {% endfor %}
+</div>

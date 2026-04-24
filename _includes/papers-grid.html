@@ -1,0 +1,40 @@
+<div class="papers-grid">
+  {% for paper in site.data.papers %}
+  <div class="paper-card" id="paper-{{ paper.id }}">
+    <button class="paper-toggle" type="button" aria-expanded="false">
+      <div class="paper-cover" style="background: linear-gradient(135deg, {{ paper.color }}, {{ paper.color }}cc);">
+        {% if paper.highlight %}
+        <span class="paper-badge">First author</span>
+        {% endif %}
+        <span class="paper-num">{{ paper.num }}</span>
+      </div>
+      <div class="paper-body">
+        <p class="paper-title">{{ paper.title }}</p>
+        <p class="paper-authors">{{ paper.authors }}</p>
+        <div class="paper-meta">
+          <span class="paper-venue">{{ paper.venue }} &middot; {{ paper.year }}</span>
+          <span class="paper-expand-label">
+            Expand <span class="paper-chevron">&#9662;</span>
+          </span>
+        </div>
+      </div>
+    </button>
+    <div class="paper-details">
+      <div class="paper-details-inner">
+        <p class="paper-abstract">{{ paper.abstract }}</p>
+        <div class="paper-links">
+          {% if paper.arxiv %}
+          <a href="{{ paper.arxiv }}" class="paper-link paper-link-arxiv" target="_blank" rel="noopener">arXiv</a>
+          {% endif %}
+          {% if paper.journal %}
+          <a href="{{ paper.journal }}" class="paper-link paper-link-journal" target="_blank" rel="noopener">Journal</a>
+          {% endif %}
+          {% if paper.github %}
+          <a href="{{ paper.github }}" class="paper-link paper-link-github" target="_blank" rel="noopener">GitHub</a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>

@@ -1,0 +1,19 @@
+- degree: "Ph.D. in Mathematics"
+  year: 2026
+  institution: "Michigan State University"
+  advisor: "Guo-Wei Wei"
+  thesis: "Aspects of Applied Geometric and Algebraic Topologies"
+
+- degree: "M.A. in Mathematics"
+  year: 2021
+  institution: "The University of Alabama"
+  advisor: "Shan Zhao"
+  thesis: "Adaptive pseudo-time methods for the Poisson-Boltzmann equation with Eulerian solvent excluded surface"
+
+- degree: "B.S. in Computer Science"
+  institution: "The University of Alabama"
+  year: Fall 2020
+
+- degree: "B.S. in Mathematics"
+  institution: "The University of Alabama"
+  year: Spring 2020

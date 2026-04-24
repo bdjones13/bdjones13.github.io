@@ -1,0 +1,83 @@
+- category: Topology
+  links:
+    - label: "appliedtopology.org"
+      href: "https://appliedtopology.org/"
+    - label: "ALGTOP-L mailing list"
+      href: "https://rezk.web.illinois.edu/algtop-l/algtop-l.html"
+    - label: "Roadmap for persistent homology computation"
+      href: "https://epjdatascience.springeropen.com/articles/10.1140/epjds/s13688-017-0109-5"
+    - label: "AATRN Seminar"
+      href: "https://www.aatrn.net/seminar"
+    - label: "Math Meetings"
+      href: "https://mathmeetings.net/at-gt"
+    - label: "Low Dimensional Topology Conferences"
+      href: "https://sites.google.com/site/lowdimtopologyconferences/"
+    - label: "DONUT Database"
+      href: "https://donut.topology.rocks/"
+
+- category: General Math
+  links:
+    - label: "SIAM Student Travel Awards"
+      href: "https://www.siam.org/conferences-events/conference-support/travel-and-registration-support/"
+    - label: "AMS Student Travel Awards"
+      href: "https://www.ams.org/grants-awards/travel-grants"
+    - label: "AMS Math Research Communities (MRC)"
+      href: "https://www.ams.org/learning-careers/profdev/research-communities/mrc"
+    - label: "NSF Math Institutes"
+      href: "https://mathinstitutes.org/institutes"
+    - label: "NITMB (math & biology)"
+      href: "https://www.nitmb.org/programs"
+    - label: "MathJobs"
+      href: "https://www.mathjobs.org/jobs/list"
+    - label: "MathPrograms"
+      href: "https://www.mathprograms.org/db/program"
+
+- category: Grad School
+  links:
+    - label: "Matt Might's Blog"
+      href: "https://matt.might.net/articles/"
+    - label: "Personal Finance for PhDs"
+      href: "https://pfforphds.com/"
+    - label: "A PhD Is Not Enough! (book)"
+      href: "https://www.amazon.com/gp/product/0465022227"
+
+- category: MSU Math
+  links:
+    - label: "MSU AWM Chapter"
+      href: "https://apps.math.msu.edu/PageSpace/pb/awm/"
+    - label: "MSU AMS Chapter"
+      href: "https://apps.math.msu.edu/PageSpace/pb/ams"
+    - label: "MSU Topology RTG"
+      href: "https://sites.google.com/msu.edu/msutopologyrtg"
+    - label: "TDA Seminar"
+      href: "https://cmse.msu.edu/NewsEvents/tda_seminar/index.aspx"
+    - label: "MSU Math Seminars"
+      href: "https://math.msu.edu/Research/active-seminars.aspx"
+
+- category: MSU Resources
+  links:
+    - label: "Gender & Sexuality Campus Center"
+      href: "https://gscc.msu.edu/index.html"
+    - label: "Counseling & Psychiatric Services (CAPS)"
+      href: "https://caps.msu.edu/"
+    - label: "MSU Graduate Travel Funding"
+      href: "https://grad.msu.edu/fellowships/travel"
+    - label: "Student Legal Services"
+      href: "https://studentlegalservices.com/index.html"
+    - label: "Graduate Employees Union"
+      href: "https://geuatmsu.org/member-benefits/"
+    - label: "Emergency Fellowship Funding"
+      href: "https://grad.msu.edu/fellowships/emergency-fellowship-funding"
+    - label: "MSU Student Food Bank"
+      href: "https://foodbank.msu.edu/index.html"
+
+- category: Lansing / East Lansing
+  links:
+    - label: "Choose Lansing"
+      href: "https://www.lansing.org/"
+    - label: "Lansing Foodies"
+      href: "https://lansingfoodies.com/"
+    - label: "Meridian Township Farmers Market"
+      href: "https://www.meridian.mi.us/community/explore-meridian/meridian-farmers-market"
+    - label: "East Lansing Community Events"
+      href: "https://www.cityofeastlansing.com/133/Community-Events"

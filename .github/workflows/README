@@ -1,0 +1,30 @@
+# Local build instructions
+Instructions for building the website locally on a new machine, which I seem to have to do about once a year.
+## Installations
+
+
+Install rbenv for ruby (https://github.com/rbenv/rbenv-installer#rbenv-installer)
+
+Pre-requisites for ruby listed on https://github.com/rbenv/ruby-build/wiki
+
+Note: as of 2026-04-23, there was no way to resolve dependency conflicts with Ruby 4.0.3, so 3.4.9 or lower was required.
+
+
+```
+# list latest stable versions:
+rbenv install -l 
+
+#install a Ruby version:
+rbenv install 3.4.9
+rbenv local 3.4.9   # set the Ruby version for this directory
+gem install bundler
+bundle install
+```
+
+Install rbenv so that you can install Ruby so that you can install bundler so that you can install the Gems for the project.
+
+## Build
+
+```
+bundle exec jekyll serve
+```

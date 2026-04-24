@@ -1,0 +1,48 @@
+- name: PETLS
+  name_full: PErsistent Topological Laplacian Software
+  install: pip install petls
+  desc: "a high-performance C++/Python library for efficiently computing persistent Laplacians in topological data analysis. Offers orders-of-magnitude speedups over existing tools, with support for Rips, alpha, flag complexes, and cellular sheaves."
+  links:
+    - label: GitHub
+      href: "https://github.com/bdjones13/PETLS"
+      class: github
+    - label: Documentation
+      href: "/software/PETLS/"
+      class: docs
+    - label: arXiv
+      href: "https://arxiv.org/abs/2508.11560"
+      class: docs
+
+- name: CACTIS
+  name_full: "Coarse-grained Asymmetric Cycles In Time Series"
+  desc: "tools for studying directed networks from dynamical systems using asymmetrically weighted Dowker persistence, with applications to climate science."
+  links:
+    - label: GitHub
+      href: "https://github.com/cactismath/CACTIS"
+      class: github
+    - label: Documentation
+      href: "https://cactismath.github.io/"
+      class: docs
+    - label: arXiv
+      href: "https://arxiv.org/abs/2601.04559"
+      class: docs
+
+- name: Flagser-Laplacian
+  desc: "Persistent Directed Flag Laplacian implementation built on top of Flagser for computing persistent Laplacians on directed flag complexes (directed clique complexes)."
+  links:
+    - label: GitHub
+      href: "https://github.com/bdjones13/flagser-laplacian"
+      class: github
+    - label: arXiv
+      href: "https://arxiv.org/abs/2312.02099"
+      class: docs
+
+- name: Khovanov Laplacian
+  desc: "Mathematica implementation of Khovanov Laplacians and Dirac operators for knots and links, extending combinatorial Laplacian theory to the geometric topology of knot theory."
+  links:
+    - label: GitHub
+      href: "https://github.com/bdjones13/KhovanovLaplacian"
+      class: github
+    - label: Publication
+      href: "https://doi.org/10.1088/2632-072X/adde9f"
+      class: docs

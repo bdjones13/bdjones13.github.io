@@ -1,0 +1,15 @@
+- title: "Persistent Laplacians"
+  desc: "Spectral analysis of persistent topological structures across filtrations"
+  color: "var(--pink)"
+
+- title: "Khovanov Homology"
+  desc: "Laplacians and Dirac operators on chain complexes from knot theory"
+  color: "var(--green-mid)"
+
+- title: "Efficient TDA Algorithms"
+  desc: "Fast computation of persistent Laplacian eigenvalues for applications"
+  color: "var(--pink)"
+
+- title: "Mathematical Biology"
+  desc: "Applying topology and ML to molecular biology and drug discovery"
+  color: "var(--green-mid)"

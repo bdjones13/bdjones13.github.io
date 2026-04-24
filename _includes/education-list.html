@@ -1,0 +1,10 @@
+<div class="edu-list">
+  {% for entry in site.data.education %}
+  <div class="edu-card">
+    <p class="degree">{{ entry.degree }}{% if entry.status %} <span class="muted">({{ entry.status }})</span>{% endif %}{% if entry.year %} <span class="muted">&middot; {{ entry.year }}</span>{% endif %}</p>
+    <p class="institution">{{ entry.institution }}</p>
+    <p class="institution">{% if entry.advisor %}Advisor: {{ entry.advisor }}{% endif %}</p>
+    {% if entry.thesis %}<p class="thesis">Thesis: &ldquo;{{ entry.thesis }}&rdquo;</p>{% endif %}
+  </div>
+  {% endfor %}
+</div>

@@ -1,0 +1,18 @@
+<div class="software-list">
+  {% for item in site.data.software %}
+  <div class="software-card">
+    <div class="software-header">
+      <h3>{{ item.name }}</h3>
+      {% if item.install %}<code class="software-install">{{ item.install }}</code>{% endif %}
+    </div>
+    <p class="software-desc">
+      {% if item.name_full %}<strong>{{ item.name_full }}</strong> &mdash; {% endif %}{{ item.desc }}
+    </p>
+    <div class="software-links">
+      {% for link in item.links %}
+      <a href="{{ link.href }}" class="software-link software-link-{{ link.class }}"{% if link.href contains 'http' %} target="_blank" rel="noopener"{% endif %}>{{ link.label }}</a>
+      {% endfor %}
+    </div>
+  </div>
+  {% endfor %}
+</div>

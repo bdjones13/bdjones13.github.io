@@ -1,0 +1,10 @@
+{% if include.type == 'seminar' %}
+  {% assign talks = site.data.talks.seminar %}
+{% else %}
+  {% assign talks = site.data.talks.conference %}
+{% endif %}
+<ol class="talks-list" reversed>
+  {% for talk in talks %}
+  <li>{{ talk | markdownify | remove: '<p>' | remove: '</p>' | strip }}</li>
+  {% endfor %}
+</ol>
