@@ -12,13 +12,13 @@ description: "Ben Jones is a Postdoctoral Associate at Yale University. Ben rece
 
 ![image-left](/assets/images/ProfileF23_hq.webp){: width="20%" .align-right } &nbsp;&nbsp;&nbsp;&nbsp;I am a Postdoctoral Associate at Yale University working with [Smita Krishnaswamy](https://krishnaswamylab.org/) to develop geometric, topological, and graph-based deep learning methods for biological problems, with applications including neuroscience.
 
-I did my PhD in Mathematics at Michigan State University, working with [Guo-Wei Wei](https://users.math.msu.edu/users/weig/) to develop tools in topological data analysis (TDA) and computational topology for computational biology. My research focuses on persistent Laplacians, Khovanov homology, and efficient algorithms for TDA.
+I did my PhD in Mathematics at Michigan State University, working with [Guo-Wei Wei](https://users.math.msu.edu/users/weig/) to develop tools in topological data analysis (TDA) and computational topology for computational biology. My research focused on persistent Laplacians, Khovanov homology, and efficient algorithms for TDA.
 
 Before that, I earned my MA in math, BS in computer science, and BS in mathematics at The University of Alabama.
 
 # Research Interests
 1. Developing geometric deep learning methods for biology.
-2. The behavior of persistent Laplacians defined in different contexts, such as directed flag complexes (clique complexes)<sup><a href="#pdfl">3</a></sup>, the chain complex arrising from Khovanov homology<sup><a href="#khovanov">5</a></sup>, and with cellular sheaves<sup><a href="#PSLL">11</a></sup>.
+2. The behavior of persistent Laplacians defined in different contexts, such as directed flag complexes (clique complexes)<sup><a href="#pdfl">3</a></sup>, the chain complex arrising from Khovanov homology<sup><a href="#khovanov">5</a></sup>, and with cellular sheaves<sup><a href="#pssl">11</a></sup>.
 3. Ways to efficiently compute the persistent Laplacian and its eigenvalues for TDA applications. Persistent Laplacian computations are much slower in practice than persistent homology, but there are practical and theoretical ways to mitigate this<sup><a href="#petls">7</a></sup>. See my [PETLS software](/software/) for efficient implementations.
 4. Applying persistent Laplacians and machine learning to problems in molecular biology<sup><a href="#pdfl-ml">4</a>, <a href="#transformer">6</a>, <a href="#alphafold">8</a>, <a href="#opioid">9</a> </sup>.
 5. Using topological data analysis and persistent homology of asymmetric/directed networks (directed flag/clique complexes and Dowker complexes) to study dynamical systems arrising from climate science<sup><a href="#dowker">10</a></sup>.
@@ -26,7 +26,7 @@ Before that, I earned my MA in math, BS in computer science, and BS in mathemati
 
 # Papers and preprints
 <ol reversed>
-  <li id="PSSL"> Mushal Zia, <strong>Benjamin Jones</strong>, and Guo-Wei Wei, "PSLL: Persistent Sheaf Laplacian Learning for Protein-Ligand Binding Affinity Prediction," 2026. Submitted.</li>
+  <li id="pssl"> Mushal Zia, <strong>Benjamin Jones</strong>, and Guo-Wei Wei, "PSLL: Persistent Sheaf Laplacian Learning for Protein-Ligand Binding Affinity Prediction," 2026. Submitted.</li>
   <li id="dowker"> Tobias Timofeyev, Christopher Potvin, <strong>Benjamin Jones</strong>, Kristin Kurianski, Miguel Lopez, and Sunia Tanweer, "Asymmetrically Weighted Dowker Persistence and Applications in Dynamical Systems," 2026. Submitted. (<a href="https://arxiv.org/abs/2601.04559">arXiv</a>) [<a href="/software/#cactis-coarse-grained-asymmetric-cycles-in-time-series">Software</a>] [<a href="https://github.com/cactismath/CACTIS">GitHub</a>]</li>
   <li id="opioid"> Chunhuan Zhang, Sean Cottrell, <strong>Benjamin Jones</strong>, Yueying Zhu, Huahai Qiu, Bengong Zhang, Tianshou Zhou,  and Jian Jiang, "Meta-analysis and Topological Perturbation in Interactomic Network for Anti-opioid Addiction Drug Repurposing," 2025. (<a href="https://arxiv.org/abs/2509.19410">arXiv</a>) (<a href="https://doi.org/10.1021/acs.jcim.5c02263">Journal</a>)</li>
   <li id="alphafold">Jian Jiang, Guilin Wang, Daixin Li, Nicole Hayes, <strong>Benjamin Jones</strong>, Yazhou Shi, Huahai Qiu, Bengong Zhang, Tianshou Zhou, and Guo-Wei Wei, "Unexpected Applications of AlphaFold in Molecular Sciences: A Review," <em>Annual review of Biochemistry</em>, accepted (2025).</li>
