@@ -20,7 +20,7 @@
 
 title: Ben Jones
 email: benjamindanieljones@gmail.com
-description: "Ben Jones is a mathematics PhD candidate at Michigan State University specializing in topological data analysis (TDA), persistent Laplacians, flag complexes, and computational topology. Creator of PETLS software for efficient persistent Laplacian computations with applications to molecular biology." 
+description: "Ben Jones is a Postdoctoral Associate at Yale University and working on geometric and topological deep learning for biology." 
 baseurl: "" # the subpath of your site, e.g. /blog
 url: https://www.benjones-math.com # the base hostname & protocol for your site, e.g. http://example.com
 repository: "bdjones13/bdjones13.github.io"
@@ -48,7 +48,7 @@ minimal_mistakes_skin: "default" # "air", "aqua", "contrast", "dark", "dirt", "n
 author:
   name     : "Ben Jones"
   avatar   : "/assets/images/bio-photo.jpg"
-  bio      : "Math PhD | TDA & Persistent Laplacians | PETLS Creator"
+  bio      : "Postdoctoral Associate"
   location : "East Lansing, MI - USA"
   links:
     - label: "GitHub"
