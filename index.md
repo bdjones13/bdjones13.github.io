@@ -26,7 +26,7 @@ Before that, I earned my MA in math, BS in computer science, and BS in mathemati
 
 # Papers and preprints
 <ol reversed>
-  <li id="PSSL"> Mushal Zia, <strong>Benjamin Jones</strong>, and Guo-Wei Wei, "PSLL: Persistent Sheaf Laplacian Learning for Protein-Ligand Binding Affinity Prediction," 2026. Submitted.
+  <li id="PSSL"> Mushal Zia, <strong>Benjamin Jones</strong>, and Guo-Wei Wei, "PSLL: Persistent Sheaf Laplacian Learning for Protein-Ligand Binding Affinity Prediction," 2026. Submitted.</li>
   <li id="dowker"> Tobias Timofeyev, Christopher Potvin, <strong>Benjamin Jones</strong>, Kristin Kurianski, Miguel Lopez, and Sunia Tanweer, "Asymmetrically Weighted Dowker Persistence and Applications in Dynamical Systems," 2026. Submitted. (<a href="https://arxiv.org/abs/2601.04559">arXiv</a>) [<a href="/software/#cactis-coarse-grained-asymmetric-cycles-in-time-series">Software</a>] [<a href="https://github.com/cactismath/CACTIS">GitHub</a>]</li>
   <li id="opioid"> Chunhuan Zhang, Sean Cottrell, <strong>Benjamin Jones</strong>, Yueying Zhu, Huahai Qiu, Bengong Zhang, Tianshou Zhou,  and Jian Jiang, "Meta-analysis and Topological Perturbation in Interactomic Network for Anti-opioid Addiction Drug Repurposing," 2025. (<a href="https://arxiv.org/abs/2509.19410">arXiv</a>) (<a href="https://doi.org/10.1021/acs.jcim.5c02263">Journal</a>)</li>
   <li id="alphafold">Jian Jiang, Guilin Wang, Daixin Li, Nicole Hayes, <strong>Benjamin Jones</strong>, Yazhou Shi, Huahai Qiu, Bengong Zhang, Tianshou Zhou, and Guo-Wei Wei, "Unexpected Applications of AlphaFold in Molecular Sciences: A Review," <em>Annual review of Biochemistry</em>, accepted (2025).</li>
